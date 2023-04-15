@@ -464,6 +464,14 @@ a {
   overflow: hidden;
 }
 
+.galery-isi img {
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+.galery-isi:hover img {
+  scale: 110%;
+}
+
 footer {
   height: 32rem;
   width: 100%;
