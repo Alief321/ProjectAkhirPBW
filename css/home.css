@@ -505,17 +505,32 @@ ul {
 }
 
 .footer2-right {
-  width: 60%;
+  width: 55%;
   height: 100%;
   display: flex;
+  margin: 0 0 0 3rem;
+  overflow: hidden;
   align-items: center;
   justify-content: center;
-  background-color: #d37d2f;
 }
 
 .footer2-right-isi {
   width: 30%;
   height: 100%;
-  margin: 0 1rem;
-  background-color: #d1d1d1;
+  text-align: start;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.footer2-right-isi ul {
+  margin: 0;
+  padding: 0;
+}
+.footer2-right-isi ul li {
+  margin: 1.2rem 0;
+}
+
+.footer2-right-isi ul li:hover {
+  color: #a47b09;
 }
