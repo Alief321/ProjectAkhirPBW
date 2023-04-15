@@ -1,10 +1,10 @@
 window.onload = function () {
+  document.documentElement.style.scrollBehavior = 'smooth';
+
   const totop = document.querySelector('#up_arrow');
   const float_item = document.querySelector('.float_item');
   const goToTop = () => {
-    document.body.scrollIntoView({
-      behavior: 'smooth',
-    });
+    document.body.scrollIntoView();
   };
   totop.addEventListener('click', goToTop);
 

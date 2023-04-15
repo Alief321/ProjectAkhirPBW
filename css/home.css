@@ -226,7 +226,7 @@ a {
 }
 
 #categories {
-  margin-left: 2rem;
+  margin-left: 0rem;
   height: 25rem;
   display: flex;
   width: 100%;
@@ -425,6 +425,97 @@ a {
   height: 80%;
   background-color: #d1d1d1;
   border-radius: 1.5rem;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
   overflow: hidden;
+}
+
+footer {
+  height: 32rem;
+  width: 100%;
+  background-color: #dedede;
+}
+
+hr {
+  margin-bottom: 0;
+}
+
+#footer1 {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-items: start;
+  align-items: center;
+}
+#footer2 {
+  margin-left: 2rem;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer3 {
+  margin-left: 2rem;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  background-color: aqua;
+}
+
+.footer1-isi {
+  width: 20%;
+  margin: 0;
+  height: 80%;
+  margin-left: 1rem;
+  font-family: 'League Spartan', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 21px;
+}
+
+.footer2-left {
+  width: 40%;
+  height: 100%;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 22px;
+  display: flex;
+  word-spacing: 4px;
+}
+
+.footer2-left ul li {
+  margin: 1rem 0;
+}
+
+.footer2-left ul li {
+  margin: 0;
+  padding: 20px 0 0 50px;
+  list-style: none;
+  background-image: url('../img/map.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 40px;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer2-right {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d37d2f;
+}
+
+.footer2-right-isi {
+  width: 30%;
+  height: 100%;
+  margin: 0 1rem;
+  background-color: #d1d1d1;
 }
