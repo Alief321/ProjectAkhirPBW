@@ -4,18 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/home.css" />
     <link rel="icon" type="image/png" href="img/logo.png" />
+    <script src="node_modules/feather-icons/dist/feather.min.js"></script>
     <title>Paw Catshop | Home</title>
   </head>
   <body>
+    <!-- Navbar -->
     <nav>
-      <img src="img/logo.png" alt="" />
+      <div class="logo">
+        <img src="img/logo.png" alt="logo" id="logo" />
+        <h1 id="logo_name">Paw Catshop</h1>
+      </div>
+
+      <ul class="nav_item">
+        <li>Home</li>
+        <li>Product</li>
+        <li>About Us</li>
+        <li>Link</li>
+      </ul>
+
+      <div class="login">
+        <i data-feather="log-in" class="login_item"></i>
+      </div>
     </nav>
-    <section>
+    <!-- Akhir Navbar -->
+
+    <!-- Hiro -->
+    <section id="hiro">
       <h1>Ini anggep aja Home</h1>
     </section>
+    <!-- Akhir Hiro -->
+
+    <!-- Footer -->
     <footer></footer>
+    <!-- Akhir Footer -->
+
+    <!-- Script -->
     <script src="js/script.js"></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
