@@ -79,7 +79,7 @@ a {
 }
 
 .login_item {
-  margin-right: 3rem;
+  margin-right: 2rem;
   width: 50px;
   height: 50px;
 }
@@ -240,4 +240,31 @@ a {
   background: linear-gradient(180deg, rgba(234, 182, 0, 0.4) 13.02%, rgba(211, 190, 7, 0.79521) 40.63%, rgba(222, 174, 4, 0.9) 75%, rgba(231, 144, 14, 0.4) 100%);
   box-shadow: 7px 8px 4px rgba(0, 0, 0, 0.25);
   border-radius: 45px;
+}
+
+.float_item {
+  width: 7%;
+  height: auto;
+  bottom: 1rem;
+  right: 0rem;
+  display: block;
+  position: fixed;
+  transition: all 100ms ease;
+  z-index: 99;
+}
+
+#up_arrow {
+  display: none;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  filter: hue-rotate(-90deg);
+}
+
+#recom {
+  margin-left: 2rem;
+  height: 30rem;
+  display: flex;
+  width: 100%;
+  display: flex;
+  column-gap: 2rem;
 }
