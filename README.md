@@ -14,6 +14,10 @@ Project ini dibuat dengan menggunakan HTML, CSS, Javascript, dan PHP serta denga
 
 ![](https://geps.dev/progress/15)
 
+## Desain Project
+
+[![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/file/qU9KS3Dj7fcQkBOTBMsSAm/Desain-Project-Akhir?node-id=37%3A422&t=dHvpaZ3oAyKyycpI-1)
+
 ## Preview
 
 ### Screnshoot tampilan dekstop
