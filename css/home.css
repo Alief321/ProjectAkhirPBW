@@ -180,12 +180,6 @@
   width: 25%;
 }
 
-.active {
-  color: #6f0000;
-  text-decoration: underline;
-  text-underline-offset: 1rem;
-}
-
 #categories {
   margin-left: 0rem;
   height: 25rem;

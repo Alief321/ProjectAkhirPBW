@@ -270,3 +270,9 @@ hr {
   scale: 110%;
   fill: #fafafafa !important;
 }
+
+.active {
+  color: #6f0000;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+}
