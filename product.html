@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" href="img/logo.png" />
     <!-- Ini buat icon -->
     <script src="js/feather.min.js"></script>
-    <title>Paw Catshop | Home</title>
+    <title>Paw Catshop | Product</title>
   </head>
   <body>
     <!-- Navbar -->
@@ -44,10 +44,31 @@
     </div>
     <!-- Akhir float item -->
 
-    <!-- Isi -->
-    <section id="product"></section>
-    <!-- Akhir Isi -->
+    <!-- Seputar search -->
+    <section id="searchdll">
+      <select name="filtering" id="filtering">
+        <option value="Terbaru">Terbaru</option>
+        <option value="Terhits">Terhits</option>
+      </select>
+      <form action="" id="searchform">
+        <input type="search" name="search" id="search" placeholder="Input nama produk..." />
+        <div class="searchbtn">
+          <i data-feather="search" id="search-magnify"></i>
+        </div>
+      </form>
+      <select name="sorting" id="sorting">
+        <option value="ascending">Menaik</option>
+        <option value="descending">Menurun</option>
+      </select>
+    </section>
+    <!-- Akhir Search -->
 
+    <!-- group -->
+    <!-- akhir group -->
+
+    <!-- isi -->
+    <section id="product"></section>
+    <!-- akhir isi -->
     <hr />
     <!-- Footer -->
     <footer>
@@ -125,7 +146,6 @@
 
     <!-- Script -->
     <script src="js/script.js"></script>
-    <script src="js/home.js"></script>
     <script>
       feather.replace();
     </script>
