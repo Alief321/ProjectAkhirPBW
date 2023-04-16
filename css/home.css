@@ -181,6 +181,7 @@
 }
 
 #categories {
+  margin-top: 2rem;
   margin-left: 0rem;
   height: 25rem;
   display: flex;

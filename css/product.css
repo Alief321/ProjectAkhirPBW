@@ -1,7 +1,12 @@
-#product {
-  margin-top: 5rem;
+#wrap {
   width: 100%;
-  height: 90rem;
+  height: 110rem;
+}
+#product {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 25%;
 }
 
 #searchform {
@@ -103,9 +108,129 @@ input[type='search'] {
 }
 
 .group-active {
-  color: #730000;
+  color: #8c0606;
 }
 
 #group-categories li:hover {
   color: #b7922b;
+}
+
+.prod-row {
+  width: 81.5%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2rem;
+}
+
+.prod-card {
+  width: 22.5%;
+  height: 90%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.prod-pic {
+  width: 100%;
+  height: 40%;
+  border: solid 2px #d1d1d1;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+.prod-pic img {
+  transition: all 100ms ease;
+}
+.prod-pic:hover img {
+  scale: 120%;
+}
+
+.prod-text {
+  width: 100%;
+  height: 60%;
+}
+
+.prod-price {
+  overflow: hidden;
+  margin-top: 0.5rem;
+  display: flex;
+  column-gap: 6rem;
+  width: 100%;
+  height: 18%;
+  color: #730000;
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 40px;
+  align-items: center;
+}
+
+#shoping-cart {
+  color: #161616;
+  fill: #ffa31a;
+  scale: 150%;
+  transition: all 100ms ease;
+  cursor: pointer;
+}
+
+#shoping-cart:hover {
+  color: #730000;
+  fill: #fafafafa;
+  scale: 155%;
+}
+
+.product-more {
+  width: 100%;
+  height: 17%;
+  background-color: #d37d2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 35px;
+  color: #fafafafa;
+  transition: all 100ms ease;
+  cursor: pointer;
+}
+
+#pagination {
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.pag-content {
+  width: 5%;
+  height: 90%;
+  background-color: #d07f35;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fafafafa;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: all 100ms ease;
+  cursor: pointer;
+}
+
+.pag-content:hover,
+.product-more:hover {
+  background-color: #fafafafa;
+  scale: 110%;
+  color: #d07f35;
 }
