@@ -201,6 +201,7 @@ input[type='search'] {
   color: #fafafafa;
   transition: all 100ms ease;
   cursor: pointer;
+  border-radius: 0.75rem;
 }
 
 #pagination {
