@@ -1,12 +1,15 @@
-#description {
+#description,
+#locationwrap {
   width: 80%;
   height: 29rem;
   margin: auto;
-  margin-top: 5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   overflow: hidden;
 }
 
+#description {
+  margin-top: 5rem;
+}
 .desc-atas {
   width: 100%;
   height: 25%;
@@ -44,7 +47,7 @@
   text-indent: 1rem;
 }
 .lokasi {
-  display: flex;
+  display: grid;
   background: #f5f5f5;
   border: 1px solid #bbbbbb;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -56,13 +59,24 @@
 
 .lokasi-isi {
   overflow: hidden;
-  width: 20%;
-  height: 80%;
+  height: 90%;
+  max-width: 100%;
   font-size: 1.25rem;
   font-weight: 600;
   cursor: pointer;
 }
 
+@media only screen and (max-width: 555px) {
+  .lokasi-isi {
+    margin-top: 1.5rem;
+    height: 15rem;
+    width: 90%;
+    margin: auto;
+  }
+  #locationwrap {
+    height: 95rem;
+  }
+}
 .lokasi-isi p {
   margin: 0 0 0.5rem 0;
   text-align: center;
