@@ -25,3 +25,11 @@ Project ini dibuat dengan menggunakan HTML, CSS, Javascript, dan PHP serta denga
 ![Screnshoot Preview Home Web](/img/previewWeb.jpg)
 
 ### Screnshoot tampilan mobile
+
+## Credit icon
+
+[![flaticon](https://media.flaticon.com/dist/min/img/logo/flaticon_negative.svg)](https://www.flaticon.com)
+
+[![feathericons](https://www.evernote.design/assets/images/feathericons.jpg)](https://feathericons.com)
+
+[![fontawesome](https://pbs.twimg.com/profile_images/1491038861224517637/s-H1KgWO_400x400.png)](https://fontawesome.com)
