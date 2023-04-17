@@ -28,8 +28,8 @@
 }
 
 #search {
-  border-radius: 0.8rem;
-  width: 100%;
+  border-radius: 0.8rem 0 0 0.8rem;
+  width: 90%;
   box-sizing: border-box;
   height: 100%;
   background-color: #fff7e1;
@@ -45,12 +45,10 @@ input[type='search'] {
 }
 
 .searchbtn {
-  position: absolute;
-  float: left;
-  right: 23%;
-  width: 6%;
-  height: 6.5%;
+  width: 9%;
+  height: 100%;
   display: flex;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   justify-content: center;
   align-items: center;
   border-radius: 0 1rem 1rem 0;

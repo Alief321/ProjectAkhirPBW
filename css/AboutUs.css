@@ -47,12 +47,11 @@
   text-indent: 1rem;
 }
 .lokasi {
-  display: grid;
+  display: flex;
   background: #f5f5f5;
   border: 1px solid #bbbbbb;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 20px;
-  align-items: stretch;
   justify-content: center;
   align-items: center;
 }
@@ -60,10 +59,19 @@
 .lokasi-isi {
   overflow: hidden;
   height: 90%;
-  max-width: 100%;
+  width: 100%;
   font-size: 1.25rem;
   font-weight: 600;
   cursor: pointer;
+}
+
+.lokasi-isi iframe {
+  width: 95%;
+  height: 90%;
+}
+
+.lokasi-isi iframe:first-of-type {
+  margin-left: 1rem;
 }
 
 @media only screen and (max-width: 555px) {
@@ -75,6 +83,15 @@
   }
   #locationwrap {
     height: 95rem;
+  }
+  .lokasi-isi iframe:first-of-type {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .lokasi {
+    display: grid;
   }
 }
 .lokasi-isi p {
