@@ -22,29 +22,38 @@
     <!-- Isi -->
     <div class="login-isi">
       <div class="login-kiri">
-        <p>Hey Hello 👋🏻</p>
-        <p>Silahkan login dengan memasukan data diri anda</p>
-        <label for="email">Email</label>
-        <input type="text" />
-        <br />
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" />
-        <br />
-        <div class="remme">
-          <div>
-            <input type="checkbox" />
-            <p>Remember me</p>
+        <p class="Hello">Hey Hello 👋🏻</p>
+        <p class="sub-text">Silahkan login dengan memasukan data diri anda</p>
+        <form action="Index.html" method="">
+          <label for="email" class="text">Email</label>
+          <input type="text" name="email" placeholder="Alief321@gmail.com" required autofocus />
+          <br />
+          <label for="password" class="text">Password</label>
+          <input type="password" name="password" id="password" required />
+          <br />
+          <div class="remme">
+            <div style="display: flex; justify-content: start; align-items: start">
+              <input type="checkbox" style="margin: 0" />
+              <span>Remember me</span>
+            </div>
+            <a href="">
+              <span id="passforgot">Forgot Password</span>
+            </a>
           </div>
-          <p>Forgot Password</p>
+          <button class="login-text">Login</button>
+        </form>
+
+        <div style="display: flex; margin: 1rem 0 0 5rem; overflow: hidden; width: 60%; color: #b6b6b6; font-size: 0.8rem">
+          <hr />
+          <p>or</p>
+          <hr />
         </div>
-        <p>Login</p>
-        <hr />
-        <p>or</p>
-        <hr />
-        <div class="signin">
-          <img src="img/google.png" alt="google" />
-          <p>Sign in</p>
-        </div>
+        <a href="">
+          <div class="signin">
+            <img src="img/google.png" alt="google" height="70%" />
+            <p>Sign in with google</p>
+          </div>
+        </a>
       </div>
       <div class="login-kanan">
         <img src="img/login-img.png" alt="login" width="95%" height="95%" style="margin-left: 1rem" />

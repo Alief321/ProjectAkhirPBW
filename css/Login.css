@@ -14,15 +14,13 @@
 .login-isi {
   height: 32rem;
   width: 100%;
-  background: salmon;
   display: flex;
-  align-items: center;
 }
 
 .login-kiri {
+  margin-top: 2rem;
   width: 40%;
-  height: 80%;
-  background-color: aqua;
+  height: 90%;
 }
 .login-kanan {
   width: 60%;
@@ -30,11 +28,117 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-color: aqua;
 }
 .remme {
   width: 100%;
-  height: 100%;
+  height: 10%;
   display: flex;
-  column-gap: 5rem;
+  column-gap: 6rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+hr {
+  width: 45%;
+  height: 0px;
+}
+
+p {
+  margin: 0;
+}
+
+.Hello,
+.sub-text,
+.text,
+.signin,
+.remme,
+.login-text,
+input {
+  margin: 1rem 0 0 5rem;
+}
+.Hello {
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.313rem;
+}
+
+.sub-text {
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 0.938rem;
+  color: #484848;
+  margin-bottom: 1rem;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 1.25;
+}
+
+input[type='text'],
+input[type='password'] {
+  display: block;
+  width: 60%;
+  border-radius: 0.5rem;
+  border: 1px solid #b6b6b6;
+  padding: 12px 10px;
+  box-sizing: border-box;
+  height: 7%;
+  transition: all 100ms ease;
+}
+
+input:active {
+  border: 2px solid #733a00;
+}
+
+.login-text {
+  cursor: pointer;
+  color: #fafafa;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.313rem;
+  width: 60%;
+  padding: 0.5rem;
+  background: linear-gradient(89.97deg, #e6b76e 1.74%, #dfa83f 14.3%, #f5a729 24.34%, #f39b4a 43.7%, #f97a4d 64.71%, #fd6736 81.05%, #fc7951 97.87%);
+  border: 1px solid #b6b6b6;
+  border-radius: 0.5rem;
+  transition: all 100ms ease-in-out;
+}
+
+.signin {
+  display: flex;
+  width: 60%;
+  height: 8%;
+  border: 1px solid #b6b6b6;
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.75rem;
+  overflow: hidden;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 100ms ease-in-out;
+}
+
+#passforgot {
+  background: linear-gradient(89.92deg, #ca974b 1.43%, #b59a57 17.55%, #dda045 38.3%, #9d6249 54.01%, #ca5935 79.2%, #cc6848 88.4%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 100ms ease-in-out;
+}
+
+.login-text:hover,
+.signin:hover {
+  background: linear-gradient(89.97deg, #fafafa 1.74%, #fafafa 14.3%, #fafafa 24.34%, #fafafa 43.7%, #fafafa 64.71%, #fafafa 81.05%, #fafafa 97.87%);
+  color: #733a00;
+}
+
+#passforgot:hover {
+  background: #1f1f1f;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
