@@ -27,9 +27,12 @@ Project ini dibuat dengan menggunakan HTML, CSS, Javascript, dan PHP serta denga
 ### Screnshoot tampilan mobile
 
 ## Credit icon
-
-[![flaticon](https://media.flaticon.com/dist/min/img/logo/flaticon_negative.svg)](https://www.flaticon.com)
-
-[![feathericons](https://www.evernote.design/assets/images/feathericons.jpg)](https://feathericons.com)
-
-[![fontawesome](https://pbs.twimg.com/profile_images/1491038861224517637/s-H1KgWO_400x400.png)](https://fontawesome.com)
+<a href="https://www.flaticon.com" target="_blank">
+  <img src="https://media.flaticon.com/dist/min/img/logo/flaticon_negative.svg" width="80" height="50">
+</a>
+<a href="https://feathericons.com" target="_blank">
+  <img src="https://www.evernote.design/assets/images/feathericons.jpg" width="80" height="50">
+</a>
+<a href="https://fontawesome.com" target="_blank">
+  <img src="https://pbs.twimg.com/profile_images/1491038861224517637/s-H1KgWO_400x400.png" width="80" height="50">
+</a>
