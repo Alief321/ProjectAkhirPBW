@@ -171,7 +171,8 @@
 
 .exp.exp-hover:hover .exp-text {
   margin-right: 30px;
-  color: rgb(20, 20, 20);
+  color: #181818;
+  mix-blend-mode: normal;
 }
 
 .exp.exp-hover:hover::before {
