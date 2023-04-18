@@ -26,7 +26,7 @@ Project ini dibuat dengan menggunakan HTML, CSS, Javascript, dan PHP serta denga
 
 ### Screnshoot tampilan mobile
 
-## Credit icon
+## Credit icon & picture
 <a href="https://www.flaticon.com" target="_blank">
   <img src="https://media.flaticon.com/dist/min/img/logo/flaticon_negative.svg" width="80" height="50">
 </a>
@@ -36,3 +36,10 @@ Project ini dibuat dengan menggunakan HTML, CSS, Javascript, dan PHP serta denga
 <a href="https://fontawesome.com" target="_blank">
   <img src="https://pbs.twimg.com/profile_images/1491038861224517637/s-H1KgWO_400x400.png" width="80" height="50">
 </a>
+<a href="https://www.freepik.com" target="_blank">
+  <img src="https://yt3.googleusercontent.com/cAxYWAR5GsbYphyuO-9ObBFJ75E5X5Uy-45T0hS1DrY0CUxX_VG5jy-IA6NzGxzvI4609nVfGw=s900-c-k-c0x00ffffff-no-rj" width="80" height="50">
+</a>
+<a href="https://unsplash.com/s/photos/cat-eating" target="_blank">
+  <img src="https://logowik.com/content/uploads/images/unsplash8609.jpg" width="80" height="50">
+</a>
+
