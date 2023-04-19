@@ -131,6 +131,8 @@ ul {
 }
 
 footer {
+  clear: both;
+  position: relative;
   height: 32rem;
   width: 100%;
   background-color: #dedede;
@@ -276,4 +278,10 @@ hr {
   color: #6f0000;
   text-decoration: underline;
   text-underline-offset: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    height: 40rem;
+  }
 }
