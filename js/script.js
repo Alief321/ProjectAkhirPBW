@@ -20,4 +20,14 @@ window.onload = function () {
       float_item.style.bottom = '1rem';
     }
   };
+
+  document.addEventListener('click', function (e) {
+    let profile = document.querySelector('.login');
+    let drpdwn = document.querySelector('#modal');
+    if (!profile.contains(e.target)) {
+      drpdwn.style.display = 'none';
+    } else {
+      drpdwn.style.display = 'block';
+    }
+  });
 };

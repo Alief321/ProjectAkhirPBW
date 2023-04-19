@@ -72,13 +72,52 @@ a {
 }
 
 .login {
+  cursor: pointer;
   width: 10%;
+  height: 100%;
+  border-radius: 1rem;
   display: flex;
   justify-content: end;
   align-items: center;
+  margin: auto;
   transition: all 100ms ease-in-out;
 }
 
+#modal {
+  display: none;
+  position: fixed;
+  width: 15%;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: rgba(255, 220, 117, 0.8);
+  top: 4.5rem;
+  border-radius: 0 0 1rem 1rem;
+  z-index: 20;
+  overflow: hidden;
+  right: 0rem;
+}
+
+.modal-isi {
+  display: flex;
+  width: 100%;
+  justify-content: baseline;
+  align-items: center;
+  transition: all 100ms ease;
+}
+
+.modal-icon,
+.modal-isi p {
+  margin: 1rem 0 0.5rem 1rem;
+  transition: all 100ms ease;
+}
+
+.modal-isi:hover,
+.modal-isi:hover p,
+.modal-isi:hover .modal-icon {
+  background-color: #fafafa;
+  color: #6f0000;
+  scale: 102%;
+}
 .login_item {
   margin-right: 2rem;
   width: 50px;
