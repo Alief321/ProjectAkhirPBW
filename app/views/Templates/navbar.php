@@ -1,9 +1,9 @@
  <!-- Navbar -->
     <nav>
         <div class="logo">
-            <a href="">
+            <a href="Home">
                 <img src="img/logo.png" alt="logo" id="logo" />
-                <h1 id="logo_name"><a href="">Paw Catshop</a></h1>
+                <h1 id="logo_name"><a href="Home">Paw Catshop</a></h1>
             </a>
         </div>
         <ul class="nav_items">
@@ -21,7 +21,7 @@
 
     <!-- modal user -->
     <div id="modal">
-      <a href="User/">
+      <a href="User">
         <div class="modal-isi">
           <i data-feather="user" class="modal-icon"></i>
           <p>Profile</p>

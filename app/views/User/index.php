@@ -12,8 +12,8 @@
             <label for="PasswordBaru">Konfirmasi Password </label>
           </div>
           <div style="width: 60%">
-            <input type="text" name="name" id="name" value="Nama User" /><br />
-            <input type="email" name="email" id="email" value="email User" /><br />
+            <input type="text" name="name" id="name" value="<?php echo $data['nama']?>" /><br />
+            <input type="email" name="email" id="email" value="<?php echo $data['email']?>" /><br />
             <input type="text" name="Password" id="Password" /><br />
             <input type="text" name="PasswordBaru" id="PasswordBaru" /><br />
           </div>
