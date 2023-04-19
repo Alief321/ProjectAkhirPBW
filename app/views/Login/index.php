@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="google-site-verification" content="MoqNAD8U5v-TpvU8J2oO992zgZwQRteW1zyVZVo-NsE" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/Login.css" />
-    <link rel="icon" type="image/png" href="img/logo.png" />
-    <!-- Ini buat icon -->
-    <script src="js/feather.min.js"></script>
-    <title>Paw Catshop | Login</title>
-  </head>
-  <body>
     <!-- Atas -->
     <div id="logo-row">
       <img src="img/logo.png" alt="logo" width="7.5%" height="90%" />
@@ -25,7 +10,7 @@
       <div class="login-kiri">
         <p class="Hello">Hey Hello 👋🏻</p>
         <p class="sub-text">Silahkan login dengan memasukan data diri anda</p>
-        <form action="Home.html" method="">
+        <form action="Home" method="post">
           <label for="email" class="text">Email</label>
           <input type="email" name="email" placeholder="Alief321@gmail.com" required autofocus />
           <br />
@@ -49,7 +34,7 @@
           <p>or</p>
           <hr />
         </div>
-        <a href="Signup.html">
+        <a href="Signup">
           <div class="signin">
             <i data-feather="user-plus"></i>
             <p>Sign In or Create Acount</p>

@@ -1,77 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/Detail-Product.css" />
-    <link rel="icon" type="image/png" href="img/logo.png" />
-    <!-- Ini buat icon -->
-    <script src="js/feather.min.js"></script>
-    <title>Paw Catchop | Product name</title>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav>
-      <div class="logo">
-        <a href="">
-          <img src="img/logo.png" alt="logo" id="logo" />
-          <h1 id="logo_name"><a href="">Paw Catshop</a></h1>
-        </a>
-      </div>
-      <ul class="nav_items">
-        <a href="Home.html"><li class="nav_item">Home</li></a>
-        <a href="product.html"><li class="nav_item active">Product</li></a>
-        <a href="About Us.html"><li class="nav_item">About Us</li></a>
-        <a href="Link.html"><li class="nav_item">Link</li></a>
-      </ul>
-
-      <div class="login">
-        <i data-feather="user" class="login_item"></i>
-      </div>
-    </nav>
-    <!-- Akhir Navbar -->
-
-    <!-- modal user -->
-    <div id="modal">
-      <a href="UserProfile.html">
-        <div class="modal-isi">
-          <i data-feather="user" class="modal-icon"></i>
-          <p>Profile</p>
-        </div>
-      </a>
-
-      <a href="">
-        <div class="modal-isi">
-          <i data-feather="shopping-cart" class="modal-icon"></i>
-          <p>Keranjang</p>
-        </div>
-      </a>
-
-      <a href="index.html">
-        <div class="modal-isi" style="color: red">
-          <i data-feather="log-out" class="modal-icon"></i>
-          <p>Logout</p>
-        </div>
-      </a>
-    </div>
-    <!-- akhir modal user -->
-
-    <!-- float item -->
-    <div class="float_item">
-      <img src="img/up-arrow.png" width="60px" height="60px" id="up_arrow" alt="upArrow" />
-      <a href="">
-        <img src="img/whatsapp.png" width="60px" height="60px" id="wa" alt="wa" />
-      </a>
-    </div>
-    <!-- Akhir float item -->
-
-    <!-- Isi -->
-    <section id="product"></section>
-    <!-- Akhir Isi -->
-
-    <hr />
+<hr />
     <!-- Footer -->
     <footer>
       <div id="footer1">
@@ -148,7 +75,6 @@
 
     <!-- Script -->
     <script src="js/script.js"></script>
-    <script src="js/home.js"></script>
     <script>
       feather.replace();
     </script>

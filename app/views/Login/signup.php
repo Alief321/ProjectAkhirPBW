@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/Login.css" />
-    <link rel="icon" type="image/png" href="img/logo.png" />
-    <!-- Ini buat icon -->
-    <script src="js/feather.min.js"></script>
-    <title>Paw Catshop | Login</title>
-  </head>
-  <body>
     <!-- Atas -->
     <div id="logo-row">
       <img src="img/logo.png" alt="logo" width="7.5%" height="90%" />
@@ -27,7 +13,7 @@
       <div class="login-kiri" style="margin-top: 0">
         <p class="Hello">Create Acount</p>
         <p class="sub-text">Silahkan buat akun dengan memasukan data diri anda</p>
-        <form action="Home.html" method="">
+        <form action="Home" method="post">
           <label for="email" class="text">Nama</label>
           <input type="text" name="nama" placeholder="Masukkan nama anda" required autofocus />
           <br />
