@@ -5,287 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/Login.css" />
     <link rel="icon" type="image/png" href="img/logo.png" />
     <!-- Ini buat icon -->
     <script src="js/feather.min.js"></script>
-    <title>Paw Catshop | Home</title>
+    <title>Paw Catshop | Login</title>
   </head>
   <body>
-    <!-- Navbar -->
-    <nav>
-      <div class="logo">
-        <a href="">
-          <img src="img/logo.png" alt="logo" id="logo" />
-          <h1 id="logo_name"><a href="">Paw Catshop</a></h1>
-        </a>
-      </div>
-      <ul class="nav_items">
-        <a href="Index.html"><li class="nav_item active">Home</li></a>
-        <a href="product.html"><li class="nav_item">Product</li></a>
-        <a href="About Us.html"><li class="nav_item">About Us</li></a>
-        <a href="Link.html"><li class="nav_item">Link</li></a>
-      </ul>
-
-      <div class="login">
-        <a href="Login.html">
-          <i data-feather="log-in" class="login_item"></i>
-        </a>
-      </div>
-    </nav>
-    <!-- Akhir Navbar -->
-
-    <!-- float item -->
-    <div class="float_item">
-      <img src="img/up-arrow.png" width="60px" height="60px" id="up_arrow" alt="upArrow" />
-      <a href="">
-        <img src="img/whatsapp.png" width="60px" height="60px" id="wa" alt="wa" />
-      </a>
+    <!-- Atas -->
+    <div id="logo-row">
+      <img src="img/logo.png" alt="logo" width="7.5%" height="90%" />
+      <p>PAW CATSHOP</p>
     </div>
-    <!-- Akhir float item -->
+    <!-- Akhir Atas -->
 
-    <!-- Hiro -->
-    <section id="hiro">
-      <div class="hiro_left">
-        <div class="hileft_content">
-          <p style="margin: 0rem">PAW CATSHOP</p>
-          <p class="sub">Tempat Terbaik Untuk Keperluan Si Empus!!</p>
-          <div class="socmed">
-            <a href="">
-              <i style="fill: rgb(241, 114, 114)" data-feather="instagram" class="socmed_item"></i>
-            </a>
-            <a href="">
-              <i style="fill: #163aea" data-feather="facebook" class="socmed_item"> </i>
-            </a>
-            <a href="">
-              <i style="fill: #1684ea" data-feather="twitter" class="socmed_item"> </i>
-            </a>
-            <a href="">
-              <i style="fill: #ead116" data-feather="mail" class="socmed_item"> </i>
-            </a>
-          </div>
-          <div class="explore">
-            <a href="#categories">
-              <button class="exp exp-hover">
-                <span class="exp-text">Explore ></span>
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="hiro_right">
-        <img src="img/kucing.png" alt="kucing" width="100%" id="hiro_pic" />
-        <p id="stop">STOP</p>
-      </div>
-    </section>
-    <!-- Akhir Hiro -->
-
-    <!-- Categories -->
-    <section id="categories">
-      <div class="categories_content" style="margin-left: 2rem">
-        <a href="">
-          <div class="cat-pic">
-            <div class="cat-picture">
-              <img src="img/pur kucing.png" alt="categories" />
+    <!-- Isi -->
+    <div class="login-isi">
+      <div class="login-kiri">
+        <p class="Hello">Hey Hello 👋🏻</p>
+        <p class="sub-text">Silahkan login dengan memasukan data diri anda</p>
+        <form action="Index.html" method="">
+          <label for="email" class="text">Email</label>
+          <input type="email" name="email" placeholder="Alief321@gmail.com" required autofocus />
+          <br />
+          <label for="password" class="text">Password</label>
+          <input type="password" name="password" id="password" required />
+          <br />
+          <div class="remme">
+            <div style="display: flex; justify-content: start; align-items: start">
+              <input type="checkbox" style="margin: 0" />
+              <span>Remember me</span>
             </div>
+            <a href="">
+              <span id="passforgot">Forgot Password</span>
+            </a>
           </div>
-          <div class="cat-text">
-            <p>Makanan & Camilan</p>
+          <button class="login-text">Login</button>
+        </form>
+
+        <div style="display: flex; margin: 1rem 0 0 5rem; overflow: hidden; width: 60%; color: #b6b6b6; font-size: 0.8rem">
+          <hr />
+          <p>or</p>
+          <hr />
+        </div>
+        <a href="">
+          <div class="signin">
+            <img src="img/google.png" alt="google" height="70%" />
+            <p>Sign in with google</p>
           </div>
         </a>
       </div>
-      <div class="categories_content">
-        <a href="">
-          <div class="cat-pic">
-            <div class="cat-picture">
-              <img src="img/vitamin 1.png" alt="categories" />
-            </div>
-          </div>
-          <div class="cat-text">
-            <p>Obat & Vitamin</p>
-          </div>
-        </a>
+      <div class="login-kanan">
+        <img src="img/login-img.png" alt="login" width="95%" height="95%" style="margin-left: 1rem" />
       </div>
-      <div class="categories_content">
-        <a href="">
-          <div class="cat-pic">
-            <div class="cat-picture">
-              <img src="img/clean.png" alt="categories" />
-            </div>
-          </div>
-          <div class="cat-text">
-            <p>Alat Kebersihan</p>
-          </div>
-        </a>
-      </div>
-    </section>
-    <!-- Akhir Categories -->
-
-    <!-- Rekomendasi -->
-    <section id="recom">
-      <div class="recom-box">
-        <p class="recom-text">REKOMENDASI</p>
-      </div>
-      <div class="recom-content">
-        <div class="recom-isi">
-          <div class="recom-white">
-            <div class="recom-pic">
-              <img src="img/whiskas.png" alt="whiskas" width="70%" height="100%" />
-            </div>
-            <div class="recom-price">
-              <div class="cart">
-                <i data-feather="shopping-cart" id="shoping-cart"></i>
-              </div>
-              <p class="recom-price-text">RP 29.500</p>
-            </div>
-          </div>
-          <div class="recom-isi-text">
-            <p style="font-family: 'Bebas Neue', cursive; font-size: 1.25rem; margin: 4px">Whiskas 4Pcs Pouch Sachet Adult Tuna And White Fish Flavour</p>
-            <p style="font-size: 0.75rem; margin: 4px; text-align: justify; text-justify: inter-word">Kalau untuk kucing kesayangan, pastinya kamu harus memberikan makanan bernutrisi terbaik! Whiskas Pouch Adult 1+ ...</p>
-            <div class="recom-more">
-              <p>Selengkapnya</p>
-            </div>
-          </div>
-        </div>
-        <div class="recom-isi">
-          <div class="recom-white">
-            <div class="recom-pic">
-              <img src="img/whiskas.png" alt="whiskas" width="70%" height="100%" />
-            </div>
-            <div class="recom-price">
-              <div class="cart">
-                <i data-feather="shopping-cart" id="shoping-cart"></i>
-              </div>
-              <p class="recom-price-text">RP 29.500</p>
-            </div>
-          </div>
-          <div class="recom-isi-text">
-            <p style="font-family: 'Bebas Neue', cursive; font-size: 1.25rem; margin: 4px">Whiskas 4Pcs Pouch Sachet Adult Tuna And White Fish Flavour</p>
-            <p style="font-size: 0.75rem; margin: 4px; text-align: justify; text-justify: inter-word">Kalau untuk kucing kesayangan, pastinya kamu harus memberikan makanan bernutrisi terbaik! Whiskas Pouch Adult 1+ ...</p>
-            <div class="recom-more">
-              <p>Selengkapnya</p>
-            </div>
-          </div>
-        </div>
-        <div class="recom-isi">
-          <div class="recom-white">
-            <div class="recom-pic">
-              <img src="img/whiskas.png" alt="whiskas" width="70%" height="100%" />
-            </div>
-            <div class="recom-price">
-              <div class="cart">
-                <i data-feather="shopping-cart" id="shoping-cart"></i>
-              </div>
-              <p class="recom-price-text">RP 29.500</p>
-            </div>
-          </div>
-          <div class="recom-isi-text">
-            <p style="font-family: 'Bebas Neue', cursive; font-size: 1.25rem; margin: 4px">Whiskas 4Pcs Pouch Sachet Adult Tuna And White Fish Flavour</p>
-            <p style="font-size: 0.75rem; margin: 4px; text-align: justify; text-justify: inter-word">Kalau untuk kucing kesayangan, pastinya kamu harus memberikan makanan bernutrisi terbaik! Whiskas Pouch Adult 1+ ...</p>
-            <div class="recom-more">
-              <p>Selengkapnya</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Akhir Rekomendasi -->
-
-    <!-- Galeri -->
-    <section id="galery">
-      <div class="galery-isi">
-        <img src="img/galeri1.png" alt="galeri" width="100%" height="100%" />
-      </div>
-      <div class="galery-isi">
-        <img src="img/galeri2.png" alt="galeri" width="100%" height="100%" />
-      </div>
-      <div class="galery-isi">
-        <img src="img/galeri3.png" alt="galeri" width="100%" height="100%" />
-      </div>
-      <div class="galery-isi">
-        <img src="img/galeri4.png" alt="galeri" width="100%" height="100%" />
-      </div>
-    </section>
-    <!-- Akhir Galeri -->
-
-    <hr />
-    <!-- Footer -->
-    <footer>
-      <div id="footer1">
-        <img src="img/logo.png" alt="logo" width="100rem" height="100rem" style="margin: 0 0 0 1.5rem" />
-        <div class="footer1-isi">
-          <p style="font-family: 'Bebas Neue', cursive; font-size: 3rem; margin: 1rem 0 0 0">PAW CATSHOP</p>
-          <p>Tempat Terbaik Untuk Keperluan Empus!!</p>
-        </div>
-      </div>
-      <div id="footer2">
-        <div class="footer2-left">
-          <ul>
-            <li>Jalan Soekarno-Hatta No 25, RT 005/RW 008, Karangkandri, Kesugihan, Cilacap</li>
-            <li>Jalan Merdeka Barat No 225, RT 010/RW 009, Karangmangu, Sidodadi, Banyumas</li>
-            <li>Jalan Cut Nyak Dien No 101, RT 015/RW 003, Krampyak, Adiwerna, Tegal</li>
-            <li>Jalan Ahmad Yani No 14, RT 002/RW 001, Lawangrejo, Sidanegara, Pemalang</li>
-          </ul>
-        </div>
-        <div class="footer2-right">
-          <div class="footer2-right-isi">
-            <p style="font-family: 'Bebas Neue', cursive; font-size: 2.2rem; margin: 1rem 0 0 0">Online Shop</p>
-            <ul>
-              <li><a href="" target="_blank">Shopee</a></li>
-              <li><a href="" target="_blank">Tokopedia</a></li>
-              <li><a href="" target="_blank">Blibli</a></li>
-              <li><a href="" target="_blank">Lazada</a></li>
-              <li><a href="" target="_blank">Bukalapak</a></li>
-            </ul>
-          </div>
-          <div class="footer2-right-isi">
-            <p style="font-family: 'Bebas Neue', cursive; font-size: 2.2rem; margin: 1rem 0 0 0">Produk</p>
-            <ul>
-              <li><a href="" target="_blank">Makanan & Camilan</a></li>
-              <li><a href="" target="_blank">Obat & Vitamin</a></li>
-              <li><a href="" target="_blank">Alat Kebersihan</a></li>
-              <li><a href="" target="_blank">Kandang & Toilet</a></li>
-              <li><a href="" target="_blank">Lainnya</a></li>
-            </ul>
-          </div>
-          <div class="footer2-right-isi">
-            <p style="font-family: 'Bebas Neue', cursive; font-size: 2.2rem; margin: 1rem 0 0 0">Lainnya</p>
-            <ul>
-              <li><a href="" target="_blank">Syarat & Ketentuan Pengembalian Barang</a></li>
-              <li><a href="" target="_blank">Hubungi Kami</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div id="footer3">
-        <div class="footer3-left">
-          <p style="word-spacing: 0.2rem">
-            Copyright @2023 <b><a href="https://www.instagram.com/zv.alief" target="_blank">Zulvansyah Alief.</a></b> All rights reserved.
-          </p>
-        </div>
-        <div class="footer3-right">
-          <div class="socmed2">
-            <a href="">
-              <i data-feather="instagram" class="socmed_item"></i>
-            </a>
-            <a href="">
-              <i data-feather="facebook" class="socmed_item"> </i>
-            </a>
-            <a href="">
-              <i data-feather="twitter" class="socmed_item"> </i>
-            </a>
-            <a href="">
-              <i data-feather="mail" class="socmed_item"> </i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- Akhir Footer -->
+    </div>
+    <!-- Akhir Isi -->
 
     <!-- Script -->
     <script src="js/script.js"></script>
-    <script src="js/home.js"></script>
     <script>
       feather.replace();
     </script>
