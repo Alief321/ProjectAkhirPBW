@@ -22,13 +22,13 @@ Project ini dibuat dengan menggunakan HTML, CSS, Javascript, dan PHP serta denga
 
 ### Screnshoot tampilan dekstop
 
-![Screnshoot Preview Home Web](/img/previewWeb.jpg)
+![Screnshoot Preview Home Web](public/img/previewWeb.jpg)
 
 ### Screnshoot tampilan mobile
 
 ## Server Active
 <a href="https://222111873.student.stis.ac.id/" target="_blank">
-  <img src="img/logo.png" width="100" height="50">
+  <img src="public/img/logo.png" width="100" height="50">
 </a>
 
 ## Credit icon & picture
