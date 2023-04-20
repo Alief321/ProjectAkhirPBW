@@ -5,9 +5,9 @@
     </div>
     <!-- Akhir Atas -->
 
-    <!-- Isi -->
-    <div class="login-isi">
-      <div class="login-kanan">
+  <!-- Isi -->
+  <div class="login-isi">
+      <div class="signin-kanan">
         <img src="img/signup.png" alt="login" width="75%" height="95%" style="margin-left: 1rem" />
       </div>
       <div class="login-kiri" style="margin-top: 0">
@@ -26,13 +26,12 @@
           <label for="passwordBaru" class="text">Konfirmasi Password</label>
           <input type="text" name="passwordbaru" id="passwordbaru" required />
           <br />
-          <button class="login-text" type="submit">Sign up</button>
+          <button type="submit" class="login-text">Sign up</button>
         </form>
       </div>
     </div>
 
     <!-- Akhir Isi -->
-
     <!-- Script -->
     <script src="js/script.js"></script>
     <script src="js/loader.js"></script>

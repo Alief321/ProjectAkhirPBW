@@ -1,5 +1,5 @@
     <!-- Navbar -->
-    <nav>
+    <nav class="navDeks">
         <div class="logo">
             <a href="Home">
                 <img src="img/logo.png" alt="logo" id="logo" />
@@ -30,14 +30,14 @@
     <!-- modal user -->
     <div id="modal">
       <a href="User">
-        <div class="modal-isi">
-          <i data-feather="user" class="modal-icon"></i>
+        <div class="modal-isi <?php if($data['judul'] == 'User') echo 'active_mobile';?>">
+          <i data-feather="user" class="modal-icon"></i
           <p>Profile</p>
         </div>
       </a>
 
       <a href="Home">
-        <div class="modal-isi">
+        <div class="modal-isi <?php if($data['judul'] == 'Keranjang') echo 'active_mobile';?>">
           <i data-feather="shopping-cart" class="modal-icon"></i>
           <p>Keranjang</p>
         </div>
@@ -52,6 +52,49 @@
     </div>
     <!-- akhir modal user -->
 
+    <!-- Navbar Mobile -->
+    <nav class="mobile">
+      <div class="logo">
+        <a href="Home">
+          <img src="img/logo.png" alt="logo" id="logo" />
+        </a>
+        <h1 id="logo_name"><a href="Home">Paw Catshop</a></h1>
+      </div>
+      <div class="drpdwn">
+        <i id="drpdwn" data-feather="align-justify" class="icon"></i>
+        <i id="x" data-feather="x" class="icon"></i>
+      </div>
+    </nav>
+    <!-- Akhir Navbar Mobile -->
+
+    <!-- drp dwn menu -->
+    <nav class="drpdwn_menu">
+      <ul style="width: 100%; margin: 0; padding: 0">
+        <a href="Home">
+          <li class="<?php if($data['judul'] == 'Home') echo 'active_mobile';?>"><i data-feather="home"></i> Home</li>
+        </a>
+        <a href="Product">
+          <li class="<?php if($data['judul'] == 'Product') echo 'active_mobile';?>"><i data-feather="box"></i>Product</li>
+        </a>
+        <a href="About">
+          <li class="<?php if($data['judul'] == 'About Us') echo 'active_mobile';?>"><i data-feather="info"></i>About Us</li>
+        </a>
+        <a href="Link">
+          <li class="<?php if($data['judul'] == 'Link') echo 'active_mobile';?>"><i data-feather="link"></i>Link</li>
+        </a>
+        <a href="User">
+          <li class="<?php if($data['judul'] == 'User') echo 'active_mobile';?>"><i data-feather="user"></i>Profile</li>
+        </a>
+        <a href="Home">
+          <li class="<?php if($data['judul'] == 'Keranjang') echo 'active_mobile';?>"><i data-feather="shopping-cart"></i>Keranjang</li>
+        </a>
+        <a href="Login">
+          <li style="color: red"><i data-feather="log-out"></i>Logout</li>
+        </a>
+      </ul>
+    </nav>
+    <!-- Akhir drp dwn menu -->
+
     <!-- float item -->
     <div class="float_item">
       <img src="img/up-arrow.png" width="60px" height="60px" id="up_arrow" alt="upArrow" />
@@ -60,3 +103,4 @@
       </a>
     </div>
     <!-- Akhir float item -->
+

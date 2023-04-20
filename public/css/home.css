@@ -1,5 +1,5 @@
 #hiro {
-  margin-top: 4.6rem;
+  margin-top: 4.5rem;
   height: 32rem;
   display: flex;
   justify-content: center;
@@ -19,9 +19,9 @@
 
 .hiro_content {
   background-color: rgba(0, 0, 0, 0.4);
+  padding: 0;
   border-radius: 3rem;
   height: 80%;
-  margin-left: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -330,5 +330,41 @@
 @media screen and (max-width: 1080px) {
   .hiro_content {
     width: 80%;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .hiro_content {
+    font-size: 3rem;
+  }
+  .sub {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  .hiro_content {
+    font-size: 2rem;
+  }
+  .sub {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .socmed_itemHome {
+    height: 30px;
+    width: 30px;
+  }
+  .socmed {
+    column-gap: 2rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .socmed_itemHome {
+    height: 23px;
+    width: 23px;
+  }
+  .socmed {
+    column-gap: 1.4rem;
   }
 }

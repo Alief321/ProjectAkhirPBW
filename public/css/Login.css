@@ -20,20 +20,31 @@
 .login-kiri {
   margin-top: 2rem;
   width: 40%;
-  height: 90%;
+  height: auto;
+  overflow-y: visible;
 }
-.login-kanan {
+.login-kanan,
+.login-kanan-kecil,
+.signin-kanan {
   width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
+.login-kanan-kecil {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
 .remme {
-  width: 100%;
+  width: 60%;
   height: 10%;
+  overflow: hidden;
+  margin: auto;
+  right: 0;
   display: flex;
-  column-gap: 6rem;
+  column-gap: 2.5rem;
   font-weight: 600;
   font-size: 0.9rem;
 }
@@ -51,7 +62,6 @@ p {
 .sub-text,
 .text,
 .signin,
-.remme,
 .login-text,
 input {
   margin: 1rem 0 0 5rem;
@@ -101,6 +111,7 @@ input:active {
   font-weight: 600;
   font-size: 1.313rem;
   width: 60%;
+  height: auto;
   padding: 0.5rem;
   background: linear-gradient(89.97deg, #e6b76e 1.74%, #dfa83f 14.3%, #f5a729 24.34%, #f39b4a 43.7%, #f97a4d 64.71%, #fd6736 81.05%, #fc7951 97.87%);
   border: 1px solid #b6b6b6;
@@ -129,6 +140,7 @@ input:active {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   transition: all 100ms ease-in-out;
+  box-sizing: border-box;
 }
 
 .login-text:hover,
@@ -142,4 +154,119 @@ input:active {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Hide the default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0 0.5rem 0 0;
+  height: 1rem;
+  width: 1rem;
+  background-color: #ccc;
+  border-radius: 25px;
+  transition: 0.15s;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #7a3307;
+  border-radius: 25px;
+  transition: 0.15s;
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 0.15em;
+  top: 0.15em;
+  width: 0.25em;
+  height: 0.2em;
+  border: solid white;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+
+#hrhr {
+  display: flex;
+  margin: 1rem 0 0 5rem;
+  overflow: hidden;
+  width: 60%;
+  color: #b6b6b6;
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 1080px) {
+  input[type='email'],
+  input[type='password'],
+  input[type='text'],
+  .login-text,
+  .signin {
+    width: 70%;
+  }
+
+  #hrhr {
+    width: 70%;
+  }
+  .remme {
+    font-size: 0.85rem;
+  }
+}
+@media screen and (max-width: 656px) {
+  .login-isi {
+    height: auto;
+    display: block;
+  }
+
+  .login-kiri {
+    width: 90%;
+    margin: auto;
+    margin-left: 0;
+  }
+
+  .login-kanan-kecil,
+  .signin-kanan {
+    width: 100%;
+    height: auto;
+    visibility: visible;
+  }
+  .login-kanan {
+    visibility: hidden;
+    height: 4rem;
+  }
+
+  .remme {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 333px) {
+  .signin {
+    font-size: 0.9rem;
+  }
 }
