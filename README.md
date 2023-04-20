@@ -12,7 +12,7 @@ Project ini dibuat dengan menggunakan HTML, CSS, Javascript, dan PHP serta denga
 
 ## Progress Pembuatan
 
-![](https://geps.dev/progress/20)
+![](https://geps.dev/progress/25)
 
 ## Desain Project
 
