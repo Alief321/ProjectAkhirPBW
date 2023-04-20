@@ -54,6 +54,7 @@ nav {
 .icon {
   height: 2rem;
   width: 2rem;
+  cursor: pointer;
 }
 #x {
   display: none;
