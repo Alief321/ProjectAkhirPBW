@@ -5,16 +5,16 @@
           <p style="margin: 0rem">PAW CATSHOP</p>
           <p class="sub">Tempat Terbaik Untuk Keperluan Si Empus!!</p>
           <div class="socmed">
-            <a href="">
+            <a href="https://www.instagram.com/zv.alief/" target="_blank">
               <i style="fill: rgb(241, 114, 114)" data-feather="instagram" class="socmed_item"></i>
             </a>
-            <a href="">
+            <a href="https://www.instagram.com/zv.alief/" target="_blank">
               <i style="fill: #163aea" data-feather="facebook" class="socmed_item"> </i>
             </a>
-            <a href="">
+            <a href="https://www.instagram.com/zv.alief/" target="_blank">
               <i style="fill: #1684ea" data-feather="twitter" class="socmed_item"> </i>
             </a>
-            <a href="">
+            <a href="https://mail.google.com/mail/u/0/#inbox/FMfcgzGsmDsbFtZLXMmhpkDtsHjFhgCV?compose=CllgCJvqKMLTGgWzZCmFZGvNDrzwqjbFHqBVnBRPQbZTbtNMlhPWgnFvlhGCZdwlRZQNkFpRRCL" target="_blank">
               <i style="fill: #ead116" data-feather="mail" class="socmed_item"> </i>
             </a>
           </div>
@@ -37,7 +37,7 @@
     <!-- Categories -->
     <section id="categories">
       <div class="categories_content" style="margin-left: 2rem">
-        <a href="">
+        <a href="Product">
           <div class="cat-pic">
             <div class="cat-picture">
               <img src="img/pur kucing.png" alt="categories" />
@@ -49,7 +49,7 @@
         </a>
       </div>
       <div class="categories_content">
-        <a href="">
+        <a href="Product">
           <div class="cat-pic">
             <div class="cat-picture">
               <img src="img/vitamin 1.png" alt="categories" />
@@ -61,7 +61,7 @@
         </a>
       </div>
       <div class="categories_content">
-        <a href="">
+        <a href="Product">
           <div class="cat-pic">
             <div class="cat-picture">
               <img src="img/clean.png" alt="categories" />

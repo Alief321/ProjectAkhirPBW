@@ -7,16 +7,30 @@ class User_model{
         $this->db = new Database;
     }
 
-    public function getName($id)
+    public function getAllUser()
     {
-        $this->db->query('SELECT "Name" FROM' . $this->table . ' WHERE idUser =:idUser)');
+        $this->db->query('SELECT * FROM ' . $this->table);
+        return $this->db->resultSet();
+    }
+    public function getUserById($id)
+    {
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE idUser =:idUser)');
         $this->db->bind('idUser', $id);
         return $this->db->single();
     }
-    public function getEmail($id)
+
+    public function tambahDataUser($data)
     {
-        $this->db->query('SELECT "Email" FROM' . $this->table . ' WHERE idUser=:idUser)');
-        $this->db->bind('idUser', $id);
-        return $this->db->single();
+        $query = "INSERT INTO user
+                    VALUES
+                    ('', :Name, :Email, :Password, :ConPassword)";
+        $this->db->query($query);
+        $this->db->bind('Name', $data['name']);
+        $this->db->bind('Email', $data['email']);
+        $this->db->bind('Password', $data['password']);
+        $this->db->bind('ConPassword', $data['password2']);
+
+        $this->db->execute();
+        return $this->db->rowCount();
     }
 }
