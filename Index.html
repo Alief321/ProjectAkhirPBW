@@ -7,12 +7,18 @@
     <meta name="google-site-verification" content="MoqNAD8U5v-TpvU8J2oO992zgZwQRteW1zyVZVo-NsE" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/Login.css" />
+    <link rel="stylesheet" href="css/loader.css" />
     <link rel="icon" type="image/png" href="img/logo.png" />
     <!-- Ini buat icon -->
     <script src="js/feather.min.js"></script>
     <title>Paw Catshop | Login</title>
   </head>
-  <body>
+  <body style="visibility: hidden">
+    <!-- Loader -->
+    <div class="loader loader-hidden">
+      <img src="./Assets/image/loader.gif" alt="Loader Image" />
+    </div>
+    <!-- End of Loader -->
     <!-- Atas -->
     <div id="logo-row">
       <img src="img/logo.png" alt="logo" width="7.5%" height="90%" />
@@ -64,6 +70,7 @@
 
     <!-- Script -->
     <script src="js/script.js"></script>
+    <script src="js/loader.js"></script>
     <script>
       feather.replace();
     </script>

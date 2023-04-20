@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/Login.css" />
+    <link rel="stylesheet" href="css/loader.css" />
     <link rel="icon" type="image/png" href="img/logo.png" />
     <!-- Ini buat icon -->
     <script src="js/feather.min.js"></script>
     <title>Paw Catshop | Login</title>
   </head>
-  <body>
+  <body style="visibility: hidden">
+    <!-- Loader -->
+    <div class="loader loader-hidden">
+      <img src="img/loading.gif" alt="Loader Image" />
+    </div>
+    <!-- End of Loader -->
+
     <!-- Atas -->
     <div id="logo-row">
       <img src="img/logo.png" alt="logo" width="7.5%" height="90%" />
@@ -40,7 +47,7 @@
           <label for="passwordBaru" class="text">Konfirmasi Password</label>
           <input type="text" name="passwordbaru" id="passwordbaru" required />
           <br />
-          <button class="login-text">Sign up</button>
+          <button type="submit" class="login-text">Sign up</button>
         </form>
       </div>
     </div>
@@ -49,6 +56,7 @@
 
     <!-- Script -->
     <script src="js/script.js"></script>
+    <script src="js/loader.js"></script>
     <script>
       feather.replace();
     </script>

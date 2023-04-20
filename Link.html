@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/Link.css" />
+    <link rel="stylesheet" href="css/loader.css" />
     <link rel="icon" type="image/png" href="img/logo.png" />
     <!-- Ini buat icon -->
     <script src="js/feather.min.js"></script>
     <title>Paw Catshop | Link</title>
   </head>
-  <body>
+  <body style="visibility: hidden">
     <!-- Navbar -->
     <nav>
       <div class="logo">
@@ -32,6 +33,14 @@
       </div>
     </nav>
     <!-- Akhir Navbar -->
+
+    <!-- Scroll Indicator -->
+    <div class="indicator">
+      <div class="indicator__container">
+        <div id="indicator__bar"></div>
+      </div>
+    </div>
+    <!-- End of scroll indicator -->
 
     <!-- modal user -->
     <div id="modal">
@@ -66,6 +75,12 @@
       </a>
     </div>
     <!-- Akhir float item -->
+
+    <!-- Loader -->
+    <div class="loader loader-hidden">
+      <img src="./Assets/image/loader.gif" alt="Loader Image" />
+    </div>
+    <!-- End of Loader -->
 
     <!-- Olshop -->
     <section id="isi">
@@ -234,6 +249,8 @@
 
     <!-- Script -->
     <script src="js/script.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/IndicatorBar.js"></script>
     <script>
       feather.replace();
     </script>
