@@ -332,3 +332,39 @@
     width: 80%;
   }
 }
+
+@media screen and (max-width: 625px) {
+  .hiro_content {
+    font-size: 3rem;
+  }
+  .sub {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  .hiro_content {
+    font-size: 2rem;
+  }
+  .sub {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .socmed_itemHome {
+    height: 30px;
+    width: 30px;
+  }
+  .socmed {
+    column-gap: 2rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .socmed_itemHome {
+    height: 23px;
+    width: 23px;
+  }
+  .socmed {
+    column-gap: 1.4rem;
+  }
+}

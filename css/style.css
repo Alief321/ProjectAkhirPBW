@@ -137,16 +137,20 @@ ul {
 }
 
 .float_item {
-  width: 7%;
   height: auto;
   bottom: 1rem;
-  right: 0rem;
+  right: 1rem;
   display: block;
   position: fixed;
   transition: all 100ms ease;
   z-index: 99;
 }
 
+#up_arrow,
+#wa {
+  width: 60px;
+  height: 60px;
+}
 #up_arrow {
   display: none;
   cursor: pointer;
@@ -172,6 +176,7 @@ ul {
 footer {
   clear: both;
   position: relative;
+  overflow: hidden;
   height: 32rem;
   width: 100%;
   background-color: #dedede;
@@ -190,6 +195,7 @@ hr {
 }
 #footer2 {
   margin-left: 2rem;
+  visibility: visible;
   width: 100%;
   height: 60%;
   display: flex;
@@ -206,7 +212,7 @@ hr {
 }
 
 .footer1-isi {
-  width: 20%;
+  width: auto;
   margin: 0;
   height: 80%;
   margin-left: 1rem;
@@ -261,6 +267,11 @@ hr {
   line-height: 22px;
 }
 
+.footer2-right-h {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.2rem;
+  margin: 1rem 0 0 0;
+}
 .footer2-right-isi ul {
   margin: 0;
   padding: 0;
@@ -355,8 +366,53 @@ hr {
   border-radius: 6px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1150px) {
+  .footer2-right-h {
+    font-size: 1.5rem;
+  }
+  .footer2-left,
+  .footer2-right-isi {
+    font-size: 0.9rem;
+  }
+  .footer2-right {
+    margin-top: -3rem;
+  }
+  .footer2-left {
+    margin-top: -5rem;
+  }
+}
+@media screen and (max-width: 768px) {
   footer {
-    height: 40rem;
+    height: auto;
+  }
+
+  #footer2 {
+    visibility: hidden;
+    height: 0px;
+  }
+
+  #footer3 {
+    display: block;
+    margin-left: 0;
+  }
+
+  .footer3-left,
+  .footer3-right {
+    width: 100%;
+    font-size: 0.75rem;
+  }
+
+  .footer1-isi {
+    font-size: 0.75rem;
+  }
+
+  .footer3-right,
+  .footer3-left {
+    justify-content: center;
+  }
+  #up_arrow,
+  #wa {
+    width: 45px;
+    height: 45px;
   }
 }
