@@ -15,7 +15,7 @@
   </head>
   <body style="visibility: hidden">
     <!-- Navbar -->
-    <nav>
+    <nav class="navDeks">
       <div class="logo">
         <a href="">
           <img src="img/logo.png" alt="logo" id="logo" />
@@ -34,8 +34,50 @@
       </div>
     </nav>
     <!-- Akhir Navbar -->
+
     <!-- Navbar Mobile -->
+    <nav class="mobile">
+      <div class="logo">
+        <a href="">
+          <img src="img/logo.png" alt="logo" id="logo" />
+        </a>
+        <h1 id="logo_name"><a href="">Paw Catshop</a></h1>
+      </div>
+      <div class="drpdwn">
+        <i id="drpdwn" data-feather="align-justify" class="icon"></i>
+        <i id="x" data-feather="x" class="icon"></i>
+      </div>
+    </nav>
     <!-- Akhir Navbar Mobile -->
+
+    <!-- drp dwn menu -->
+    <nav class="drpdwn_menu">
+      <ul style="width: 100%; margin: 0; padding: 0">
+        <a href="Home">
+          <li class="active_mobile"><i data-feather="home"></i> Home</li>
+        </a>
+        <a href="Product">
+          <li><i data-feather="box"></i>Product</li>
+        </a>
+        <a href="About">
+          <li><i data-feather="info"></i>About Us</li>
+        </a>
+        <a href="Link">
+          <li><i data-feather="link"></i>Link</li>
+        </a>
+        <a href="User">
+          <li><i data-feather="user"></i>Profile</li>
+        </a>
+        <a href="Home">
+          <li><i data-feather="shopping-cart"></i>Keranjang</li>
+        </a>
+        <a href="Login">
+          <li style="color: red"><i data-feather="log-out"></i>Logout</li>
+        </a>
+      </ul>
+    </nav>
+    <!-- Akhir drp dwn menu -->
+
     <!-- Scroll Indicator -->
     <div class="indicator">
       <div class="indicator__container">
@@ -317,6 +359,7 @@
 
     <!-- Script -->
     <script src="js/script.js"></script>
+    <script src="js/navbar.js"></script>
     <script src="js/loader.js"></script>
     <script src="js/IndicatorBar.js"></script>
     <script>
