@@ -1,4 +1,4 @@
- <!-- Navbar -->
+    <!-- Navbar -->
     <nav>
         <div class="logo">
             <a href="Home">
@@ -19,6 +19,14 @@
     </nav>
     <!-- Akhir Navbar -->
 
+     <!-- Scroll Indicator -->
+     <div class="indicator">
+      <div class="indicator__container">
+        <div id="indicator__bar"></div>
+      </div>
+    </div>
+    <!-- End of scroll indicator -->
+
     <!-- modal user -->
     <div id="modal">
       <a href="User">
@@ -28,14 +36,14 @@
         </div>
       </a>
 
-      <a href="">
+      <a href="Home">
         <div class="modal-isi">
           <i data-feather="shopping-cart" class="modal-icon"></i>
           <p>Keranjang</p>
         </div>
       </a>
 
-      <a href="Login/">
+      <a href="Login">
         <div class="modal-isi" style="color: red">
           <i data-feather="log-out" class="modal-icon"></i>
           <p>Logout</p>

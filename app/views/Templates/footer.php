@@ -21,28 +21,28 @@
           <div class="footer2-right-isi">
             <p style="font-family: 'Bebas Neue', cursive; font-size: 2.2rem; margin: 1rem 0 0 0">Online Shop</p>
             <ul>
-              <li><a href="" target="_blank">Shopee</a></li>
-              <li><a href="" target="_blank">Tokopedia</a></li>
-              <li><a href="" target="_blank">Blibli</a></li>
-              <li><a href="" target="_blank">Lazada</a></li>
-              <li><a href="" target="_blank">Bukalapak</a></li>
+              <li><a href="Link" target="_blank">Shopee</a></li>
+              <li><a href="Link" target="_blank">Tokopedia</a></li>
+              <li><a href="Link" target="_blank">Blibli</a></li>
+              <li><a href="Link" target="_blank">Lazada</a></li>
+              <li><a href="Link" target="_blank">Bukalapak</a></li>
             </ul>
           </div>
           <div class="footer2-right-isi">
             <p style="font-family: 'Bebas Neue', cursive; font-size: 2.2rem; margin: 1rem 0 0 0">Produk</p>
             <ul>
-              <li><a href="" target="_blank">Makanan & Camilan</a></li>
-              <li><a href="" target="_blank">Obat & Vitamin</a></li>
-              <li><a href="" target="_blank">Alat Kebersihan</a></li>
-              <li><a href="" target="_blank">Kandang & Toilet</a></li>
-              <li><a href="" target="_blank">Lainnya</a></li>
+              <li><a href="Product" target="_blank">Makanan & Camilan</a></li>
+              <li><a href="Product" target="_blank">Obat & Vitamin</a></li>
+              <li><a href="Product" target="_blank">Alat Kebersihan</a></li>
+              <li><a href="Product" target="_blank">Kandang & Toilet</a></li>
+              <li><a href="Product" target="_blank">Lainnya</a></li>
             </ul>
           </div>
           <div class="footer2-right-isi">
             <p style="font-family: 'Bebas Neue', cursive; font-size: 2.2rem; margin: 1rem 0 0 0">Lainnya</p>
             <ul>
-              <li><a href="" target="_blank">Syarat & Ketentuan Pengembalian Barang</a></li>
-              <li><a href="" target="_blank">Hubungi Kami</a></li>
+              <li><a href="Home" target="_blank">Syarat & Ketentuan Pengembalian Barang</a></li>
+              <li><a href="Link" target="_blank">Hubungi Kami</a></li>
             </ul>
           </div>
         </div>
@@ -55,16 +55,16 @@
         </div>
         <div class="footer3-right">
           <div class="socmed2">
-            <a href="">
+          <a href="https://www.instagram.com/zv.alief/" target="_blank">
               <i data-feather="instagram" class="socmed_item"></i>
             </a>
-            <a href="">
+            <a href="https://www.facebook.com/aliefta.zulvansyah" target="_blank">
               <i data-feather="facebook" class="socmed_item"> </i>
             </a>
-            <a href="">
+            <a href="https://twitter.com/Mahklukbumi6" target="_blank">
               <i data-feather="twitter" class="socmed_item"> </i>
             </a>
-            <a href="">
+            <a href="https://mail.google.com/mail/u/0/#inbox/FMfcgzGsmDsbFtZLXMmhpkDtsHjFhgCV?compose=CllgCJvqKMLTGgWzZCmFZGvNDrzwqjbFHqBVnBRPQbZTbtNMlhPWgnFvlhGCZdwlRZQNkFpRRCL" target="_blank">
               <i data-feather="mail" class="socmed_item"> </i>
             </a>
           </div>
@@ -75,6 +75,8 @@
 
     <!-- Script -->
     <script src="js/script.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/IndicatorBar.js"></script>
     <script>
       feather.replace();
     </script>

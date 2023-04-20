@@ -8,9 +8,15 @@
     <base href="<?= BASEURL?>" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/<?= $data['css'] ?>" />
+    <link rel="stylesheet" href="css/loader.css" />
     <link rel="icon" type="image/png" href="img/logo.png" />
     <!-- Ini buat icon -->
     <script src="js/feather.min.js"></script>
     <title>Paw Catshop | <?= $data['judul'] ?></title>
   </head>
-  <body>
+  <body style="visibility: hidden;">
+     <!-- Loader -->
+    <div class="loader loader-hidden">
+      <img src="img/loading.gif" alt="Loader Image" width="100%" />
+    </div>
+    <!-- End of Loader -->

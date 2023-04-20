@@ -26,7 +26,7 @@
               <span id="passforgot">Forgot Password</span>
             </a>
           </div>
-          <button class="login-text">Login</button>
+          <button class="login-text" type="submit">Login</button>
         </form>
 
         <div style="display: flex; margin: 1rem 0 0 5rem; overflow: hidden; width: 60%; color: #b6b6b6; font-size: 0.8rem">
@@ -49,6 +49,7 @@
 
     <!-- Script -->
     <script src="js/script.js"></script>
+    <script src="js/loader.js"></script>
     <script>
       feather.replace();
     </script>

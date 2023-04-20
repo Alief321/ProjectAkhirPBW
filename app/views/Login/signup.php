@@ -26,7 +26,7 @@
           <label for="passwordBaru" class="text">Konfirmasi Password</label>
           <input type="text" name="passwordbaru" id="passwordbaru" required />
           <br />
-          <button class="login-text">Sign up</button>
+          <button class="login-text" type="submit">Sign up</button>
         </form>
       </div>
     </div>
@@ -35,6 +35,7 @@
 
     <!-- Script -->
     <script src="js/script.js"></script>
+    <script src="js/loader.js"></script>
     <script>
       feather.replace();
     </script>

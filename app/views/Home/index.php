@@ -1,35 +1,27 @@
-    <!-- Hiro -->
-    <section id="hiro">
-      <div class="hiro_left">
-        <div class="hileft_content">
+   <!-- Hiro -->
+   <section id="hiro">
+      <div class="hiro_content">
+        <div class="content-wrap">
           <p style="margin: 0rem">PAW CATSHOP</p>
           <p class="sub">Tempat Terbaik Untuk Keperluan Si Empus!!</p>
           <div class="socmed">
             <a href="https://www.instagram.com/zv.alief/" target="_blank">
-              <i style="fill: rgb(241, 114, 114)" data-feather="instagram" class="socmed_item"></i>
+              <i style="fill: rgb(241, 114, 114)" data-feather="instagram" class="socmed_item socmed_itemHome"></i>
             </a>
-            <a href="https://www.instagram.com/zv.alief/" target="_blank">
-              <i style="fill: #163aea" data-feather="facebook" class="socmed_item"> </i>
+            <a href="https://www.facebook.com/aliefta.zulvansyah" target="_blank">
+              <i style="fill: #163aea" data-feather="facebook" class="socmed_item socmed_itemHome"> </i>
             </a>
-            <a href="https://www.instagram.com/zv.alief/" target="_blank">
-              <i style="fill: #1684ea" data-feather="twitter" class="socmed_item"> </i>
+            <a href="https://twitter.com/Mahklukbumi6" target="_blank">
+              <i style="fill: #1684ea" data-feather="twitter" class="socmed_item socmed_itemHome"> </i>
             </a>
             <a href="https://mail.google.com/mail/u/0/#inbox/FMfcgzGsmDsbFtZLXMmhpkDtsHjFhgCV?compose=CllgCJvqKMLTGgWzZCmFZGvNDrzwqjbFHqBVnBRPQbZTbtNMlhPWgnFvlhGCZdwlRZQNkFpRRCL" target="_blank">
-              <i style="fill: #ead116" data-feather="mail" class="socmed_item"> </i>
+              <i style="fill: #ead116" data-feather="mail" class="socmed_item socmed_itemHome"> </i>
             </a>
           </div>
-          <div class="explore">
-            <a href="#categories">
-              <button class="exp exp-hover">
-                <span class="exp-text">Explore ></span>
-              </button>
-            </a>
-          </div>
+          <a href="#categories" style="width: 100%">
+            <div class="exp">Explore</div>
+          </a>
         </div>
-      </div>
-      <div class="hiro_right">
-        <img src="img/kucing.png" alt="kucing" width="100%" id="hiro_pic" />
-        <p id="stop">STOP</p>
       </div>
     </section>
     <!-- Akhir Hiro -->
@@ -161,7 +153,3 @@
       </div>
     </section>
     <!-- Akhir Galeri -->
-
-    <!-- script home -->
-    <script src="js/home.js"></script>
-    <!-- Akhir script home -->
