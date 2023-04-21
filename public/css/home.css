@@ -116,7 +116,7 @@
 }
 
 .categories_content {
-  width: 30%;
+  width: 31%;
   height: 100%;
   background: linear-gradient(180deg, rgba(234, 182, 0, 0.4) 13.02%, rgba(211, 190, 7, 0.79521) 40.63%, rgba(222, 174, 4, 0.9) 75%, rgba(231, 144, 14, 0.4) 100%);
   box-shadow: 7px 8px 4px rgba(0, 0, 0, 0.25);
@@ -344,7 +344,8 @@
 }
 @media screen and (max-width: 390px) {
   .hiro_content {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    font-weight: 600;
   }
   .sub {
     font-size: 0.85rem;
@@ -360,18 +361,86 @@
     column-gap: 2rem;
   }
   #categories {
-    display: grid;
+    display: block;
     margin: auto;
     margin-top: 2rem;
-    grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
-    grid-gap: 2rem;
-    align-items: stretch;
     width: 80%;
     height: auto;
   }
   .categories_content {
+    margin-top: 2rem;
     width: 100%;
     height: 18rem;
+  }
+
+  .categories_content:hover {
+    margin-top: 2rem;
+    scale: 102.5%;
+    background: linear-gradient(180deg, rgba(234, 129, 0, 0.4) 13.02%, rgba(211, 92, 7, 0.795) 40.63%, rgba(222, 124, 4, 0.9) 75%, rgba(231, 104, 14, 0.4) 100%);
+  }
+  #recom {
+    display: block;
+    height: auto;
+    margin: auto;
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 630px) and (max-width: 768px) {
+  #recom {
+    display: block;
+    height: auto;
+    margin: auto;
+    width: 70%;
+  }
+  .recom-box {
+    position: absolute;
+    left: 0;
+    top: 65rem;
+  }
+
+  .recom-isi:first-of-type {
+    margin-top: 7.7rem;
+    border-radius: 0 0 1rem 1rem;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .recom-isi:first-of-type {
+    margin-top: -2rem;
+    border-radius: 0 0 1rem 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .recom-box,
+  .recom-content,
+  .recom-more {
+    width: 100%;
+  }
+
+  .recom-content {
+    height: auto;
+    display: block;
+  }
+
+  .recom-isi {
+    padding: 0;
+    margin-left: -1rem;
+    height: 28rem;
+    width: 100%;
+  }
+
+  .recom-box {
+    margin-top: 2rem;
+    height: 4rem;
+    border-radius: 0.7rem;
+    background: #730000;
+  }
+
+  .recom-text {
+    transform: rotate(0deg);
+    margin: auto;
+    font-size: 3rem;
   }
 }
 @media screen and (max-width: 450px) {
