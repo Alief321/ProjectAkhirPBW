@@ -1,24 +1,25 @@
 <?php
 
 class Database{
+    private $type = DB_TYPE;
     private $host = DB_HOST;
     private $user = DB_USER;
     private $pass = DB_PASS;
     private $db_name = DB_NAME;
+    private $charset = DB_CHARSET;
 
     private $dbh;
     private $stmt;
 
     public function __construct() {
         // data source name
-        $dsn = "mysql:host=". $this->host. ";dbname=" . $this->db_name;
     
         $option = [
             PDO::ATTR_PERSISTENT => true,
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
         ];
         try{
-            $this->dbh = new PDO($dsn, $this->user, $this->pass, $option);
+            $this->dbh = new PDO($this->type. ':host=' . $this->host . ';dbname=' . $this->db_name . ';charset=' . $this->charset, $this->user, $this->pass, $option);
         } catch(PDOException $e){
             die($e->getMessage());
         }

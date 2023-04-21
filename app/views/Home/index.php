@@ -28,7 +28,7 @@
 
     <!-- Categories -->
     <section id="categories">
-      <div class="categories_content" style="margin-left: 2rem">
+      <div class="categories_content">
         <a href="Product">
           <div class="cat-pic">
             <div class="cat-picture">
