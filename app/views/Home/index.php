@@ -28,7 +28,8 @@
 
     <!-- Categories -->
     <section id="categories">
-      <div class="categories_content">
+      <p class="button-carou" id="prev-carou"><</p>
+      <div class="categories_content carousel1">
         <a href="Product">
           <div class="cat-pic">
             <div class="cat-picture">
@@ -40,7 +41,7 @@
           </div>
         </a>
       </div>
-      <div class="categories_content">
+      <div class="categories_content carousel1">
         <a href="Product">
           <div class="cat-pic">
             <div class="cat-picture">
@@ -52,7 +53,7 @@
           </div>
         </a>
       </div>
-      <div class="categories_content">
+      <div class="categories_content carousel1">
         <a href="Product">
           <div class="cat-pic">
             <div class="cat-picture">
@@ -64,6 +65,31 @@
           </div>
         </a>
       </div>
+      <div class="categories_content carousel2">
+        <a href="Product">
+          <div class="cat-pic">
+            <div class="cat-picture">
+              <img src="img/hamster.png" alt="categories" />
+            </div>
+          </div>
+          <div class="cat-text">
+            <p>Kandang & toilet</p>
+          </div>
+        </a>
+      </div>
+      <div class="categories_content carousel2">
+        <a href="Product">
+          <div class="cat-pic">
+            <div class="cat-picture">
+              <img src="img/kitty.png" alt="categories" />
+            </div>
+          </div>
+          <div class="cat-text">
+            <p>Lainnya</p>
+          </div>
+        </a>
+      </div>
+      <p class="button-carou" id="next-carou">></p>
     </section>
     <!-- Akhir Categories -->
 
@@ -86,8 +112,8 @@
             </div>
           </div>
           <div class="recom-isi-text">
-            <p style="font-family: 'Bebas Neue', cursive; font-size: 1.25rem; margin: 4px">Whiskas 4Pcs Pouch Sachet Adult Tuna And White Fish Flavour</p>
-            <p style="font-size: 0.75rem; margin: 4px; text-align: justify; text-justify: inter-word">Kalau untuk kucing kesayangan, pastinya kamu harus memberikan makanan bernutrisi terbaik! Whiskas Pouch Adult 1+ ...</p>
+            <p class="recom-text-judul">Whiskas 4Pcs Pouch Sachet Adult Tuna And White Fish Flavour</p>
+            <p class="recom-text-detail">Kalau untuk kucing kesayangan, pastinya kamu harus memberikan makanan bernutrisi terbaik! Whiskas Pouch Adult 1+ ...</p>
             <div class="recom-more">
               <p>Selengkapnya</p>
             </div>
@@ -106,8 +132,8 @@
             </div>
           </div>
           <div class="recom-isi-text">
-            <p style="font-family: 'Bebas Neue', cursive; font-size: 1.25rem; margin: 4px">Whiskas 4Pcs Pouch Sachet Adult Tuna And White Fish Flavour</p>
-            <p style="font-size: 0.75rem; margin: 4px; text-align: justify; text-justify: inter-word">Kalau untuk kucing kesayangan, pastinya kamu harus memberikan makanan bernutrisi terbaik! Whiskas Pouch Adult 1+ ...</p>
+            <p class="recom-text-judul">Whiskas 4Pcs Pouch Sachet Adult Tuna And White Fish Flavour</p>
+            <p class="recom-text-detail">Kalau untuk kucing kesayangan, pastinya kamu harus memberikan makanan bernutrisi terbaik! Whiskas Pouch Adult 1+ ...</p>
             <div class="recom-more">
               <p>Selengkapnya</p>
             </div>
@@ -126,8 +152,8 @@
             </div>
           </div>
           <div class="recom-isi-text">
-            <p style="font-family: 'Bebas Neue', cursive; font-size: 1.25rem; margin: 4px">Whiskas 4Pcs Pouch Sachet Adult Tuna And White Fish Flavour</p>
-            <p style="font-size: 0.75rem; margin: 4px; text-align: justify; text-justify: inter-word">Kalau untuk kucing kesayangan, pastinya kamu harus memberikan makanan bernutrisi terbaik! Whiskas Pouch Adult 1+ ...</p>
+            <p class="recom-text-judul">Whiskas 4Pcs Pouch Sachet Adult Tuna And White Fish Flavour</p>
+            <p class="recom-text-detail">Kalau untuk kucing kesayangan, pastinya kamu harus memberikan makanan bernutrisi terbaik! Whiskas Pouch Adult 1+ ...</p>
             <div class="recom-more">
               <p>Selengkapnya</p>
             </div>
@@ -139,17 +165,15 @@
 
     <!-- Galeri -->
     <section id="galery">
-      <div class="galery-isi">
-        <img src="img/galeri1.png" alt="galeri" width="100%" height="100%" />
-      </div>
-      <div class="galery-isi">
-        <img src="img/galeri2.png" alt="galeri" width="100%" height="100%" />
-      </div>
-      <div class="galery-isi">
-        <img src="img/galeri3.png" alt="galeri" width="100%" height="100%" />
-      </div>
-      <div class="galery-isi">
-        <img src="img/galeri4.png" alt="galeri" width="100%" height="100%" />
+      <div class="galeri-isi">
+        <img src="img/galeri1.png" alt="galeri" />
+        <img src="img/galeri2.png" alt="galeri" />
+        <img src="img/galeri3.png" alt="galeri" />
+        <img src="img/galeri4.png" alt="galeri" />
       </div>
     </section>
     <!-- Akhir Galeri -->
+
+    <!-- Script home -->
+    <script src="js/home.js"></script>
+    <!-- Akhir Script home -->
