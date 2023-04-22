@@ -1,6 +1,6 @@
    <!-- Hiro -->
    <section id="hiro">
-      <div class="hiro_content">
+      <div class="hiro_content animate-bottom">
         <div class="content-wrap">
           <p style="margin: 0rem">PAW CATSHOP</p>
           <p class="sub">Tempat Terbaik Untuk Keperluan Si Empus!!</p>

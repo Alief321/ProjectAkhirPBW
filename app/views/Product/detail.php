@@ -1,3 +1,3 @@
     <!-- Isi -->
-    <section id="product"></section>
+    <section id="product-detail"></section>
     <!-- Akhir Isi -->

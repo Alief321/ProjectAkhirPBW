@@ -5,7 +5,10 @@ class User extends Controller{
     public function index(){
         $id = 1;
         $data['judul'] = "User";
-        $data['User']= $this->model('User_model')->getUserById($id);
+        $data['User']= array(
+            "Nama" => "Bukayo Saka",
+            "Email" => "Bukayo@gmail.com",
+        );
         $data['css'] = "user.css";
         $this->view('Templates/header', $data);
         $this->view('Templates/navbar', $data);
