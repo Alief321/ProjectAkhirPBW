@@ -1,11 +1,11 @@
     <!-- Olshop -->
     <section id="isi">
       <div class="isi-atas">
-        <img src="img/retailer.png" alt="toko" width="10%" height="100%" />
+        <img src="img/retailer.png" alt="toko" class="img-isi" />
         <p>Toko Online</p>
       </div>
       <div class="isi-bawah">
-        <div class="isi-row" style="margin-bottom: -2rem">
+        <div class="isi-row isi-satu">
           <a href="" class="link">
             <div class="isi-content" style="background: #ff8678">
               <img src="img/shopee.png" alt="shopee" width="25%" height="90%" />
@@ -46,11 +46,11 @@
     <!-- Social media -->
     <section id="isi" style="margin-top: 2rem">
       <div class="isi-atas">
-        <img src="img/social-media.png" alt="toko" width="10%" height="100%" />
+        <img src="img/social-media.png" alt="toko" class="img-isi" />
         <p>Sosial Media</p>
       </div>
       <div class="isi-bawah">
-        <div class="isi-row" style="margin-bottom: -2rem">
+        <div class="isi-row isi-satu">
           <a href="" class="link">
             <div class="isi-content" style="background: #ff8678">
               <img src="img/instagram.png" alt="instagram.png" width="25%" height="90%" />

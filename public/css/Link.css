@@ -93,3 +93,51 @@
 .link .isi-content img {
   transition: all 250ms ease-in-out;
 }
+
+.isi-satu {
+  margin-bottom: -2rem;
+}
+
+.img-isi {
+  width: 10%;
+  height: 100%;
+}
+@media screen and (max-width: 1060px) and (min-width: 685px) {
+  .isi-content {
+    font-size: 2.25rem;
+  }
+}
+
+@media screen and (max-width: 602px) {
+  .img-isi {
+    width: 20%;
+  }
+  .isi-atas {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  .isi-content {
+    font-size: 2.15rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .isi-satu {
+    margin-bottom: 0;
+  }
+  #isi {
+    height: auto;
+  }
+  .isi-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  .isi-content {
+    width: 90%;
+    margin: auto;
+  }
+}
