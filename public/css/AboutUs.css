@@ -70,6 +70,7 @@
 .text-area {
   margin: auto;
   width: 95%;
+  height: auto;
 }
 .text-area ol li {
   text-indent: 1rem;
@@ -100,18 +101,27 @@
   margin-left: 1rem;
 }
 
+@media screen and (max-width: 826px) {
+  .desc-bawah {
+    overflow-y: auto;
+  }
+}
+
 @media only screen and (max-width: 555px) {
+  .desc-atas {
+    font-size: 2rem;
+  }
+
+  .desc-bawah {
+    font-size: 1.25rem;
+  }
   .lokasi-isi {
-    margin-top: 1.5rem;
-    height: 15rem;
-    width: 90%;
     margin: auto;
+    height: 15rem;
+    width: 100%;
   }
   #locationwrap {
-    height: 95rem;
-  }
-  .lokasi-isi iframe:first-of-type {
-    margin-left: 0;
+    height: auto;
   }
 }
 

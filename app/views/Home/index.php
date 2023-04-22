@@ -18,9 +18,7 @@
               <i style="fill: #ead116" data-feather="mail" class="socmed_item socmed_itemHome"> </i>
             </a>
           </div>
-          <a href="#categories" style="width: 100%">
-            <div class="exp">Explore</div>
-          </a>
+          <div class="exp">Explore</div>
         </div>
       </div>
     </section>

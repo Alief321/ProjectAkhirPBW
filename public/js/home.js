@@ -3,6 +3,7 @@ const prev = document.querySelector('#prev-carou');
 const carou1 = document.querySelectorAll('.carousel1');
 const carou2 = document.querySelectorAll('.carousel2');
 const cat = document.querySelector('#categories');
+const exp = document.querySelector('.exp');
 
 next.addEventListener('click', function () {
   carou1.forEach((item) => {
@@ -36,4 +37,8 @@ prev.addEventListener('click', function () {
     key.style.height = '100%';
     key.style.width = '31%';
   });
+});
+
+exp.addEventListener('click', function () {
+  window.scrollTo(0, 500);
 });
