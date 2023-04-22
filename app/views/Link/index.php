@@ -49,7 +49,7 @@
         <img src="img/social-media.png" alt="toko" class="img-isi" />
         <p>Sosial Media</p>
       </div>
-      <div class="isi-bawah">
+      <div class="isi-bawah socmed-grouping">
         <div class="isi-row isi-satu">
           <a href="" class="link">
             <div class="isi-content" style="background: #ff8678">

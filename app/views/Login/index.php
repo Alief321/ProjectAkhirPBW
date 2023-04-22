@@ -1,6 +1,6 @@
     <!-- Atas -->
     <div id="logo-row">
-      <img src="img/logo.png" alt="logo" width="7.5%" height="90%" />
+      <img src="img/logo.png" alt="logo" class="logo-icon"/>
       <p>PAW CATSHOP</p>
     </div>
     <!-- Akhir Atas -->

@@ -12,7 +12,7 @@ body {
 
 nav {
   width: 100%;
-  height: 4.5rem;
+  height: 4rem;
   background-color: rgba(255, 220, 117, 0.6);
   overflow: hidden;
   position: fixed;
@@ -25,7 +25,7 @@ nav {
   background-color: rgba(255, 220, 117, 0.8);
   border-radius: 0 0 1rem 1rem;
   height: auto;
-  top: 4.5rem;
+  top: 4.3rem;
   display: none;
   align-items: center;
   justify-content: center;
@@ -65,10 +65,9 @@ nav {
   align-items: center;
   width: 75%;
   column-gap: 4rem;
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
-  font-size: 1.3rem;
-  line-height: 24px;
+  font-size: 1.15rem;
   text-align: center;
   list-style: none;
 }
@@ -97,7 +96,7 @@ a {
 #logo {
   height: 4rem;
   width: 5rem;
-  margin-top: 0.4rem;
+  margin-top: 0.2rem;
 }
 
 #logo_name {
@@ -127,7 +126,7 @@ a {
   font-size: 1.2rem;
   text-align: center;
   background-color: rgba(255, 220, 117, 0.8);
-  top: 4.5rem;
+  top: 4.3rem;
   border-radius: 0 0 1rem 1rem;
   z-index: 20;
   overflow: hidden;
@@ -373,7 +372,7 @@ hr {
 
 .indicator {
   position: fixed;
-  top: 4.5em;
+  top: 4.02em;
   z-index: 1;
   width: 100%;
   background-color: #fffffe;
@@ -407,6 +406,24 @@ hr {
   align-items: center;
   margin-right: 3rem;
 }
+
+/* Animation */
+animate-top {
+  position: relative;
+  animation: animatetop 0.4s;
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/*  */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -421,6 +438,7 @@ hr {
   border-radius: 6px;
 }
 
+/* Responsive */
 @media screen and (max-width: 1150px) {
   .footer2-right-h {
     font-size: 1.5rem;
@@ -488,9 +506,14 @@ hr {
     height: 45px;
   }
 
+  textarea:focus,
+  input:focus {
+    outline: 1.5px solid #d8d517;
+  }
+
   @media screen and (max-width: 345px) {
     #logo {
-      height: 4rem;
+      height: 3rem;
       width: 4rem;
       margin-top: 0.5rem;
     }

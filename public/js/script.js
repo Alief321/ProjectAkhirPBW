@@ -1,6 +1,7 @@
 window.onload = function () {
   document.documentElement.style.scrollBehavior = 'smooth';
 
+  // tombol up arrow
   const totop = document.querySelector('#up_arrow');
   const float_item = document.querySelector('.float_item');
   const goToTop = () => {
@@ -21,9 +22,10 @@ window.onload = function () {
     }
   };
 
+  // profile user
   document.addEventListener('click', function (e) {
-    let profile = document.querySelector('.login');
-    let drpdwn = document.querySelector('#modal');
+    const profile = document.querySelector('.login');
+    const drpdwn = document.querySelector('#modal');
     if (!profile.contains(e.target)) {
       drpdwn.style.display = 'none';
     } else {
@@ -31,6 +33,7 @@ window.onload = function () {
     }
   });
 
+  // Navbar Mobile
   menu = document.querySelector('#drpdwn');
   drp = document.querySelector('.drpdwn_menu');
   x = document.querySelector('#x');

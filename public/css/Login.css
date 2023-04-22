@@ -11,6 +11,11 @@
   column-gap: 1rem;
 }
 
+.logo-icon {
+  width: 7.5%;
+  height: 90%;
+}
+
 .login-isi {
   height: 32rem;
   width: 100%;
@@ -238,6 +243,10 @@ input:active {
   }
 }
 @media screen and (max-width: 656px) {
+  .logo-icon {
+    width: 20%;
+    height: 90%;
+  }
   .login-isi {
     height: auto;
     display: block;

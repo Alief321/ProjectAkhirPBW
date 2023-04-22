@@ -21,28 +21,28 @@
           <div class="footer2-right-isi">
             <p class="footer2-right-h">Online Shop</p>
             <ul>
-              <li><a href="" target="_blank">Shopee</a></li>
-              <li><a href="" target="_blank">Tokopedia</a></li>
-              <li><a href="" target="_blank">Blibli</a></li>
-              <li><a href="" target="_blank">Lazada</a></li>
-              <li><a href="" target="_blank">Bukalapak</a></li>
+              <li><a href="https://shopee.co.id/" target="_blank">Shopee</a></li>
+              <li><a href="https://www.tokopedia.com/" target="_blank">Tokopedia</a></li>
+              <li><a href="https://www.blibli.com/" target="_blank">Blibli</a></li>
+              <li><a href="https://www.lazada.co.id/" target="_blank">Lazada</a></li>
+              <li><a href="https://bukalapak.com/" target="_blank">Bukalapak</a></li>
             </ul>
           </div>
           <div class="footer2-right-isi">
             <p class="footer2-right-h">Produk</p>
             <ul>
-              <li><a href="" target="_blank">Makanan & Camilan</a></li>
-              <li><a href="" target="_blank">Obat & Vitamin</a></li>
-              <li><a href="" target="_blank">Alat Kebersihan</a></li>
-              <li><a href="" target="_blank">Kandang & Toilet</a></li>
-              <li><a href="" target="_blank">Lainnya</a></li>
+              <li><a href="Product" target="_blank">Makanan & Camilan</a></li>
+              <li><a href="Product" target="_blank">Obat & Vitamin</a></li>
+              <li><a href="Product" target="_blank">Alat Kebersihan</a></li>
+              <li><a href="Product" target="_blank">Kandang & Toilet</a></li>
+              <li><a href="Product" target="_blank">Lainnya</a></li>
             </ul>
           </div>
           <div class="footer2-right-isi">
             <p class="footer2-right-h">Lainnya</p>
             <ul>
-              <li><a href="" target="_blank">Syarat & Ketentuan Pengembalian Barang</a></li>
-              <li><a href="" target="_blank">Hubungi Kami</a></li>
+              <li><a href="https://stackoverflow.com/questions/65364362/my-style-doesnt-working-in-php-mvc-project" target="_blank">Syarat & Ketentuan Pengembalian Barang</a></li>
+              <li><a href="Link" target="_blank">Hubungi Kami</a></li>
             </ul>
           </div>
         </div>

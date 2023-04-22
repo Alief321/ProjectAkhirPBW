@@ -33,10 +33,13 @@
   border-radius: 1.5rem;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: block;
-  background: #f5f5f5;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTainvbApOSlMMT-ay2EIqnvYwMdLlqXfmNcw&usqp=CAU);
   border: 1px solid #bbbbbb;
 }
 
+.socmed-grouping {
+  background-image: url(https://cdn.wallpapersafari.com/47/8/cYWu6H.jpg);
+}
 .link {
   height: 100%;
   width: auto;
@@ -115,6 +118,9 @@
   .isi-atas {
     font-size: 2.5rem;
   }
+  #isi:first-of-type {
+    margin-top: 5rem;
+  }
 }
 @media screen and (max-width: 390px) {
   .isi-content {
@@ -127,6 +133,13 @@
   }
   #isi {
     height: auto;
+    margin-top: 2rem;
+  }
+  .isi-atas {
+    margin-bottom: 0rem;
+  }
+  .isi-bawah {
+    margin-top: -1rem;
   }
   .isi-row {
     display: grid;

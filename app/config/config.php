@@ -4,7 +4,8 @@ define('URL_PUBLIC_FOLDER', 'public');
 // define('URL_DOMAIN', $_SERVER['HTTP_HOST']);
 // define('URL_SUB_FOLDER', str_replace(URL_PUBLIC_FOLDER, '', dirname($_SERVER['SCRIPT_NAME'])));
 // define('BASEURL', URL_PROTOCOL . URL_DOMAIN . URL_SUB_FOLDER);
-define('BASEURL', '/ProjectAkhirPBW/public/');
+// define('BASEURL', '/ProjectAkhirPBW/public/');
+define('BASEURL', filemtime($_SERVER['DOCUMENT_ROOT']));
 
 // DB
 define('DB_TYPE', 'mysql');

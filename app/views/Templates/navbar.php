@@ -31,7 +31,7 @@
     <div id="modal">
       <a href="User">
         <div class="modal-isi <?php if($data['judul'] == 'User') echo 'active_mobile';?>">
-          <i data-feather="user" class="modal-icon"></i
+          <i data-feather="user" class="modal-icon"></i>
           <p>Profile</p>
         </div>
       </a>

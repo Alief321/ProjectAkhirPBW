@@ -1,6 +1,6 @@
     <!-- Atas -->
     <div id="logo-row">
-      <img src="img/logo.png" alt="logo" width="7.5%" height="90%" />
+      <img src="img/logo.png" alt="logo" class="logo-icon"/>
       <p>PAW CATSHOP</p>
     </div>
     <!-- Akhir Atas -->
@@ -21,11 +21,12 @@
           <input type="email" name="email" placeholder="Alief321@gmail.com" required />
           <br />
           <label for="password" class="text">Password</label>
-          <input type="text" name="password" id="password" required />
+          <input type="password" name="password" id="password" onkeyup='check();' required />
           <br />
           <label for="passwordBaru" class="text">Konfirmasi Password</label>
-          <input type="text" name="passwordbaru" id="passwordbaru" required />
+          <input type="password" name="passwordbaru" id="passwordBaru" onkeyup='check();' required />
           <br />
+          <p id="message" style="text-align: center"></p>
           <button type="submit" class="login-text">Sign up</button>
         </form>
       </div>
@@ -35,6 +36,7 @@
     <!-- Script -->
     <script src="js/script.js"></script>
     <script src="js/loader.js"></script>
+    <script src="js/signup.js"></script>
     <script>
       feather.replace();
     </script>
