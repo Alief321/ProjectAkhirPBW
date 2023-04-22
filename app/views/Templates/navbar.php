@@ -36,7 +36,7 @@
         </div>
       </a>
 
-      <a href="Home">
+      <a href="Keranjang">
         <div class="modal-isi <?php if($data['judul'] == 'Keranjang') echo 'active_mobile';?>">
           <i data-feather="shopping-cart" class="modal-icon"></i>
           <p>Keranjang</p>
@@ -85,7 +85,7 @@
         <a href="User">
           <li class="<?php if($data['judul'] == 'User') echo 'active_mobile';?>"><i data-feather="user"></i>Profile</li>
         </a>
-        <a href="Home">
+        <a href="Keranjang">
           <li class="<?php if($data['judul'] == 'Keranjang') echo 'active_mobile';?>"><i data-feather="shopping-cart"></i>Keranjang</li>
         </a>
         <a href="Login">

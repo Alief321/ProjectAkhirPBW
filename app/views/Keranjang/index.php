@@ -1,5 +1,5 @@
     <!-- Isi -->
-    <section id="product-detail">
+    <section id="keranjang-detail">
     <div class="prod-pic">
           <img src="img/whiskas.png" alt="whiskas" width="60%" />
         </div>

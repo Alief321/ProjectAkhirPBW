@@ -70,9 +70,11 @@
           </div>
           <p class="prod-judul">Whiskas 4Pcs Pouch Sachet Adult Tuna And White Fish Flavour</p>
           <p style="font-size: 0.75rem; margin-top: 0; text-align: justify">Kalau untuk kucing kesayangan, pastinya kamu harus memberikan makanan bernutrisi terbaik! Whiskas Pouch Adult 1+ ...</p>
-          <div class="product-more">
-            <p>Selengkapnya</p>
-          </div>
+          <a href="Product/detail">
+            <div class="product-more">
+              <p>Selengkapnya</p>
+            </div>
+          </a>
         </div>
       </div>';
       }?>

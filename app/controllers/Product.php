@@ -12,10 +12,10 @@ class Product extends Controller{
     }
     public function detail(){
         
-        $data['judul'] = "Product name";
+        $data['judul'] = "Detail Product";
         $data['css'] = "Detail-Product.css";
         $this->view('Templates/header', $data);
-        $this->view('Templates/navbar');
+        $this->view('Templates/navbar', $data);
         $this->view('Product/detail');
         $this->view('Templates/footer');
     }

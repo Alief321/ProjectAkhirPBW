@@ -234,6 +234,12 @@ option {
   transition: all 100ms ease;
   cursor: pointer;
   border-radius: 0.75rem;
+  transition: all 150ms ease;
+}
+
+.product-more:hover {
+  background-color: #fafafafa;
+  color: #d37d2f;
 }
 
 @media screen and (max-width: 912px) {
@@ -241,7 +247,8 @@ option {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
   .group-cat-wrap {
-    column-gap: 0.85rem;
+    justify-content: start;
+    column-gap: 1rem;
   }
 }
 @media screen and (min-width: 1567px) {
@@ -250,6 +257,16 @@ option {
   }
 }
 
+@media screen and (max-width: 912px) {
+  .group-cat-wrap {
+    column-gap: 0.75rem;
+  }
+}
+@media screen and (max-width: 1150px) and (min-width: 912px) {
+  .group-cat-wrap {
+    column-gap: 2rem;
+  }
+}
 @media screen and (max-width: 768px) {
   #group-categories hr {
     display: none;

@@ -33,12 +33,15 @@
   border-radius: 1.5rem;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: block;
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTainvbApOSlMMT-ay2EIqnvYwMdLlqXfmNcw&usqp=CAU);
+  background-image: url(../img/kucingwp1.webp);
+  background-size: cover;
   border: 1px solid #bbbbbb;
 }
 
 .socmed-grouping {
-  background-image: url(https://cdn.wallpapersafari.com/47/8/cYWu6H.jpg);
+  /* background-image: url(https://cdn.wallpapersafari.com/47/8/cYWu6H.jpg); */
+  background-image: url(../img/imgkucingwp2.jpg);
+  background-size: cover;
 }
 .link {
   height: 100%;
@@ -76,12 +79,10 @@
 .laz {
   background: linear-gradient(180deg, #f0bf86 0%, #efa06f 28.65%, #eb6591 75%, #e76bd8 98.44%);
 }
-
 .link:hover .isi-content {
   background-color: #fafafa !important;
   background: linear-gradient(180deg, #ffffff 0%, #ffffff 28.65%, #ffffff 75%, #ffffff 98.44%) !important;
 }
-
 .link:hover .isi-content p {
   color: #5757f2;
   scale: 105%;
@@ -96,11 +97,9 @@
 .link .isi-content img {
   transition: all 250ms ease-in-out;
 }
-
 .isi-satu {
   margin-bottom: -2rem;
 }
-
 .img-isi {
   width: 10%;
   height: 100%;
@@ -110,7 +109,6 @@
     font-size: 2.25rem;
   }
 }
-
 @media screen and (max-width: 602px) {
   .img-isi {
     width: 20%;
@@ -152,5 +150,15 @@
   .isi-content {
     width: 90%;
     margin: auto;
+  }
+}
+
+@media screen and (min-width: 1718px) {
+  .isi-content {
+    scale: 150%;
+    margin: 5rem;
+  }
+  .isi-satu {
+    margin-top: 2rem;
   }
 }
