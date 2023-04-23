@@ -409,7 +409,7 @@ hr {
   display: flex;
   justify-content: end;
   align-items: center;
-  margin-right: 3rem;
+  margin-right: 1.5rem;
 }
 
 /* Animation */
@@ -476,6 +476,7 @@ animate-top {
   }
   .logo {
     width: 90%;
+    margin-left: 0.5rem;
   }
   footer {
     height: auto;

@@ -16,6 +16,7 @@
             <p>100</p>
           </div>
           <hr>
+          <p>Kategori: <a href="Product" style="color: #730000; ">Makanan & Camilan</a></p>
           <p>Deskripsi Product</p>
           <p class="desk-detail">Kalau untuk kucing kesayangan, pastinya kamu harus memberikan makanan bernutrisi terbaik! Whiskas Pouch Adult 1+ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, exercitationem.</p>
           <p>Link pembelian</p>

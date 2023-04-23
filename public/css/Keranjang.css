@@ -1,0 +1,244 @@
+#keranjang {
+  width: 92.5%;
+  border-radius: 0.5rem;
+  margin: auto;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  height: auto;
+  overflow: hidden;
+  display: block;
+}
+
+.product {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1.5px solid #dadadafa;
+  align-items: center;
+  justify-content: center;
+  height: 15rem;
+  overflow: hidden;
+  display: flex;
+  margin-bottom: 1rem;
+}
+.prod-pic {
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1.5px solid #dadadafa;
+  height: 80%;
+  width: 25%;
+  margin-right: 3rem;
+  overflow: hidden;
+}
+
+.img-pic {
+  width: 100%;
+  height: 92.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-pic img {
+  width: 80%;
+  height: 100%;
+}
+
+.prod-text {
+  margin-top: 1rem;
+  width: 60%;
+  height: 95%;
+  overflow: hidden;
+}
+
+.prod-judul {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.1rem;
+  margin: 0;
+}
+
+.prod-price {
+  overflow: hidden;
+  width: auto;
+  margin: 0.75rem 0 0 0;
+  color: #730000;
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.stok {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: auto;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.stok p {
+  width: 50%;
+}
+.stok p:first-of-type {
+  text-align: start;
+  justify-self: start;
+}
+.stok p:last-of-type {
+  justify-self: end;
+  text-align: end;
+}
+#silang {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: fit-content;
+}
+.tombol {
+  text-align: center;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 500;
+  height: 50%;
+  width: auto;
+  margin: 0;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+.tombol:hover {
+  border: 1px #730000 solid;
+  background-color: transparent !important;
+  color: inherit;
+}
+
+.modal-link {
+  display: none;
+  position: fixed;
+  width: 80%;
+  height: 300px;
+  padding: auto;
+  top: 6rem;
+  margin-left: 10%;
+  background-color: #f3f3f3;
+  border-radius: 0.5rem;
+  z-index: 40;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1.5px solid #dadadafa;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: animate-bottom 100ms ease;
+}
+
+.modal-atas {
+  background-color: #b45c0f;
+  color: #fafafa;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 2rem;
+  font-family: 'Bebas Neue';
+  font-weight: 500;
+}
+
+.modal-atas p {
+  width: 95%;
+  text-align: center;
+}
+
+.laz {
+  background: linear-gradient(180deg, #f0bf86 0%, #efa06f 28.65%, #eb6591 75%, #e76bd8 98.44%);
+}
+
+.Link-olshop {
+  margin: auto;
+  margin-top: 1rem;
+  width: 88%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 10px;
+  align-items: stretch;
+}
+
+.isi-content {
+  width: auto;
+  height: 100%;
+  padding: 0 0.5rem;
+  column-gap: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #fafafa;
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  transition: all 150ms ease;
+}
+
+.link:hover .isi-content {
+  color: #730000;
+  scale: 105%;
+  background-color: #fafafa !important;
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 28.65%, #ffffff 75%, #ffffff 98.44%) !important;
+}
+
+.tombol-tombol {
+  display: flex;
+  column-gap: 1rem;
+  width: 100%;
+  height: 3rem;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .modal-atas p {
+    width: 90%;
+    font-size: 1.5rem;
+  }
+  .prod-judul,
+  .prod-price {
+    font-size: 1.4rem;
+  }
+  .stok,
+  .tombol {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 581px) {
+  #whiskas {
+    width: 85%;
+    height: 80%;
+  }
+
+  .prod-pic {
+    margin-right: 1rem;
+    width: 50%;
+  }
+  .prod-text {
+    overflow-x: auto;
+    width: 47.5%;
+  }
+
+  .tombol-tombol {
+    word-wrap: break-word;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    grid-gap: 10px;
+    align-items: stretch;
+    height: auto;
+  }
+  .product {
+    height: auto;
+  }
+}
