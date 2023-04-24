@@ -32,12 +32,6 @@
 
         <section style="display:block; width:100%; left: 20%; ">
             <section style=" height:10%; width:80%; display:flex; justify-content: end; column-gap: 2rem; overflow: hidden; position: fixed; top: 0; right:0; z-index:99">
-                <div class="toggle-switch">
-                    <label class="switch-label">
-                    <input type="checkbox" class="checkbox" onclick="toggleTheme('dark')" onreset="toggleTheme('light')">
-                    <span class="slider"></span>
-                    </label>
-                </div>  
                 <div class="userp">
                    <img src="img/profile.png" alt="kucing" width="100%" height="100%" id="userp">
                 </div>
@@ -61,7 +55,6 @@
       </div>
     <!-- akhir modal user -->
     </section>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="js/Admin.js"></script>
     <script src="js/loader.js"></script>
     <script>

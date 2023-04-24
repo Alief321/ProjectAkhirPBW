@@ -83,3 +83,6 @@
             </tbody>
         </table>
     </section>
+
+    <script src="js/AdminData.js"></script>
+    <script src="js/AdminFoto.js"></script>

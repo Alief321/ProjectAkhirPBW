@@ -138,3 +138,4 @@
         <!-- Akhir modal create -->
 
     </section>
+    <script src="js/AdminData.js"></script>
