@@ -22,11 +22,11 @@
     <section class="main">
         <aside>
             <ul>
-                <a href="Admin"><li class="nav_item <?php if($data['judul'] == 'Admin') echo 'active';?>">Home</li></a>
-                <a href="Admin/Rekomendasi"><li class="nav_item <?php if($data['judul'] == 'Rekomendasi') echo 'active';?>">Rekomendasi</li></a>
-                <a href="Admin/Product"><li class="nav_item <?php if($data['judul'] == 'ProductAdmin') echo 'active';?>">Product</li></a>
-                <a href="Admin/Galeri"><li class="nav_item <?php if($data['judul'] == 'Galeri') echo 'active';?>">Galeri</li></a>
-                <a href="Home" target="_blank"><li class="nav_item">Main Page</li></a>
+                <a href="Admin"><li class="nav_item <?php if($data['judul'] == 'Admin') echo 'active';?>"> <i data-feather="home"></i> &nbsp; Home</li></a>
+                <a href="Admin/Rekomendasi"><li class="nav_item <?php if($data['judul'] == 'Rekomendasi') echo 'active';?>"> <i data-feather="star"></i> &nbsp; Rekomendasi</li></a>
+                <a href="Admin/Product"><li class="nav_item <?php if($data['judul'] == 'ProductAdmin') echo 'active';?>"> <i data-feather="box"></i> &nbsp; Product</li></a>
+                <a href="Admin/Galeri"><li class="nav_item <?php if($data['judul'] == 'Galeri') echo 'active';?>"> <i data-feather="camera"></i> &nbsp; Galeri</li></a>
+                <a href="Home" target="_blank"><li class="nav_item"><i data-feather="globe"></i> &nbsp; Main Page</li></a>
             </ul>
         </aside>
 
@@ -39,11 +39,27 @@
                     </label>
                 </div>  
                 <div class="userp">
-                    <i data-feather="user" style="width: 70%; height: 70%;"></i>
+                   <img src="img/profile.png" alt="kucing" width="100%" height="100%" id="userp">
                 </div>
             </section>
             <?php include($data['content']);?>
         </section>
+           <!-- modal user -->
+      <div id="modalprof">
+        <a href="User" target="_blank">
+          <div class="modal-isi">
+            <i data-feather="user" class="modal-icon"></i>
+            <p>Profile</p>
+          </div>
+        </a>
+        <a href="Login">
+          <div class="modal-isi" style="color: red">
+            <i data-feather="log-out" class="modal-icon"></i>
+            <p>Logout</p>
+          </div>
+        </a>
+      </div>
+    <!-- akhir modal user -->
     </section>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="js/Admin.js"></script>

@@ -27,6 +27,7 @@ function toggleTheme(theme) {
   htmlEl.dataset.theme = theme;
 }
 
+// modal edit
 const modcancel = document.getElementById('modcancel');
 const edit = document.querySelectorAll('.edit');
 const modal = document.querySelector('.modalAdmin');
@@ -38,4 +39,49 @@ edit.forEach((element) => {
 });
 modcancel.addEventListener('click', function () {
   modal.style.display = 'none';
+});
+
+// modal create
+const create = document.querySelector('#create');
+const modalCreate = document.querySelector('.modalCreate');
+const createcancel = document.getElementById('createCancel');
+
+create.addEventListener('click', function () {
+  modalCreate.style.display = 'block';
+});
+createCancel.addEventListener('click', function () {
+  modalCreate.style.display = 'none';
+});
+
+// show Foto
+const prevFoto = document.querySelectorAll('.prevFoto');
+const modalFoto = document.querySelector('.modalFoto');
+const cilang = document.getElementById('cilang');
+prevFoto.forEach((element) => {
+  element.addEventListener('click', function () {
+    modalFoto.style.display = 'block';
+  });
+});
+cilang.addEventListener('click', function () {
+  modalFoto.style.display = 'none';
+});
+
+// delete data
+const del = document.querySelectorAll('.trash');
+del.forEach((element) => {
+  element.addEventListener('click', function () {
+    confirm('Apakah anda yakin ingin menghapus data?');
+  });
+});
+
+// modal user
+const user = document.querySelector('#userp');
+const drpdwn = document.querySelector('#modalprof');
+document.onload = drpdwn.style.display = 'none';
+user.addEventListener('click', function () {
+  if (drpdwn.style.display == 'none') {
+    drpdwn.style.display = 'block';
+  } else {
+    drpdwn.style.display = 'none';
+  }
 });

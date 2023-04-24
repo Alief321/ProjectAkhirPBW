@@ -23,13 +23,14 @@ window.onload = function () {
   };
 
   // profile user
-  document.addEventListener('click', function (e) {
-    const profile = document.querySelector('.login');
-    const drpdwn = document.querySelector('#modal');
-    if (!profile.contains(e.target)) {
-      drpdwn.style.display = 'none';
-    } else {
+  const profile = document.querySelector('.login');
+  const drpdwn = document.querySelector('#modal');
+  document.onload = drpdwn.style.display = 'none';
+  profile.addEventListener('click', function () {
+    if (drpdwn.style.display == 'none') {
       drpdwn.style.display = 'block';
+    } else {
+      drpdwn.style.display = 'none';
     }
   });
 

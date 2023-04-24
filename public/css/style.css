@@ -128,6 +128,7 @@ a {
   display: none;
   position: fixed;
   width: 15%;
+  height: auto;
   font-size: 1.2rem;
   text-align: center;
   background-color: rgba(255, 220, 117, 0.8);
@@ -139,8 +140,9 @@ a {
 }
 
 .modal-isi {
-  display: flex;
+  height: auto;
   width: 100%;
+  display: flex;
   justify-content: baseline;
   align-items: center;
   transition: all 100ms ease;
