@@ -24,8 +24,6 @@
             <tbody>
             <?php
                 $content = ' 
-                    <tr>
-                    <td>1</td>
                     <td>Whiskas</td>
                     <td>Rp. 23.000</td>
                     <td>100</td>
@@ -50,7 +48,11 @@
                         </div>
                     </td>
                     </tr>';
-                for ($i=0; $i <10 ; $i++) { 
+                for ($i=0; $i <10 ; $i++) {
+                    echo '<tr>';
+                    echo '<td>';
+                    echo $i+1; 
+                    echo '</td>'; 
                     echo $content;
                 }
             ?>

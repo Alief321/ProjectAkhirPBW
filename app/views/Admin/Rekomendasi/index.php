@@ -16,8 +16,6 @@
             <tbody>
             <?php
                 $content = ' 
-                    <tr>
-                    <td>1</td>
                     <td>Whiskas</td>
                     <td>Rp. 23.000</td>
                     <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis quod quam quasi! Quis iure dignissimos, modi dolores eius nobis neque veniam quibusdam a.</td>
@@ -33,6 +31,10 @@
                     </td>
                     </tr>';
                 for ($i=0; $i <10 ; $i++) { 
+                    echo '<tr>';
+                    echo '<td>';
+                    echo $i+1; 
+                    echo '</td>';
                     echo $content;
                 }
             ?>

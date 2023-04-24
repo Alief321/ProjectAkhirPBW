@@ -15,8 +15,6 @@
             <tbody>
             <?php
                 $content = ' 
-                    <tr>
-                    <td>1</td>
                     <td>Whiskas</td>
                     <td>
                         <button class="prevFoto">Lihat Foto</button>
@@ -33,6 +31,10 @@
                     </td>
                     </tr>';
                 for ($i=0; $i <10 ; $i++) { 
+                    echo '<tr>';
+                    echo '<td>';
+                    echo $i+1; 
+                    echo '</td>';
                     echo $content;
                 }
             ?>
