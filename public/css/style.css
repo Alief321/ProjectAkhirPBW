@@ -39,10 +39,10 @@ nav {
 }
 
 .drpdwn_menu ul li {
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin: auto;
   width: 100%;
-  padding: 1rem 0 1rem 0;
+  padding: 0.5rem 0 0.5rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -173,6 +173,10 @@ a {
   transition: all;
 }
 
+textarea:focus,
+input:focus {
+  outline: 1.5px solid #d8d517;
+}
 ul {
   list-style: none;
 }
@@ -409,7 +413,7 @@ hr {
   display: flex;
   justify-content: end;
   align-items: center;
-  margin-right: 1.5rem;
+  margin-right: 0.5rem;
 }
 
 /* Animation */
@@ -478,6 +482,9 @@ animate-top {
     width: 90%;
     margin-left: 0.5rem;
   }
+  .drpdwn {
+    width: 10%;
+  }
   footer {
     height: auto;
   }
@@ -510,11 +517,6 @@ animate-top {
   #wa {
     width: 45px;
     height: 45px;
-  }
-
-  textarea:focus,
-  input:focus {
-    outline: 1.5px solid #d8d517;
   }
 
   @media screen and (max-width: 345px) {

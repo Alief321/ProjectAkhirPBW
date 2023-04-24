@@ -4,17 +4,26 @@ class Admin extends Controller{
     public function index()
     {
         $data['judul'] = "Admin";
-        $data['css'] = "";
-        $this->view('Templates/header', $data);
-        $this->view('Admin/User/Create');
-        $this->view('Templates/footer');
+        $data['Name'] = "Bambang";
+        $data['content'] = '../app/views/Admin/index.php';
+        $this->view('Templates/Admin', $data);
     }
-    public function user()
+    public function Rekomendasi()
     {
-        $data['judul'] = "Admin";
-        $data['css'] = "";
-        $this->view('Templates/header', $data);
-        $this->view('Admin/User/Create');
-        $this->view('Templates/footer');
+        $data['judul'] = "Rekomendasi";
+        $data['content'] = '../app/views/Admin/Rekomendasi/index.php';
+        $this->view('Templates/Admin', $data);
+    }
+    public function Product()
+    {
+        $data['judul'] = "Rekomendasi";
+        $data['content'] = '../app/views/Admin/Product/index.php';
+        $this->view('Templates/Admin', $data);
+    }
+    public function Galeri()
+    {
+        $data['judul'] = "Rekomendasi";
+        $data['content'] = '../app/views/Admin/Galeri/index.php';
+        $this->view('Templates/Admin', $data);
     }
 };

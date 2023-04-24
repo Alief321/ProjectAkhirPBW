@@ -1,10 +1,13 @@
-const link = document.getElementById('linkBeli');
-const x = document.getElementById('silang');
+const link = document.querySelectorAll('#linkBeli');
+const silang = document.querySelector('#silang');
 const modal = document.querySelector('.modal-link');
 
-link.addEventListener('click', function () {
-  modal.style.display = 'block';
+link.forEach((element) => {
+  element.addEventListener('click', function () {
+    modal.style.display = 'block';
+  });
 });
-x.addEventListener('click', function () {
+
+silang.addEventListener('click', function () {
   modal.style.display = 'none';
 });

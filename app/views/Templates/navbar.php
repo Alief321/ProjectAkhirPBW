@@ -43,6 +43,13 @@
         </div>
       </a>
 
+      <a href="Admin">
+        <div class="modal-isi" style="color: #147ae0 ">
+          <i data-feather="monitor" class="modal-icon"></i>
+          <p>Admin</p>
+        </div>
+      </a>
+
       <a href="Login">
         <div class="modal-isi" style="color: red">
           <i data-feather="log-out" class="modal-icon"></i>
@@ -87,6 +94,9 @@
         </a>
         <a href="Keranjang">
           <li class="<?php if($data['judul'] == 'Keranjang') echo 'active_mobile';?>"><i data-feather="shopping-cart"></i>Keranjang</li>
+        </a>
+        <a href="Admin">
+          <li style="color: #147ae0"><i data-feather="monitor"></i>Admin</li>
         </a>
         <a href="Login">
           <li style="color: red"><i data-feather="log-out"></i>Logout</li>

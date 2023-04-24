@@ -133,7 +133,6 @@
   border: 1.5px solid #dadadafa;
   overflow-x: hidden;
   overflow-y: auto;
-  transition: animate-bottom 100ms ease;
 }
 
 .modal-atas {

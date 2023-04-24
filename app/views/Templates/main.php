@@ -1,3 +1,8 @@
-<?include 'header.php'?>
-<?php $Content ?>
-<?include 'footer.php' ?>
+<?  
+    include('./header.php');
+    if($data['navbar'] == 'perlu'){
+        include('./navbar.php');
+    }
+    include($data['content']); 
+    include('./footer.php'); 
+?>
