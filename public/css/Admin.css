@@ -406,8 +406,24 @@ aside ul li span {
     width: 200px;
   }
 }
+@media screen and (max-width: 700px) {
+  .modalAdmin,
+  .modalFoto,
+  .modalCreate {
+    margin-left: 0%;
+    width: 75%;
+    margin: auto;
+  }
+}
 
 @media screen and (max-width: 550px) {
+  .modalAdmin,
+  .modalFoto,
+  .modalCreate {
+    width: 90%;
+    margin-left: 0%;
+    margin: auto;
+  }
   .userp {
     width: 10%;
     height: 75%;
