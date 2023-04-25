@@ -21,16 +21,15 @@
           <input type="password" name="password" id="password" required />
           <br />
           <div class="remme">
-            <div style="display: flex; justify-content: start; align-items: start">
-              <label class="container">
-                <input type="checkbox" checked="checked" />
-                <div class="checkmark"></div>
-              </label>
-              <span>Remember me</span>
+            <div class="remember">
+              <input type="checkbox" name="remember" id="remember"/>
+              <label for="remember">Remember me</label>
             </div>
-            <a href="">
-              <span id="passforgot">Forgot Password</span>
-            </a>
+            <div class="passforgot">
+              <a href="">
+                <span id="passforgot">Forgot Password</span>
+              </a>
+            </div>
           </div>
           <button type="submit" class="login-text">Login</button>
         </form>

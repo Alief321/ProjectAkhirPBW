@@ -11,6 +11,12 @@
   column-gap: 1rem;
 }
 
+form {
+  width: 68%;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+}
 .logo-icon {
   width: 7.5%;
   height: 90%;
@@ -43,17 +49,30 @@
   visibility: hidden;
 }
 .remme {
-  width: 60%;
+  width: 100%;
   height: 10%;
   overflow: hidden;
   margin: auto;
   right: 0;
   display: flex;
-  column-gap: 2.5rem;
+  justify-content: start;
+  column-gap: 10%;
   font-weight: 600;
   font-size: 0.9rem;
 }
 
+.remember,
+.passforgot {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+}
+
+.passforgot {
+  justify-content: end;
+}
 hr {
   width: 45%;
   height: 0px;
@@ -65,11 +84,8 @@ p {
 
 .Hello,
 .sub-text,
-.text,
-.signin,
-.login-text,
-input {
-  margin: 1rem 0 0 5rem;
+.signin {
+  margin: 1rem 0 0 15%;
 }
 .Hello {
   font-family: 'League Spartan';
@@ -96,7 +112,7 @@ input[type='email'],
 input[type='password'],
 input[type='text'] {
   display: block;
-  width: 60%;
+  width: 100%;
   border-radius: 0.5rem;
   border: 1px solid #b6b6b6;
   padding: 12px 10px;
@@ -115,7 +131,8 @@ input:active {
   text-align: center;
   font-weight: 600;
   font-size: 1.313rem;
-  width: 60%;
+  margin-top: 1rem;
+  width: 100%;
   height: auto;
   padding: 0.5rem;
   background: linear-gradient(89.97deg, #e6b76e 1.74%, #dfa83f 14.3%, #f5a729 24.34%, #f39b4a 43.7%, #f97a4d 64.71%, #fd6736 81.05%, #fc7951 97.87%);
@@ -126,7 +143,7 @@ input:active {
 
 .signin {
   display: flex;
-  width: 60%;
+  width: 68%;
   height: 8%;
   border: 1px solid #b6b6b6;
   border-radius: 0.5rem;
@@ -145,9 +162,11 @@ input:active {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   transition: all 100ms ease-in-out;
-  box-sizing: border-box;
 }
-
+input[type='checkbox'] {
+  margin: 0;
+  margin-right: 0.5rem;
+}
 .login-text:hover,
 .signin:hover {
   background: linear-gradient(89.97deg, #fafafa 1.74%, #fafafa 14.3%, #fafafa 24.34%, #fafafa 43.7%, #fafafa 64.71%, #fafafa 81.05%, #fafafa 97.87%);
@@ -161,88 +180,32 @@ input:active {
   background-clip: text;
 }
 
-/* Hide the default checkbox */
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-.container {
-  display: block;
-  position: relative;
-  cursor: pointer;
-  font-size: 20px;
-  user-select: none;
-}
-
-/* Create a custom checkbox */
-.checkmark {
-  position: relative;
-  top: 0;
-  left: 0;
-  margin: 0 0.5rem 0 0;
-  height: 1rem;
-  width: 1rem;
-  background-color: #ccc;
-  border-radius: 25px;
-  transition: 0.15s;
-}
-
-.container input:checked ~ .checkmark {
-  background-color: #7a3307;
-  border-radius: 25px;
-  transition: 0.15s;
-}
-
-.checkmark:after {
-  content: '';
-  position: absolute;
-  display: none;
-}
-
-.container input:checked ~ .checkmark:after {
-  display: block;
-}
-
-.container .checkmark:after {
-  left: 0.15em;
-  top: 0.15em;
-  width: 0.25em;
-  height: 0.2em;
-  border: solid white;
-  border-width: 0 0.15em 0.15em 0;
-  transform: rotate(45deg);
-}
-
 #hrhr {
   display: flex;
-  margin: 1rem 0 0 5rem;
+  margin: 1rem 0 0 15%;
   overflow: hidden;
-  width: 60%;
+  width: 68%;
   color: #b6b6b6;
   font-size: 0.8rem;
 }
 
 @media screen and (max-width: 1080px) {
-  input[type='email'],
-  input[type='password'],
-  input[type='text'],
-  .login-text,
-  .signin {
-    width: 70%;
-  }
-
-  #hrhr {
-    width: 70%;
-  }
   .remme {
     font-size: 0.85rem;
   }
 }
 @media screen and (max-width: 656px) {
+  form {
+    width: 90%;
+    margin: 1rem 0 0 15%;
+  }
+  #hrhr {
+    width: 90%;
+  }
+  .signin {
+    padding: 0.8rem 0;
+    width: 90%;
+  }
   .logo-icon {
     width: 20%;
     height: 90%;

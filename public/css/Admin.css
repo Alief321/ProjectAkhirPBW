@@ -33,7 +33,7 @@ a {
 }
 
 aside {
-  width: 20%;
+  width: 15%;
   height: 100%;
   margin: 0;
   overflow: hidden;
@@ -42,14 +42,13 @@ aside {
 }
 
 ul {
-  padding-left: 1rem;
+  padding-left: 0.2rem;
 }
 #isiAdmin {
   top: 10%;
-  width: 80%;
+  width: 100%;
   height: 90%;
   position: relative;
-  left: 20%;
   overflow: auto;
 }
 
@@ -61,6 +60,7 @@ ul {
   width: 7%;
   height: 100%;
   overflow: hidden;
+  overflow-y: hidden;
   cursor: pointer;
 }
 
@@ -255,6 +255,10 @@ input:focus {
   cursor: pointer;
 }
 
+#userp {
+  width: 100%;
+  height: 100%;
+}
 #modalprof {
   display: none;
   position: fixed;
@@ -266,7 +270,7 @@ input:focus {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   border: 1px solid white;
   border-radius: 0.5rem 0 0 0.5rem;
-  top: 3.6rem;
+  top: 10%;
   z-index: 20;
   overflow: hidden;
   right: 0rem;
@@ -294,6 +298,10 @@ input:focus {
   scale: 102%;
 }
 
+#aligalig {
+  display: none;
+}
+
 #cilang {
   font-size: 2rem;
   margin-left: 2rem;
@@ -318,6 +326,39 @@ input:focus {
   color: #7a3016;
   text-shadow: none;
 }
+
+.utama {
+  display: block;
+  width: 85%;
+  left: 15%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  transition: all 400ms ease;
+}
+
+.navmenu {
+  display: none;
+  width: 0;
+  left: 2.5%;
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+aside ul li span {
+  display: inline;
+  font-size: 0.9rem;
+}
+
+#cilang2 {
+  display: none;
+  width: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px #cebc90;
   border-radius: 6px;
@@ -326,4 +367,108 @@ input:focus {
 ::-webkit-scrollbar-thumb {
   background: #cebc90;
   border-radius: 6px;
+}
+
+@media screen and (max-width: 890px) {
+  aside ul li span {
+    display: none;
+    width: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  tr td,
+  tr th,
+  #create,
+  .prevFoto {
+    font-size: 0.75rem;
+  }
+  #create,
+  .prevFoto {
+    padding: 0.5rem 0.6rem 0.5rem 0.6rem;
+  }
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  h2 {
+    font-size: 1rem !important;
+  }
+
+  #edit,
+  #trash {
+    width: 14px;
+    height: 14px;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+  }
+
+  #modalprof {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .userp {
+    width: 10%;
+    height: 75%;
+  }
+
+  .navmenu {
+    display: flex;
+    width: 87%;
+  }
+  aside ul li span {
+    display: inline;
+    font-size: 0.8rem;
+  }
+  aside {
+    width: 0;
+    top: 7.5%;
+    transition: all 400ms ease;
+  }
+
+  .utama {
+    width: 97.5%;
+    left: 2.5%;
+  }
+  #aligalig {
+    display: block;
+  }
+}
+
+@media screen and (min-height: 667px) {
+  .main {
+    height: 667px;
+  }
+}
+@media screen and (min-height: 896px) and (max-height: 914px) {
+  .main {
+    height: 896px;
+  }
+}
+@media screen and (min-height: 844px) and (max-height: 850px) {
+  .main {
+    height: 844px;
+  }
+}
+@media screen and (min-height: 851px) and (max-height: 895px) {
+  .main {
+    height: 851px;
+  }
+}
+@media screen and (min-height: 740px) and (max-height: 843px) {
+  .main {
+    height: 740px;
+  }
+}
+@media screen and (min-height: 915px) {
+  .main {
+    height: 915px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .userp {
+    height: 100%;
+  }
 }

@@ -22,23 +22,30 @@
     <section class="main">
         <aside>
             <ul>
-                <a href="Admin"><li class="nav_item <?php if($data['judul'] == 'Admin') echo 'active';?>"> <i data-feather="home"></i> &nbsp; Home</li></a>
-                <a href="Admin/Rekomendasi"><li class="nav_item <?php if($data['judul'] == 'Rekomendasi') echo 'active';?>"> <i data-feather="star"></i> &nbsp; Rekomendasi</li></a>
-                <a href="Admin/Product"><li class="nav_item <?php if($data['judul'] == 'ProductAdmin') echo 'active';?>"> <i data-feather="box"></i> &nbsp; Product</li></a>
-                <a href="Admin/Galeri"><li class="nav_item <?php if($data['judul'] == 'Galeri') echo 'active';?>"> <i data-feather="camera"></i> &nbsp; Galeri</li></a>
-                <a href="Home" target="_blank"><li class="nav_item"><i data-feather="globe"></i> &nbsp; Main Page</li></a>
+                <a href="Admin"><li class="nav_item <?php if($data['judul'] == 'Admin') echo 'active';?>"> <i data-feather="home"></i> &nbsp; <span>Home</span></li></a>
+                <a href="Admin/Rekomendasi"><li class="nav_item <?php if($data['judul'] == 'Rekomendasi') echo 'active';?>"> <i data-feather="star"></i> &nbsp; <span>Rekomendasi</span></li></a>
+                <a href="Admin/Product"><li class="nav_item <?php if($data['judul'] == 'ProductAdmin') echo 'active';?>"> <i data-feather="box"></i> &nbsp; <span>Product</span></li></a>
+                <a href="Admin/Galeri"><li class="nav_item <?php if($data['judul'] == 'Galeri') echo 'active';?>"> <i data-feather="camera"></i> &nbsp; <span>Galeri</span></li></a>
+                <a href="Home" target="_blank"><li class="nav_item"><i data-feather="globe"></i> &nbsp; <span>Main Page</span></li></a>
             </ul>
         </aside>
 
-        <section style="display:block; width:100%; left: 20%; ">
-            <section style=" height:10%; width:80%; display:flex; justify-content: end; column-gap: 2rem; overflow: hidden; position: fixed; top: 0; right:0; z-index:99">
-                <div class="userp">
-                   <img src="img/profile.png" alt="kucing" width="100%" height="100%" id="userp">
-                </div>
+        <section class="utama">
+            <section style=" height:10%; width:100%; display:flex; justify-content: end; column-gap: 2rem; overflow: hidden; position: fixed; top: 0; right:0; z-index:99">
+              <div class="navmenu">
+                <span id="aligalig">
+                  <i data-feather="align-justify" ></i>
+                </span>
+                <span id="cilang2">x</span>
+              </div>  
+              <div class="userp">
+                   <img src="img/profile.png" alt="kucing" id="userp">
+              </div>
             </section>
             <?php include($data['content']);?>
         </section>
-           <!-- modal user -->
+      
+        <!-- modal user -->
       <div id="modalprof">
         <a href="User" target="_blank">
           <div class="modal-isi">
