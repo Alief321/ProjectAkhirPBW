@@ -103,11 +103,10 @@ td:last-of-type {
 .nav_item:hover {
   background-color: #f5c943;
   color: #fafafafa;
-  scale: 105%;
 }
 
 .activeAdmin {
-  background-color: #f5c943;
+  background-color: #14da14;
   color: #fafafafa;
 }
 
