@@ -22,10 +22,10 @@
     <section class="main">
         <aside>
             <ul>
-                <a href="Admin"><li class="nav_item <?php if($data['judul'] == 'Admin') echo 'active';?>"> <i data-feather="home"></i> &nbsp; <span>Home</span></li></a>
-                <a href="Admin/Rekomendasi"><li class="nav_item <?php if($data['judul'] == 'Rekomendasi') echo 'active';?>"> <i data-feather="star"></i> &nbsp; <span>Rekomendasi</span></li></a>
-                <a href="Admin/Product"><li class="nav_item <?php if($data['judul'] == 'ProductAdmin') echo 'active';?>"> <i data-feather="box"></i> &nbsp; <span>Product</span></li></a>
-                <a href="Admin/Galeri"><li class="nav_item <?php if($data['judul'] == 'Galeri') echo 'active';?>"> <i data-feather="camera"></i> &nbsp; <span>Galeri</span></li></a>
+                <a href="Admin"><li class="nav_item <?php if($data['judul'] == 'Admin') echo 'activeAdmin';?>"> <i data-feather="home"></i> &nbsp; <span>Home</span></li></a>
+                <a href="Admin/Rekomendasi"><li class="nav_item <?php if($data['judul'] == 'Rekomendasi') echo 'activeAdmin';?>"> <i data-feather="star"></i> &nbsp; <span>Rekomendasi</span></li></a>
+                <a href="Admin/Product"><li class="nav_item <?php if($data['judul'] == 'ProductAdmin') echo 'activeAdmin';?>"> <i data-feather="box"></i> &nbsp; <span>Product</span></li></a>
+                <a href="Admin/Galeri"><li class="nav_item <?php if($data['judul'] == 'Galeri') echo 'activeAdmin';?>"> <i data-feather="camera"></i> &nbsp; <span>Galeri</span></li></a>
                 <a href="Home" target="_blank"><li class="nav_item"><i data-feather="globe"></i> &nbsp; <span>Main Page</span></li></a>
             </ul>
         </aside>

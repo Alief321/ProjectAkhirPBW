@@ -16,13 +16,13 @@ class Admin extends Controller{
     }
     public function Product()
     {
-        $data['judul'] = "Rekomendasi";
+        $data['judul'] = "ProductAdmin";
         $data['content'] = '../app/views/Admin/Product/index.php';
         $this->view('Templates/Admin', $data);
     }
     public function Galeri()
     {
-        $data['judul'] = "Rekomendasi";
+        $data['judul'] = "Galeri";
         $data['content'] = '../app/views/Admin/Galeri/index.php';
         $this->view('Templates/Admin', $data);
     }
