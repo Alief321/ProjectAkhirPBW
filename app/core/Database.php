@@ -13,13 +13,13 @@ class Database{
 
     public function __construct() {
         // data source name
-    
+        $dsn =  $this->type . ':host=' . $this->host . ';dbname=' . $this->db_name . ';charset=' . $this->charset;
         $option = [
             PDO::ATTR_PERSISTENT => true,
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
         ];
         try{
-            $this->dbh = new PDO($this->type. ':host=' . $this->host . ';dbname=' . $this->db_name . ';charset=' . $this->charset, $this->user, $this->pass, $option);
+            $this->dbh = new PDO($dsn, $this->user, $this->pass, $option);
         } catch(PDOException $e){
             die($e->getMessage());
         }

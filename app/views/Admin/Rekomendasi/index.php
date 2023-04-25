@@ -14,11 +14,12 @@
                 </tr>
             </thead>
             <tbody>
-            <?php
-                $content = ' 
-                    <td>Whiskas</td>
-                    <td>Rp. 23.000</td>
-                    <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis quod quam quasi! Quis iure dignissimos, modi dolores eius nobis neque veniam quibusdam a.</td>
+                <?php $i=1 ?>
+                <?php foreach ($data['rekomendasi'] as$rekomendasi) :?> 
+                    <td><?=$i;?></td>
+                    <td><?=$rekomendasi['Nama'] ;?></td>
+                    <td><?=$rekomendasi['Harga'] ;?></td>
+                    <td><?=$rekomendasi['Deskripsi'] ;?></td>
                     <td>
                         <div class="edit">
                             <i data-feather="edit" id="edit"> </i>
@@ -29,17 +30,9 @@
                             <i data-feather="trash-2" id="trash"> </i>
                         </div>
                     </td>
-                    </tr>';
-                for ($i=0; $i <10 ; $i++) { 
-                    echo '<tr>';
-                    echo '<td>';
-                    echo $i+1; 
-                    echo '</td>';
-                    echo $content;
-                }
-            ?>
-
-   
+                    </tr>
+                <?php $i++; ?>
+                <?php endforeach; ?>
             </tbody>
         </table>
         <!-- modal edit -->

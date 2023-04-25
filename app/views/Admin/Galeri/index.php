@@ -13,9 +13,10 @@
                 </tr>
             </thead>
             <tbody>
-            <?php
-                $content = ' 
-                    <td>Whiskas</td>
+                <?php $i=1 ?>
+                <?php foreach ($data['photos'] as $photo) :?> 
+                    <td><?=$i;?></td>
+                    <td><?=$photo['Nama'] ;?></td>
                     <td>
                         <button class="prevFoto">Lihat Foto</button>
                     </td>
@@ -29,16 +30,9 @@
                             <i data-feather="trash-2" id="trash"> </i>
                         </div>
                     </td>
-                    </tr>';
-                for ($i=0; $i <10 ; $i++) { 
-                    echo '<tr>';
-                    echo '<td>';
-                    echo $i+1; 
-                    echo '</td>';
-                    echo $content;
-                }
-            ?>
-
+                    </tr>
+                <?php $i++; ?>
+                <?php endforeach; ?>
             </tbody>
         </table>
         <!-- modal foto -->

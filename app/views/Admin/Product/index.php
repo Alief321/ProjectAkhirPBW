@@ -22,18 +22,19 @@
                 </tr>
             </thead>
             <tbody>
-            <?php
-                $content = ' 
-                    <td>Whiskas</td>
-                    <td>Rp. 23.000</td>
-                    <td>100</td>
-                    <td>Makanan & Camilan</td>
-                    <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis quod quam quasi! Quis iure dignissimos, modi dolores eius nobis neque veniam quibusdam a.</td>
-                    <td>http://shopee</td>
-                    <td>http://shopee</td>
-                    <td>http://shopee</td>
-                    <td>http://shopee</td>
-                    <td>http://shopee</td>
+                <?php $i=1 ?>
+                <?php foreach ($data['product'] as $product) :?> 
+                    <td><?=$i;?></td>
+                    <td><?= $product['Nama'] ;?></td>
+                    <td><?= $product['Harga'] ;?></td>
+                    <td><?= $product['Stok'] ;?></td>
+                    <td><?= $product['Category'] ;?></td>
+                    <td><?= $product['Deskripsi'] ;?></td>
+                    <td><?= $product['LinkShopee'] ;?></td>
+                    <td><?= $product['LinkTokped'] ;?></td>
+                    <td><?= $product['LinkBiliBli'] ;?></td>
+                    <td><?= $product['LinkLazada'] ;?></td>
+                    <td><?= $product['LinkBukalapak'] ;?></td>
                     <td>
                         <input type="checkbox" name="higlight" id="higlight" >
                     </td>
@@ -47,16 +48,9 @@
                             <i data-feather="trash-2" id="trash"> </i>
                         </div>
                     </td>
-                    </tr>';
-                for ($i=0; $i <10 ; $i++) {
-                    echo '<tr>';
-                    echo '<td>';
-                    echo $i+1; 
-                    echo '</td>'; 
-                    echo $content;
-                }
-            ?>
-
+                    </tr>
+                <?php $i++; ?>
+                <?php endforeach; ?>
             </tbody>
         </table>
         <!-- modal edit -->
@@ -101,12 +95,12 @@
 
         <!-- modal create -->
         <div class="modalCreate">
-            <form action="" method="post">
+            <form action="Product/tambah" method="post">
                 <h1 style="width: 80%; margin: auto; margin-top:2rem; margin-bottom:2rem">Tambah Produk</h1>
                 <label for="nama">Nama Produk</label>
                 <input type="text" name="nama" autofocus required>
                 <label for="foto">Foto Produk</label>
-                <input type="file" name="foto">
+                <input type="text" name="foto">
                 <label for="Harga">Harga</label>
                 <input type="number" name="Harga" required>
                 <label for="Stok">Stok</label>

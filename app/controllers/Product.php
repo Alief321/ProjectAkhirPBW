@@ -5,6 +5,7 @@ class Product extends Controller{
     {
         $data['judul'] = "Product";
         $data['css'] = "product.css";
+        $data['product'] = $this->model('Product_model')->getAllProduct();
         $this->view('Templates/header', $data);
         $this->view('Templates/navbar', $data);
         $this->view('Product/index');
@@ -18,5 +19,13 @@ class Product extends Controller{
         $this->view('Templates/navbar', $data);
         $this->view('Product/detail');
         $this->view('Templates/footer');
+    }
+
+    public function tambah()
+    {
+        if( $this->model('Product_model')->tambahDataProduct($_POST) > 0){
+            header('Location: ' . BASEURL . 'Admin/Product');
+            exit;
+        }
     }
 };

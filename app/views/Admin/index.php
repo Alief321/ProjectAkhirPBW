@@ -1,5 +1,5 @@
     <section id="isiAdmin">
-        <h1 style="font-size: 2rem; margin:0; margin-bottom: 1rem">Selamat datang <?= $data['Name'] ?> 👋</h1>
+        <h1 style="font-size: 2rem; margin:0; margin-bottom: 1rem">Selamat datang <?= $data['Name']['Nama'] ?> 👋</h1>
         <?php 
         $quoteList = array(
             "Apa persamaan kamu dengan kucing? Sama-sama lucu dan menggemaskan. ", 

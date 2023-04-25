@@ -1,25 +1,25 @@
 <?php
-class User_model{
-    private $table = 'user';
+class Rekomendasi_model{
+    private $table = 'rekomendasi';
     private $db;
 
     public function __construct() {
         $this->db = new Database;
     }
 
-    public function getAllUser()
+    public function getAllRekomendasi()
     {
         $this->db->query('SELECT * FROM ' . $this->table);
         return $this->db->resultSet();
     }
-    public function getUserById($id)
+    public function getRekomendasiById($id)
     {
-        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE idUser=:id');
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE idrekomendasi=:id');
         $this->db->bind('id', $id);
         return $this->db->single();
     }
 
-    public function tambahDataUser($data)
+    public function tambahDataRekomendasi($data)
     {
         $query = "INSERT INTO user
                     VALUES
