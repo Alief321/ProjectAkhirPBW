@@ -23,9 +23,30 @@ class Product extends Controller{
 
     public function tambah()
     {
-        if( $this->model('Product_model')->tambahDataProduct($_POST) > 0){
+        if(isset($_POST)){
+            Flasher::setFlash('Data berhasil', 'ditambahkan', 'sukses');
+            $this->model('Product_model')->tambahDataProduct($_POST);
+            header('Location: ' . BASEURL . 'Admin/Product');
+            exit;
+        } else{
+            Flasher::setFlash('Data gagal', 'ditambahkan', 'gagal');
             header('Location: ' . BASEURL . 'Admin/Product');
             exit;
         }
     }
+
+    public function hapus($id)
+    {
+        if(isset($id)){
+            Flasher::setFlash('Data berhasil', 'dihapus', 'sukses');
+            $this->model('Product_model')->hapusDataProduct($id);
+            header('Location: ' . BASEURL . 'Admin/Product');
+            exit;
+        } else{
+            Flasher::setFlash('Data gagal', 'dihapus', 'gagal');
+            header('Location: ' . BASEURL . 'Admin/Product');
+            exit;
+        }
+    }
+
 };

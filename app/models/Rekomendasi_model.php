@@ -21,16 +21,26 @@ class Rekomendasi_model{
 
     public function tambahDataRekomendasi($data)
     {
-        $query = "INSERT INTO user
+        $query = "INSERT INTO rekomendasi
                     VALUES
-                    ('', :Name, :Email, :Password, :ConPassword)";
+                    ('', :Nama, :Harga, :Deskripsi, :Foto)";
         $this->db->query($query);
-        $this->db->bind('Nama', $data['name']);
-        $this->db->bind('Email', $data['email']);
-        $this->db->bind('Password', $data['password']);
-        $this->db->bind('ConPassword', $data['password2']);
+        $this->db->bind('Nama', $data['nama']);
+        $this->db->bind('Harga', $data['harga']);
+        $this->db->bind('Deskripsi', $data['deskripsi']);
+        $this->db->bind('Foto', $data['foto']);
 
         $this->db->execute();
+        return $this->db->rowCount();
+    }
+
+    public function hapusDataRekomendasi($id){
+        $query = "DELETE FROM rekomendasi WHERE idrekomendasi=:id";
+        $this->db->query($query);
+        $this->db->bind('id', $id);
+
+        $this->db->execute();
+        
         return $this->db->rowCount();
     }
 }

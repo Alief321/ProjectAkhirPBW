@@ -38,11 +38,11 @@ class Database{
                 case is_bool($value):
                     $type = PDO::PARAM_BOOL;
                     break;
-                case is_null($type):
+                case is_null($value) || $value ==='':
                     $type = PDO::PARAM_NULL;
                     break;
                 default:
-                    $type= PDO::PARAM_STR ;
+                    $type= PDO::PARAM_STR;
             }
         }
         $this->stmt->bindValue($param, $value, $type);

@@ -22,23 +22,33 @@ class Product_model{
     public function tambahDataProduct($data)
     {
         $query = "INSERT INTO product
-                    VALUES
-                    ('', :Nama, :Deskripsi, :Harga, :Stok, :Category, :LinkShopee, :LinkTokped, :LinkBiliBli, :LinkLazada, :LinkBukalapak, '', :Foto)";
+                    VALUES 
+                    ('', :Nama, :Deskripsi, :Harga, :Stok, :Category, :LinkShopee, :LinkTokped, :LinkBiliBli, :LinkLazada, :LinkBukalapak, default, :Foto)";
         $this->db->query($query);
         $this->db->bind('Nama', $data['nama']);
-        $this->db->bind('Deskripsi', $data['Deskripsi']);
-        $this->db->bind('Harga', $data['Harga']);
-        $this->db->bind('Stok', $data['Stok']);
-        $this->db->bind('Category', $data['Kategori']);
+        $this->db->bind('Deskripsi', $data['deskripsi']);
+        $this->db->bind('Harga', $data['harga']);
+        $this->db->bind('Stok', $data['stok']);
+        $this->db->bind('Category', $data['kategori']);
         $this->db->bind('LinkShopee', $data['shopee']);
-        $this->db->bind('LinkTokped', $data['Tokped']);
+        $this->db->bind('LinkTokped', $data['tokped']);
         $this->db->bind('LinkBiliBli', $data['blibli']);
-        $this->db->bind('LinkLazada', $data['Lazada']);
+        $this->db->bind('LinkLazada', $data['lazada']);
         $this->db->bind('LinkBukalapak', $data['bukalapak']);
         $this->db->bind('Foto', $data['foto']);
 
         $this->db->execute();
+        
+        return $this->db->rowCount();
+    }
 
+    public function hapusDataProduct($id){
+        $query = "DELETE FROM product WHERE idProduct=:id";
+        $this->db->query($query);
+        $this->db->bind('id', $id);
+
+        $this->db->execute();
+        
         return $this->db->rowCount();
     }
 }

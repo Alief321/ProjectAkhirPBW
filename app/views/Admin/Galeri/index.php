@@ -1,7 +1,8 @@
     <section id="isiAdmin">
     <table>   
-        <div style="width:100%; display: flex; height: auto; justify-content: start;">
+        <div style="width:100%; display: flex; height: auto; justify-content: start; column-gap: 1rem;">
             <button id="create">Create</button>
+            <?php Flasher::flash()?>
         </div>
             <thead>
                 <tr>
@@ -21,14 +22,18 @@
                         <button class="prevFoto">Lihat Foto</button>
                     </td>
                     <td>
-                        <div class="edit">
-                            <i data-feather="edit" id="edit"> </i>
-                        </div>
+                        <a href="<?= BASEURL;?>Galeri/edit/<?= $photo['idFoto'];?>">
+                            <div class="edit">
+                                <i data-feather="edit" id="edit"> </i>
+                            </div>
+                        </a>
                     </td>
                     <td>
-                        <div class="trash">
-                            <i data-feather="trash-2" id="trash"> </i>
-                        </div>
+                        <a href="<?= BASEURL;?>Galeri/hapus/<?= $photo['idFoto'];?>">
+                            <div class="trash">
+                                <i data-feather="trash-2" id="trash"> </i>
+                            </div>
+                        </a>
                     </td>
                     </tr>
                 <?php $i++; ?>
@@ -63,7 +68,7 @@
         
         <!-- modal create -->
         <div class="modalCreate">
-            <form action="" method="post">
+            <form action="Galeri/tambah" method="post">
                 <h1 style="width: 80%; margin: auto; margin-top:2rem; margin-bottom:2rem">Tambah Galeri</h1>
                 <label for="nama">Nama</label>
                 <input type="text" name="nama" autofocus required>

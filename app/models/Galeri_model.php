@@ -21,16 +21,24 @@ class Galeri_model{
 
     public function tambahDataGaleri($data)
     {
-        $query = "INSERT INTO user
+        $query = "INSERT INTO galery
                     VALUES
-                    ('', :Name, :Email, :Password, :ConPassword)";
+                    ('', :pathGalery, :Nama)";
         $this->db->query($query);
-        $this->db->bind('Name', $data['name']);
-        $this->db->bind('Email', $data['email']);
-        $this->db->bind('Password', $data['password']);
-        $this->db->bind('ConPassword', $data['password2']);
+        $this->db->bind('pathGalery', $data['foto']);
+        $this->db->bind('Nama', $data['nama']);
 
         $this->db->execute();
+        return $this->db->rowCount();
+    }
+
+    public function hapusDataGaleri($id){
+        $query = "DELETE FROM galery WHERE idFoto=:id";
+        $this->db->query($query);
+        $this->db->bind('id', $id);
+
+        $this->db->execute();
+        
         return $this->db->rowCount();
     }
 }

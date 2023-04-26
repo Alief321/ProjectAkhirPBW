@@ -1,6 +1,7 @@
     <section id="isiAdmin">
-        <div style="width:100%; display: flex; height: auto; justify-content: start;">
+        <div style="width:100%; display: flex; height: auto; justify-content: start; column-gap: 1rem;">
             <button id="create">Create</button>
+            <?php Flasher::flash()?>
         </div>
         <table>   
             <thead>
@@ -21,14 +22,18 @@
                     <td><?=$rekomendasi['Harga'] ;?></td>
                     <td><?=$rekomendasi['Deskripsi'] ;?></td>
                     <td>
-                        <div class="edit">
-                            <i data-feather="edit" id="edit"> </i>
-                        </div>
+                        <a href="<?= BASEURL;?>Rekomendasi/edit/<?= $rekomendasi['idrekomendasi'];?>">
+                            <div class="edit">
+                                <i data-feather="edit" id="edit"> </i>
+                            </div>
+                        </a>
                     </td>
                     <td>
-                        <div class="trash">
-                            <i data-feather="trash-2" id="trash"> </i>
-                        </div>
+                        <a href="<?= BASEURL;?>Rekomendasi/hapus/<?= $rekomendasi['idrekomendasi'];?>">
+                            <div class="trash">
+                                <i data-feather="trash-2" id="trash"> </i>
+                            </div>
+                        </a>
                     </td>
                     </tr>
                 <?php $i++; ?>
