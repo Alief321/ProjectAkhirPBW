@@ -16,7 +16,8 @@ class Database{
         $dsn =  $this->type . ':host=' . $this->host . ';dbname=' . $this->db_name . ';charset=' . $this->charset;
         $option = [
             PDO::ATTR_PERSISTENT => true,
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::MYSQL_ATTR_FOUND_ROWS => true
         ];
         try{
             $this->dbh = new PDO($dsn, $this->user, $this->pass, $option);
@@ -66,6 +67,6 @@ class Database{
 
     public function rowCount()
     {
-        $this->stmt->rowCount();
+        return $this->stmt->rowCount();
     }
 }

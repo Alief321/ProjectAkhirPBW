@@ -4,8 +4,12 @@ class Galeri extends Controller
 {
     public function tambah()
     {
-        if(isset($_POST)) {
-            $this->model('Galeri_model')->tambahDataGaleri($_POST);
+        if($this->model('Galeri_model')->tambahDataGaleri($_POST) > 0) {
+            Flasher::setFlash('Data berhasil', 'ditambahkan', 'sukses');
+            header('Location: ' . BASEURL . 'Admin/Galeri');
+            exit;
+        } else{
+            Flasher::setFlash('Data gagal', 'ditambahkan', 'gagal');
             header('Location: ' . BASEURL . 'Admin/Galeri');
             exit;
         }
@@ -13,9 +17,8 @@ class Galeri extends Controller
 
     public function hapus($id)
     {
-        if(isset($id)){
+        if($this->model('Galeri_model')->hapusDataGaleri($id) > 0){
             Flasher::setFlash('Data berhasil', 'dihapus', 'sukses');
-            $this->model('Galeri_model')->hapusDataGaleri($id);
             header('Location: ' . BASEURL . 'Admin/Galeri');
             exit;
         } else{

@@ -29,7 +29,7 @@
                         </a>
                     </td>
                     <td>
-                        <a href="<?= BASEURL;?>Rekomendasi/hapus/<?= $rekomendasi['idrekomendasi'];?>">
+                        <a href="<?= BASEURL;?>Rekomendasi/hapus/<?= $rekomendasi['idrekomendasi'];?>" onclick="return confirm('apakah anda yakin ingin menghapus data')">
                             <div class="trash">
                                 <i data-feather="trash-2" id="trash"> </i>
                             </div>

@@ -37,17 +37,15 @@
                     <td><?= $product['LinkLazada'] ;?></td>
                     <td><?= $product['LinkBukalapak'] ;?></td>
                     <td>
-                        <input type="checkbox" name="higlight" id="higlight" >
+                        <input type="checkbox" name="higlight" id="higlight">
                     </td>
                     <td>
-                        <a href="<?= BASEURL;?>Product/edit/<?= $product['idProduct'];?>">
-                            <div class="edit">
-                                <i data-feather="edit" id="edit"> </i>
-                            </div>
-                        </a>
+                        <div class="edit" data-id="<?= $product['idProduct'];?>">
+                            <i data-feather="edit" id="edit"> </i>
+                        </div>
                     </td>
                     <td>
-                        <a href="<?= BASEURL;?>Product/hapus/<?= $product['idProduct'];?>">
+                        <a href="<?= BASEURL;?>Product/hapus/<?= $product['idProduct'];?>" onclick="return confirm('apakah anda yakin ingin menghapus data')">
                             <div class="trash">
                                 <i data-feather="trash-2" id="trash"> </i>
                             </div>

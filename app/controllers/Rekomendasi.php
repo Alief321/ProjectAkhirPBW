@@ -4,8 +4,13 @@ class Rekomendasi extends Controller
 {
     public function tambah()
     {
-        if(isset($_POST)) {
-            $this->model('Rekomendasi_model')->tambahDataRekomendasi($_POST);
+        if( $this->model('Rekomendasi_model')->tambahDataRekomendasi($_POST) > 0) {
+            header('Location: ' . BASEURL . 'Admin/Rekomendasi');
+            Flasher::setFlash('Data berhasil', 'ditambahkan', 'sukses');
+            exit;
+        }
+        else{
+            Flasher::setFlash('Data gagal', 'ditambahkan', 'gagal');
             header('Location: ' . BASEURL . 'Admin/Rekomendasi');
             exit;
         }
@@ -13,9 +18,8 @@ class Rekomendasi extends Controller
 
     public function hapus($id)
     {
-        if(isset($id)){
+        if( $this->model('Rekomendasi_model')->hapusDataRekomendasi($id) > 0){
             Flasher::setFlash('Data berhasil', 'dihapus', 'sukses');
-            $this->model('Rekomendasi_model')->hapusDataRekomendasi($id);
             header('Location: ' . BASEURL . 'Admin/Rekomendasi');
             exit;
         } else{
