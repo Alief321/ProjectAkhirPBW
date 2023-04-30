@@ -18,7 +18,12 @@
           <input type="email" name="email" placeholder="Alief321@gmail.com" required autofocus />
           <br />
           <label for="password" class="text">Password</label>
-          <input type="password" name="password" id="password" required />
+          <div class="eye">
+            <input type="password" name="password" id="password" required />
+            <div class="passhide">
+              <i data-feather="eye" id="passhide"></i>
+            </div>
+          </div>
           <br />
           <div class="remme">
             <div class="remember">
@@ -55,6 +60,7 @@
     <!-- Script -->
     <script src="js/script.js"></script>
     <script src="js/loader.js"></script>
+    <script src="js/login.js"></script>
     <script>
       feather.replace();
     </script>

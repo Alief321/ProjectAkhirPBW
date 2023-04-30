@@ -35,11 +35,31 @@ const modal = document.querySelector('.modalAdmin');
 edit.forEach((element) => {
   element.addEventListener('click', function () {
     modal.style.display = 'block';
-
     const id = this.getAttribute('data-id');
-    console.log(id);
+    const form = modal.querySelector('form');
+    const inputs = form.querySelectorAll('input');
+
+    // Fetch record data from the server using vanilla JS
+    // and populate the form fields
+    fetch(`edit/${id}`)
+      .then((response) => response.json())
+      .then((record) => {
+        inputs[0].value = record.Nama;
+        inputs[1].value = record.Foto;
+        inputs[2].value = record.Harga;
+        inputs[3].value = record.Stok;
+        inputs[4].value = record.Kategori;
+        inputs[5].value = record.Deskripsi;
+        inputs[6].value = record.LinkShopee;
+        inputs[7].value = record.LinkTokped;
+        inputs[8].value = record.Link.LinkBiliBli;
+        inputs[9].value = record.linkLazada;
+        inputs[10].value = record.LinkBukalapak;
+      })
+      .catch((error) => console.error(error));
   });
 });
+
 modcancel.addEventListener('click', function () {
   modal.style.display = 'none';
 });

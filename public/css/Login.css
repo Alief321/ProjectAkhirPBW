@@ -108,6 +108,28 @@ p {
   font-size: 1.25;
 }
 
+.eye {
+  display: flex;
+  align-items: center;
+}
+
+.eye .passhide {
+  border: 1px solid #b6b6b6;
+  padding: 0.4rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  transition: all 100ms ease;
+  cursor: pointer;
+}
+
+.eye .passhide:hover {
+  background-color: #733a00;
+}
+
+.eye .passhide:hover #passhide {
+  color: afafa;
+  stroke: #fafafa;
+}
+
 input[type='email'],
 input[type='password'],
 input[type='text'] {
@@ -119,6 +141,10 @@ input[type='text'] {
   box-sizing: border-box;
   height: 7%;
   transition: all 100ms ease;
+}
+
+#password {
+  border-radius: 0.5rem 0 0 0.5rem;
 }
 
 input:active {

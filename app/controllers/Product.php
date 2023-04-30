@@ -47,4 +47,7 @@ class Product extends Controller{
         }
     }
 
+    public function edit($id){
+        $this->model('Product_model')->getProductById($id);
+    }
 };

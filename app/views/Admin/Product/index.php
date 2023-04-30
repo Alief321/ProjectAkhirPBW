@@ -40,9 +40,9 @@
                         <input type="checkbox" name="higlight" id="higlight">
                     </td>
                     <td>
-                        <div class="edit" data-id="<?= $product['idProduct'];?>">
+                            <div class="edit" data-id="<?= $product['idProduct'];?>">
                             <i data-feather="edit" id="edit"> </i>
-                        </div>
+                            </div>
                     </td>
                     <td>
                         <a href="<?= BASEURL;?>Product/hapus/<?= $product['idProduct'];?>" onclick="return confirm('apakah anda yakin ingin menghapus data')">

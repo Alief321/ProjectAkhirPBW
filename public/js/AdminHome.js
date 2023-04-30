@@ -13,7 +13,7 @@ function drawChart() {
   ]);
 
   var options = {
-    title: 'My Daily Activities',
+    title: 'Categories Product',
     is3D: true,
   };
 

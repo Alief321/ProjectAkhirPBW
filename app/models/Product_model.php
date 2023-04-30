@@ -52,4 +52,5 @@ class Product_model{
         return $this->db->rowCount();
     }
 
+    
 }
