@@ -52,7 +52,7 @@
 
         <!-- modal edit -->
         <div class="modalAdmin">
-            <form action="" method="post">
+            <form action="" method="post" enctype="multipart/form-data">
                 <h1 style="width: 80%; margin: auto; margin-top:2rem; margin-bottom:2rem">Edit Galeri</h1>
                 <label for="nama">Nama</label>
                 <input type="text" name="nama" autofocus required>
@@ -68,7 +68,7 @@
         
         <!-- modal create -->
         <div class="modalCreate">
-            <form action="Galeri/tambah" method="post">
+            <form action="Galeri/tambah" method="post" enctype="multipart/form-data">
                 <h1 style="width: 80%; margin: auto; margin-top:2rem; margin-bottom:2rem">Tambah Galeri</h1>
                 <label for="nama">Nama</label>
                 <input type="text" name="nama" autofocus required>

@@ -19,7 +19,7 @@ class Product_model{
         return $this->db->single();
     }
 
-    public function tambahDataProduct($data)
+    public function tambahDataProduct($data, $file)
     {
         $query = "INSERT INTO product
                     VALUES 
@@ -35,7 +35,7 @@ class Product_model{
         $this->db->bind('LinkBiliBli', $data['blibli']);
         $this->db->bind('LinkLazada', $data['lazada']);
         $this->db->bind('LinkBukalapak', $data['bukalapak']);
-        $this->db->bind('Foto', $data['foto']);
+        $this->db->bind('Foto', $file);
 
         $this->db->execute();
         

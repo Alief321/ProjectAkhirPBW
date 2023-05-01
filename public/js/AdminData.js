@@ -75,3 +75,34 @@ create.addEventListener('click', function () {
 createCancel.addEventListener('click', function () {
   modalCreate.style.display = 'none';
 });
+
+function SetChecked() {
+  var Checked = true;
+  '<%Session["Checked"] = "' + Checked + '"; %>';
+}
+
+function GetChecked() {
+  var Checked = '<%= Session["Checked"] %>';
+  return Checked;
+}
+// Checkbox product
+const checkbox = document.querySelectorAll('#higlight');
+const form = document.querySelectorAll('#checkForm');
+checkbox.forEach((element) => {
+  if (GetChecked == true) {
+    element.checked = true;
+    form[i].action = "Rekomendasi/hapus/<?= $product['idProduct'];?>";
+  }
+  i = 0;
+  element.addEventListener('change', (event) => {
+    if (event.currentTarget.checked) {
+      alert('Apakah anda yakin ingin memasukan produk ke rekomendasi?');
+      element.checked = true;
+      SetChecked();
+      form[i].action = "Rekomendasi/hapus/<?= $product['idProduct'];?>";
+    } else {
+      alert('Apakah anda yakin ingin menghapus produk dari rekomendasi?');
+    }
+    i++;
+  });
+});

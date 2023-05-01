@@ -14,18 +14,18 @@ class Galeri_model{
     }
     public function getFotoById($id)
     {
-        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE idGaleri=:id');
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE idFoto=:id');
         $this->db->bind('id', $id);
         return $this->db->single();
     }
 
-    public function tambahDataGaleri($data)
+    public function tambahDataGaleri($data, $file)
     {
         $query = "INSERT INTO galery
                     VALUES
                     ('', :pathGalery, :Nama)";
         $this->db->query($query);
-        $this->db->bind('pathGalery', $data['foto']);
+        $this->db->bind('pathGalery', $file);
         $this->db->bind('Nama', $data['nama']);
 
         $this->db->execute();

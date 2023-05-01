@@ -42,7 +42,7 @@
         </table>
         <!-- modal edit -->
         <div class="modalAdmin">
-            <form action="" method="post">
+            <form action="" method="post" enctype="multipart/form-data">
                 <h1 style="width: 80%; margin: auto; margin-top:2rem; margin-bottom:2rem">Edit Rekomendasi</h1>
                 <label for="nama">Nama Produk</label>
                 <input type="text" name="nama" autofocus required>
@@ -62,7 +62,7 @@
 
         <!-- modalCreate -->
         <div class="modalCreate">
-            <form action="" method="post">
+            <form action="" method="post" enctype="multipart/form-data">
                 <h1 style="width: 80%; margin: auto; margin-top:2rem; margin-bottom:2rem">Tambah Rekomendasi</h1>
                 <label for="nama">Nama Produk</label>
                 <input type="text" name="nama" autofocus required>

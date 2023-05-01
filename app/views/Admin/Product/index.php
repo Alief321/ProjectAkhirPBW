@@ -37,7 +37,13 @@
                     <td><?= $product['LinkLazada'] ;?></td>
                     <td><?= $product['LinkBukalapak'] ;?></td>
                     <td>
-                        <input type="checkbox" name="higlight" id="higlight">
+                        <form action="Rekomendasi/tambah" method="post" id="checkForm" enctype="multipart/form-data">
+                            <input type="checkbox" name="higlight" id="higlight" onChange="this.form.submit()">
+                            <input type="hidden" name="nama" value="<?= $product['Nama'] ;?>" />
+                            <input type="hidden" name="harga" value="<?= $product['Harga'] ;?>" />
+                            <input type="hidden" name="deskripsi" value="<?= $product['Deskripsi'] ;?>" />
+                            <input type="hidden" name="foto" value="<?= $product['Foto'] ;?>">
+                        </form>
                     </td>
                     <td>
                             <div class="edit" data-id="<?= $product['idProduct'];?>">
@@ -58,7 +64,7 @@
         </table>
         <!-- modal edit -->
         <div class="modalAdmin">
-            <form action="" method="post">
+            <form action="" method="post" enctype="multipart/form-data">
                 <h1 style="width: 80%; margin: auto; margin-top:2rem; margin-bottom:2rem">Edit Produk</h1>
                 <label for="Nama">Nama Produk</label>
                 <input type="text" name="Nama" autofocus required>
@@ -98,7 +104,7 @@
 
         <!-- modal create -->
         <div class="modalCreate">
-            <form action="Product/tambah" method="post">
+            <form action="Product/tambah" method="post" enctype="multipart/form-data">
                 <h1 style="width: 80%; margin: auto; margin-top:2rem; margin-bottom:2rem">Tambah Produk</h1>
                 <label for="nama">Nama Produk</label>
                 <input type="text" name="nama" autofocus required>
