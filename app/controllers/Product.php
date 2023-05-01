@@ -14,16 +14,17 @@ class Product extends Controller{
         $data['product'] = $this->model('Product_model')->getAllProduct();
         $this->view('Templates/header', $data);
         $this->view('Templates/navbar', $data);
-        $this->view('Product/index');
+        $this->view('Product/index' ,$data);
         $this->view('Templates/footer');
     }
-    public function detail(){
+    public function detail($id){
         
         $data['judul'] = "Detail Product";
         $data['css'] = "Detail-Product.css";
+        $data['product'] = $this->model('Product_model')->getProductById($id);
         $this->view('Templates/header', $data);
         $this->view('Templates/navbar', $data);
-        $this->view('Product/detail');
+        $this->view('Product/detail', $data);
         $this->view('Templates/footer');
     }
 

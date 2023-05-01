@@ -1,17 +1,16 @@
     <!-- Isi -->
-    <section id="keranjang">
-    <?php 
-      for ($i=0; $i <8 ; $i++) { 
-      echo '  <div class="product">
+    <section id="keranjang">    
+    <?php foreach ($data['keranjang'] as $cart) :?> 
+    <div class="product">
       <div class="prod-pic">
         <img src="img/whiskas.png" alt="whiskas" height="95%"  id="whiskas"/>
       </div>
       <div class="prod-text">
-        <p class="prod-judul">Whiskas 4Pcs Pouch Sachet Adult Tuna And White Fish Flavour</p>
-        <p class="prod-price">RP29.502</p>
+        <p class="prod-judul"><?= $cart['Nama']?></p>
+        <p class="prod-price"><?= $cart['Harga']?></p>
         <div class="stok">
           <p>Stok Barang</p>
-          <p>100</p>
+          <p><?=$cart['Stok']?></p>
         </div>
         <div class="tombol-tombol">
           <a href="Product/detail">
@@ -22,8 +21,7 @@
         </div>
         </div>
       </div>';
-      }?>
-    
+    <?php endforeach; ?>
 
       <!-- Modal -->
       <div class="modal-link">

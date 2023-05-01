@@ -36,16 +36,18 @@
                         </a>
                     </td>
                     </tr>
+
                 <?php $i++; ?>
                 <?php endforeach; ?>
             </tbody>
         </table>
+
         <!-- modal foto -->
         <div class="modalFoto">
             <p id="cilang">x</p>
             <h1 style="font-size: 2rem; margin: 1rem 0 3rem 0; text-align: center;">Nama Foto</h1>
             <div style="display: flex; width: 100%; height: auto; justify-content: center; align-items: center;">
-                <img src="img/logo.png" alt="" width="70%" height="auto" style="margin: auto;">
+                <img src="images/Galeri/<?= $photo['Path']?>" alt="" width="70%" height="auto" style="margin: auto;">
             </div>
         </div>
         <!-- Akhhir modal foto -->
