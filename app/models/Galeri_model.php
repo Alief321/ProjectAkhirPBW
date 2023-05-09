@@ -19,6 +19,12 @@ class Galeri_model{
         return $this->db->single();
     }
 
+    public function getLastFoto()
+    {
+        $this->db->query('SELECT * FROM ' . $this->table . ' LIMIT 4');
+        return $this->db->resultSet();
+    }
+
     public function tambahDataGaleri($data, $file)
     {
         $query = "INSERT INTO galery

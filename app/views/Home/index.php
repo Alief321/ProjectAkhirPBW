@@ -97,66 +97,28 @@
         <p class="recom-text">REKOMENDASI</p>
       </div>
       <div class="recom-content">
+      <?php foreach ($data['rekomendasi'] as $rekom):?>
         <div class="recom-isi">
           <div class="recom-white">
             <div class="recom-pic">
-              <img src="img/whiskas.png" alt="whiskas" width="70%" height="100%" />
+              <img src="images/Galeri/<?= $rekom['Foto']?>" alt="<?=$rekom['Nama']?>" width="70%" height="100%" />
             </div>
             <div class="recom-price">
               <div class="cart">
                 <i data-feather="shopping-cart" id="shoping-cart"></i>
               </div>
-              <p class="recom-price-text">RP 29.500</p>
+              <p class="recom-price-text">Rp<?=$rekom['Harga']?></p>
             </div>
           </div>
           <div class="recom-isi-text">
-            <p class="recom-text-judul">Whiskas 4Pcs Pouch Sachet Adult Tuna And White Fish Flavour</p>
-            <p class="recom-text-detail">Kalau untuk kucing kesayangan, pastinya kamu harus memberikan makanan bernutrisi terbaik! Whiskas Pouch Adult 1+ ...</p>
+            <p class="recom-text-judul"><?=$rekom['Nama']?></p>
+            <p class="recom-text-detail"><?=$rekom['Deskripsi']?></p>
             <div class="recom-more">
               <p>Selengkapnya</p>
             </div>
           </div>
         </div>
-        <div class="recom-isi">
-          <div class="recom-white">
-            <div class="recom-pic">
-              <img src="img/whiskas.png" alt="whiskas" width="70%" height="100%" />
-            </div>
-            <div class="recom-price">
-              <div class="cart">
-                <i data-feather="shopping-cart" id="shoping-cart"></i>
-              </div>
-              <p class="recom-price-text">RP 29.500</p>
-            </div>
-          </div>
-          <div class="recom-isi-text">
-            <p class="recom-text-judul">Whiskas 4Pcs Pouch Sachet Adult Tuna And White Fish Flavour</p>
-            <p class="recom-text-detail">Kalau untuk kucing kesayangan, pastinya kamu harus memberikan makanan bernutrisi terbaik! Whiskas Pouch Adult 1+ ...</p>
-            <div class="recom-more">
-              <p>Selengkapnya</p>
-            </div>
-          </div>
-        </div>
-        <div class="recom-isi">
-          <div class="recom-white">
-            <div class="recom-pic">
-              <img src="img/whiskas.png" alt="whiskas" width="70%" height="100%" />
-            </div>
-            <div class="recom-price">
-              <div class="cart">
-                <i data-feather="shopping-cart" id="shoping-cart"></i>
-              </div>
-              <p class="recom-price-text">RP 29.500</p>
-            </div>
-          </div>
-          <div class="recom-isi-text">
-            <p class="recom-text-judul">Whiskas 4Pcs Pouch Sachet Adult Tuna And White Fish Flavour</p>
-            <p class="recom-text-detail">Kalau untuk kucing kesayangan, pastinya kamu harus memberikan makanan bernutrisi terbaik! Whiskas Pouch Adult 1+ ...</p>
-            <div class="recom-more">
-              <p>Selengkapnya</p>
-            </div>
-          </div>
-        </div>
+        <?php endforeach ?>
       </div>
     </section>
     <!-- Akhir Rekomendasi -->
@@ -164,10 +126,9 @@
     <!-- Galeri -->
     <section id="galery">
       <div class="galeri-isi">
-        <img src="img/galeri1.png" alt="galeri" />
-        <img src="img/galeri2.png" alt="galeri" />
-        <img src="img/galeri3.png" alt="galeri" />
-        <img src="img/galeri4.png" alt="galeri" />
+        <?php foreach ($data['galeri'] as $photo):?>
+          <img src="images/Galeri/<?= $photo['Path']?>" alt="<?= $photo['Nama']?>">
+        <?php endforeach ?>
       </div>
     </section>
     <!-- Akhir Galeri -->

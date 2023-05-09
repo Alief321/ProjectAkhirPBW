@@ -20,8 +20,8 @@ class Rekomendasi_model{
     }
     public function getLastRekomendasi()
     {
-        $this->db->query('SELECT * FROM ' . $this->table . 'LIMIT 3');
-        return $this->db->single();
+        $this->db->query('SELECT * FROM ' . $this->table . ' LIMIT 3');
+        return $this->db->resultSet();
     }
 
     public function tambahDataRekomendasi($data)

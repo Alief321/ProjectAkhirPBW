@@ -29,14 +29,9 @@
         <p>Galeri Paw Catshop</p>
       </div>
       <div class="galeri-isi">
-        <img src="img/galeri1.png" alt="galeri" />
-        <img src="img/galeri2.png" alt="galeri" />
-        <img src="img/galeri3.png" alt="galeri" />
-        <img src="img/galeri4.png" alt="galeri" />
-        <img src="img/galeri5.png" alt="galeri" />
-        <img src="img/galeri6.png" alt="galeri" />
-        <img src="img/galeri7.png" alt="galeri" />
-        <img src="img/galeri8.png" alt="galeri" />
+      <?php foreach ($data['foto'] as $photo):?>
+          <img src="images/Galeri/<?= $photo['Path']?>" alt="<?= $photo['Nama']?>">
+        <?php endforeach ?>
       </div>
     </section>
     <!-- Akhir Galeri -->
