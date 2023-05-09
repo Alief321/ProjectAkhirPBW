@@ -24,7 +24,7 @@
                     <td>
                         <a href="<?= BASEURL;?>Galeri/edit/<?= $photo['idFoto'];?>">
                             <div class="edit">
-                                <i data-feather="edit" id="edit"> </i>
+                                <i data-feather="edit" id="edit"></i>
                             </div>
                         </a>
                     </td>
@@ -45,9 +45,9 @@
         <!-- modal foto -->
         <div class="modalFoto">
             <p id="cilang">x</p>
-            <h1 style="font-size: 2rem; margin: 1rem 0 3rem 0; text-align: center;">Nama Foto</h1>
+            <h1 style="font-size: 2rem; margin: 1rem 0 3rem 0; text-align: center;"><?= $picture['Nama'] ?></h1>
             <div style="display: flex; width: 100%; height: auto; justify-content: center; align-items: center;">
-                <img src="images/Galeri/<?= $photo['Path']?>" alt="" width="70%" height="auto" style="margin: auto;">
+                <img src="images/Galeri/<?= $picture['Path']?>" alt="" width="70%" height="auto" style="margin: auto;">
             </div>
         </div>
         <!-- Akhhir modal foto -->

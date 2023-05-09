@@ -71,6 +71,9 @@ class Product extends Controller{
         $Picture = $this->model('Product_model')->getProductById($id);
         unlink(getcwd().DIRECTORY_SEPARATOR.'images'.DIRECTORY_SEPARATOR. 'Product' . DIRECTORY_SEPARATOR. $Picture['Foto']);
         
+        if($Picture['isRekom']==1){
+            $this->model('Rekomendasi_model')->hapusDataRekomendasifromProduct($id);
+        }
         // delete data from database
         if($this->model('Product_model')->hapusDataProduct($id) > 0){
             Flasher::setFlash('Data berhasil', 'dihapus', 'sukses');
