@@ -23,7 +23,7 @@ class Product_model{
     {
         $query = "INSERT INTO product
                     VALUES 
-                    ('', :Nama, :Deskripsi, :Harga, :Stok, :Category, :LinkShopee, :LinkTokped, :LinkBiliBli, :LinkLazada, :LinkBukalapak, default, :Foto)";
+                    ('', :Nama, :Deskripsi, :Harga, :Stok, :Category, :LinkShopee, :LinkTokped, :LinkBiliBli, :LinkLazada, :LinkBukalapak, default, :Foto, 0)";
         $this->db->query($query);
         $this->db->bind('Nama', $data['nama']);
         $this->db->bind('Deskripsi', $data['deskripsi']);
@@ -52,5 +52,20 @@ class Product_model{
         return $this->db->rowCount();
     }
 
+    public function toRekom($data){
+        $query = "UPDATE product SET isRekom=:isRekom WHERE idProduct=:idProduct";
+        $this->db->query($query);
+        $this->db->bind('isRekom', 1);
+        $this->db->bind('idProduct', $data['idProduct']);
+        $this->db->execute();
+    }
     
+    // uncheck higlight
+    public function delRekom($id){
+        $query = "UPDATE product SET isRekom=:isRekom WHERE idProduct=:idProduct";
+        $this->db->query($query);
+        $this->db->bind('isRekom', 0);
+        $this->db->bind('idProduct', $id);
+        $this->db->execute();
+    }
 }

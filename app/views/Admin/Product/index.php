@@ -37,12 +37,18 @@
                     <td><?= $product['LinkLazada'] ;?></td>
                     <td><?= $product['LinkBukalapak'] ;?></td>
                     <td>
-                        <form action="Rekomendasi/tambah" method="post" id="checkForm" enctype="multipart/form-data">
-                            <input type="checkbox" name="higlight" id="higlight" onChange="this.form.submit()">
+                        <?php $id = $product['idProduct']?>
+                        <form action="<?php if($product['isRekom']==1){echo 'Rekomendasi/hapusFromProduct/'.$id;}else{ echo 'Rekomendasi/tambah';}?>" method="post" id="checkForm" enctype="multipart/form-data">
+                            <input type="checkbox" name="higlight" id="higlight" onChange="this.form.submit()" <?php if($product['isRekom']==1){
+                                echo 'checked';
+                            } else{
+                                echo '';
+                            }?>>
                             <input type="hidden" name="nama" value="<?= $product['Nama'] ;?>" />
                             <input type="hidden" name="harga" value="<?= $product['Harga'] ;?>" />
                             <input type="hidden" name="deskripsi" value="<?= $product['Deskripsi'] ;?>" />
                             <input type="hidden" name="foto" value="<?= $product['Foto'] ;?>">
+                            <input type="hidden" name="idProduct" value="<?= $product['idProduct'] ;?>">
                         </form>
                     </td>
                     <td>

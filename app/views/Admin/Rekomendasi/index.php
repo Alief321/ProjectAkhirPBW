@@ -1,6 +1,5 @@
     <section id="isiAdmin">
         <div style="width:100%; display: flex; height: auto; justify-content: start; column-gap: 1rem;">
-            <button id="create">Create</button>
             <?php Flasher::flash()?>
         </div>
         <table>   
@@ -29,7 +28,7 @@
                         </a>
                     </td>
                     <td>
-                        <a href="<?= BASEURL;?>Rekomendasi/hapus/<?= $rekomendasi['idrekomendasi'];?>" onclick="return confirm('apakah anda yakin ingin menghapus data')">
+                        <a href="<?= BASEURL;?>Rekomendasi/hapus/<?= $rekomendasi['idrekomendasi'];?>/<?= $rekomendasi['idProduct']?>" onclick="return confirm('apakah anda yakin ingin menghapus data')">
                             <div class="trash">
                                 <i data-feather="trash-2" id="trash"> </i>
                             </div>
@@ -59,26 +58,6 @@
             </form>
         </div>
         <!-- Akhir modal edit -->
-
-        <!-- modalCreate -->
-        <div class="modalCreate">
-            <form action="" method="post" enctype="multipart/form-data">
-                <h1 style="width: 80%; margin: auto; margin-top:2rem; margin-bottom:2rem">Tambah Rekomendasi</h1>
-                <label for="nama">Nama Produk</label>
-                <input type="text" name="nama" autofocus required>
-                <label for="foto">Foto Produk</label>
-                <input type="file" name="foto">
-                <label for="Harga">Harga</label>
-                <input type="number" name="Harga" required>
-                <label for="Deskripsi">Deskripsi</label>
-                <textarea name="Deskripsi" id="Deskripsi" cols="60" rows="8"></textarea>
-                <div class="button">
-                    <button type="button" id="createCancel">Cancel</button>
-                    <button type="submit" id="modCreate">Create</button>
-                </div>
-            </form>
-        </div>
-        <!-- modalCreate -->
 
     </section>
 
