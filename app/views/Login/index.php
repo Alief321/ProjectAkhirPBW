@@ -11,6 +11,9 @@
         <img src="img/login-img.png" alt="login" width="95%" height="95%" style="margin-left: 1rem" />
       </div>
       <div class="login-kiri">
+        <div class="Hello">
+            <?php Flasher::flash()?>
+        </div>
         <p class="Hello">Hey Hello 👋🏻</p>
         <p class="sub-text">Silahkan login dengan memasukan data diri anda</p>
         <form action="Home" method="post">

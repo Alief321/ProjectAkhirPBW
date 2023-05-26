@@ -27,7 +27,7 @@ class User_model{
         $this->db->query($query);
         $this->db->bind('Nama', $data['name']);
         $this->db->bind('Email', $data['email']);
-        $this->db->bind('Password', $data['password']);
+        $this->db->bind('Password', hash('sha1',$data['password']));
         $this->db->bind('ConPassword', $data['password2']);
 
         $this->db->execute();
@@ -38,7 +38,7 @@ class User_model{
         $query = "SELECT * FROM " . $this->table . " WHERE Email=:email and Password=:Pass";
         $this->db->query($query);
         $this->db->bind('email', $email);
-        $this->db->bind('Pass', $password);
+        $this->db->bind('Pass',hash('sha1',$password));
         
         $this->db->execute();
         return $this->db->rowCount();

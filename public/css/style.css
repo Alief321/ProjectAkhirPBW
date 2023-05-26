@@ -26,6 +26,22 @@ nav {
   z-index: 99;
 }
 
+.sukses,
+.gagal {
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #f4f4f4;
+}
+.sukses {
+  background-color: #30d430b8;
+}
+
+.gagal {
+  background-color: #da5656a5;
+}
+
 .drpdwn_menu {
   background-color: rgba(255, 220, 117, 0.8);
   border-radius: 0 0 1rem 1rem;

@@ -4,14 +4,15 @@ class Home extends Controller{
         if(!isset($_SESSION)){ 
             session_start(); 
         } 
-        if (!isset($_SESSION['email']) && !isset($_POST['email']) ) {
+        if (!isset($_SESSION['email']) && !isset($_POST['email'])) {
             header('Location:'. BASEURL .'Login');
         }else{
-       
             $_SESSION['email'] = $_POST['email'];
             $_SESSION['password'] = $_POST['password'];
             if ( $this->model('User_model')->validateUser($_SESSION['email'], $_SESSION['password']) <= 0) {
                 header('Location:'. BASEURL .'Login');
+                Flasher::setFlash('Password atau Email', 'salah', 'gagal');
+                exit;
             }
         }
         $data['judul'] = "Home";
