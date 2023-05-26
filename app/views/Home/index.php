@@ -1,4 +1,5 @@
-   <!-- Hiro -->
+
+  <!-- Hiro -->
    <section id="hiro">
       <div class="hiro_content animate-bottom">
         <div class="content-wrap">

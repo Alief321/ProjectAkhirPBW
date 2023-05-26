@@ -33,4 +33,14 @@ class User_model{
         $this->db->execute();
         return $this->db->rowCount();
     }
+
+    public function validateUser($email, $password){
+        $query = "SELECT * FROM " . $this->table . " WHERE Email=:email and Password=:Pass";
+        $this->db->query($query);
+        $this->db->bind('email', $email);
+        $this->db->bind('Pass', $password);
+        
+        $this->db->execute();
+        return $this->db->rowCount();
+    }
 }

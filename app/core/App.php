@@ -1,11 +1,14 @@
 <?php
-
 class App{
-    protected $controller = "Login";
+    protected $controller = "Home";
     protected $method = "index";
     protected $params = [];
     
+
     public function __construct() {
+        if(!isset($_SESSION)){ 
+            session_start(); 
+        }
         $url = $this->parseURL();
 
         //setup controller
@@ -26,12 +29,11 @@ class App{
         if(!empty($url)) {
             $this->params = array_values($url);
             }
-
         call_user_func_array([$this->controller, $this->method], $this->params);
     }
 
     public function parseURL() {
-        $url = ['Login'];
+        $url = ['Home'];
         if(isset($_GET['url'])){
             $url = rtrim($_GET['url'],'/');
             $url = filter_var($url, FILTER_SANITIZE_URL);
