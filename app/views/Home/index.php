@@ -114,9 +114,11 @@
           <div class="recom-isi-text">
             <p class="recom-text-judul"><?=$rekom['Nama']?></p>
             <p class="recom-text-detail"><?=$rekom['Deskripsi']?></p>
-            <div class="recom-more">
-              <p>Selengkapnya</p>
-            </div>
+            <a href="Product/detail/<?=$rekom["idProduct"]?>">
+              <div class="recom-more">
+                <p>Selengkapnya</p>
+              </div>
+            </a>
           </div>
         </div>
         <?php endforeach ?>

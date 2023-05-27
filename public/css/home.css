@@ -406,7 +406,8 @@
 .galeri-isi img {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
   height: 20vrem;
-  max-width: 23%;
+  max-width: 300px;
+  height: 250px;
   transition: all 100ms ease;
   filter: grayscale(70%);
   cursor: pointer;
