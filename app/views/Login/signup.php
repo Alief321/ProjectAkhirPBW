@@ -11,6 +11,9 @@
         <img src="img/signup.png" alt="login" width="75%" height="95%" style="margin-left: 1rem" />
       </div>
       <div class="login-kiri" style="margin-top: 0">
+        <div class="Hello">
+            <?php Flasher::flash()?>
+        </div>
         <p class="Hello">Create Acount</p>
         <p class="sub-text">Silahkan buat akun dengan memasukan data diri anda</p>
         <form action="Signup/tambah" method="post">

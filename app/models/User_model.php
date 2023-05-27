@@ -18,6 +18,13 @@ class User_model{
         $this->db->bind('id', $id);
         return $this->db->single();
     }
+    
+    public function getUserByEmail($email)
+    {
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE Email=:Email');
+        $this->db->bind('Email', $email);
+        return $this->db->single();
+    }
 
     public function tambahDataUser($data)
     {

@@ -6,9 +6,9 @@ class User extends Controller{
         if(!isset($_SESSION)){ 
             session_start(); 
         } 
-        $id = 1;
+
         $data['judul'] = "User";
-        $data['User']= $this->model('User_model')->getUserById($id);
+        $data['User']= $this->model('User_model')->getUserByEmail($_SESSION['email']);
         $data['css'] = "user.css";
         $this->view('Templates/header', $data);
         $this->view('Templates/navbar', $data);
