@@ -2,6 +2,9 @@
 
 class Link extends Controller{
     public function index(){
+        if(!isset($_SESSION)){ 
+            session_start(); 
+        } 
         $data['judul'] = "Link";
         $data['css'] = "Link.css";
         $this->view('Templates/header', $data);

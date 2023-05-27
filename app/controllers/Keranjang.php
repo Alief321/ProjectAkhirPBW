@@ -3,6 +3,9 @@
 class Keranjang extends Controller{
     public function index()
     {
+        if(!isset($_SESSION)){ 
+            session_start(); 
+        } 
         $data['judul'] = "Keranjang";
         $data['css'] = "Keranjang.css";
         $data['keranjang'] = $this->model('Keranjang_model')->getAllKeranjang();

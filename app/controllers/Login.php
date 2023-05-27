@@ -2,6 +2,11 @@
 
 class Login extends Controller{
     public function index(){
+        if(!isset($_SESSION)){ 
+            session_start(); 
+        } 
+        session_unset();
+        session_destroy();
         $data['judul'] = "Login";
         $data['css'] = "Login.css";
         $this->view('Templates/header', $data);

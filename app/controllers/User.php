@@ -3,6 +3,9 @@
 class User extends Controller{
 
     public function index(){
+        if(!isset($_SESSION)){ 
+            session_start(); 
+        } 
         $id = 1;
         $data['judul'] = "User";
         $data['User']= $this->model('User_model')->getUserById($id);

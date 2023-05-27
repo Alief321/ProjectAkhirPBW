@@ -13,7 +13,7 @@
       <div class="login-kiri" style="margin-top: 0">
         <p class="Hello">Create Acount</p>
         <p class="sub-text">Silahkan buat akun dengan memasukan data diri anda</p>
-        <form action="Home" method="post">
+        <form action="Signup/tambah" method="post">
           <label for="email" class="text">Nama</label>
           <input type="text" name="nama" placeholder="Masukkan nama anda" required autofocus />
           <br />

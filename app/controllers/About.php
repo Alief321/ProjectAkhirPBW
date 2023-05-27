@@ -2,6 +2,9 @@
 
 class About extends Controller{
     public function index(){
+        if(!isset($_SESSION)){ 
+            session_start(); 
+        } 
         $data['judul'] = "About Us";
         $data['css'] = "AboutUs.css";
         $data['foto']= $this->model("Galeri_model")->getAllFoto();

@@ -9,6 +9,9 @@ class Product extends Controller{
 
     public function index()
     {
+        if(!isset($_SESSION)){ 
+            session_start(); 
+        } 
         $data['judul'] = "Product";
         $data['css'] = "product.css";
         $data['product'] = $this->model('Product_model')->getAllProduct();

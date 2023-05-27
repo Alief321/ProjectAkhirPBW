@@ -16,7 +16,7 @@
         </div>
         <p class="Hello">Hey Hello 👋🏻</p>
         <p class="sub-text">Silahkan login dengan memasukan data diri anda</p>
-        <form action="Home" method="post">
+        <form action="Auth" method="post">
           <label for="email" class="text">Email</label>
           <input type="email" name="email" placeholder="Alief321@gmail.com" required autofocus />
           <br />

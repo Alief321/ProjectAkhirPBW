@@ -23,12 +23,12 @@ class User_model{
     {
         $query = "INSERT INTO user
                     VALUES
-                    ('', :Name, :Email, :Password, :ConPassword)";
+                    ('', :Name, :Email, :Password, :ConPassword, DEFAULT)";
         $this->db->query($query);
-        $this->db->bind('Nama', $data['name']);
+        $this->db->bind('Name', $data['nama']);
         $this->db->bind('Email', $data['email']);
         $this->db->bind('Password', hash('sha1',$data['password']));
-        $this->db->bind('ConPassword', $data['password2']);
+        $this->db->bind('ConPassword', hash('sha1',$data['password']));
 
         $this->db->execute();
         return $this->db->rowCount();
