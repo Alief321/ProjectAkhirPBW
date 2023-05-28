@@ -91,6 +91,7 @@ class Product extends Controller{
     }
 
     public function edit($id){
-        $this->model('Product_model')->getProductById($id);
+        $data['product'] = $this->model('Product_model')->getProductById($id);
+        return $data['product'];
     }
 };

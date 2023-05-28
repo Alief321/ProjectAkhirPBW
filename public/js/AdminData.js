@@ -1,30 +1,15 @@
 // fetxh data
 function fetch_data(id) {
-  var form_data = new FormData();
-  form_data.append('id', id);
-  form_data.append('action', 'fetch');
+  const Nama = document.getElementById('namaEdit');
 
-  fetch('action.php', {
-    method: 'POST',
-
-    body: form_data,
-  })
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (responseData) {
-      _('first_name').value = responseData.first_name;
-
-      _('last_name').value = responseData.last_name;
-
-      _('customer_email').value = responseData.customer_email;
-
-      _('customer_gender').value = responseData.customer_gender;
-
-      _('customer_id').value = id;
-
-      _('action').value = 'Update';
-    });
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      Nama = this.responseText;
+    }
+  };
+  xhttp.open('GET', 'Product/edit/' + id, true);
+  xhttp.send();
 }
 
 // modal edit
@@ -41,22 +26,22 @@ edit.forEach((element) => {
 
     // Fetch record data from the server using vanilla JS
     // and populate the form fields
-    fetch(`edit/${id}`)
-      .then((response) => response.json())
-      .then((record) => {
-        inputs[0].value = record.Nama;
-        inputs[1].value = record.Foto;
-        inputs[2].value = record.Harga;
-        inputs[3].value = record.Stok;
-        inputs[4].value = record.Kategori;
-        inputs[5].value = record.Deskripsi;
-        inputs[6].value = record.LinkShopee;
-        inputs[7].value = record.LinkTokped;
-        inputs[8].value = record.Link.LinkBiliBli;
-        inputs[9].value = record.linkLazada;
-        inputs[10].value = record.LinkBukalapak;
-      })
-      .catch((error) => console.error(error));
+    // fetch(`edit/${id}`)
+    //   .then((response) => response.json())
+    //   .then((record) => {
+    //     inputs[0].value = record.Nama;
+    //     inputs[1].value = record.Foto;
+    //     inputs[2].value = record.Harga;
+    //     inputs[3].value = record.Stok;
+    //     inputs[4].value = record.Kategori;
+    //     inputs[5].value = record.Deskripsi;
+    //     inputs[6].value = record.LinkShopee;
+    //     inputs[7].value = record.LinkTokped;
+    //     inputs[8].value = record.Link.LinkBiliBli;
+    //     inputs[9].value = record.linkLazada;
+    //     inputs[10].value = record.LinkBukalapak;
+    //   })
+    //   .catch((error) => console.error(error));
   });
 });
 

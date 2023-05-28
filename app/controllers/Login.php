@@ -5,11 +5,11 @@ class Login extends Controller{
         if(!isset($_SESSION)){ 
             session_start(); 
         } 
-        session_unset();
-        session_destroy();
         $data['judul'] = "Login";
         $data['css'] = "Login.css";
         $this->view('Templates/header', $data);
         $this->view('Login/index');
+        session_unset();
+        session_destroy();
     }
 }

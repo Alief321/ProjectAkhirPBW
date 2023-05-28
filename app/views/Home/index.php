@@ -102,13 +102,13 @@
         <div class="recom-isi">
           <div class="recom-white">
             <div class="recom-pic">
-              <img src="images/Galeri/<?= $rekom['Foto']?>" alt="<?=$rekom['Nama']?>" width="70%" height="100%" />
+              <img src="images/Product/<?=$rekom['Foto']?>" alt="<?=$rekom['Nama']?>" width="70%" height="100%" />
             </div>
             <div class="recom-price">
               <div class="cart">
                 <i data-feather="shopping-cart" id="shoping-cart"></i>
               </div>
-              <p class="recom-price-text">Rp<?=$rekom['Harga']?></p>
+              <p class="recom-price-text">Rp<?=number_format($rekom['Harga'], 0, ',', '.')?></p>
             </div>
           </div>
           <div class="recom-isi-text">

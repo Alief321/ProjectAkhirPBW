@@ -52,9 +52,9 @@
                         </form>
                     </td>
                     <td>
-                            <div class="edit" data-id="<?= $product['idProduct'];?>">
-                            <i data-feather="edit" id="edit"> </i>
-                            </div>
+                        <div class="edit" data-id="<?= $product['idProduct'];?>">
+                            <i data-feather="edit" id="edit" onclick="fetch_data(<?=$product['idProduct']?>)"> </i>
+                        </div>
                     </td>
                     <td>
                         <a href="<?= BASEURL;?>Product/hapus/<?= $product['idProduct'];?>" onclick="return confirm('apakah anda yakin ingin menghapus data')">
@@ -70,16 +70,16 @@
         </table>
         <!-- modal edit -->
         <div class="modalAdmin">
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="Product/update" method="post" enctype="multipart/form-data">
                 <h1 style="width: 80%; margin: auto; margin-top:2rem; margin-bottom:2rem">Edit Produk</h1>
                 <label for="Nama">Nama Produk</label>
-                <input type="text" name="Nama" autofocus required>
+                <input type="text" name="Nama" id="namaEdit" autofocus required>
                 <label for="Foto">Foto Produk</label>
-                <input type="file" name="Foto">
+                <input type="file" name="Foto" id="fotoEdit">
                 <label for="Harga">Harga</label>
-                <input type="number" name="Harga" required>
+                <input type="number" name="Harga" id="hargaEdit" required>
                 <label for="Stok">Stok</label>
-                <input type="number" name="Stok" required>
+                <input type="number" name="Stok" id="StokEdit" required>
                 <label for="Kategori">Kategori</label>
                 <select name="Kategori" id="Kategori">
                     <option value="Makanan & Camilan"> Makanan & Camilan</option>
@@ -91,15 +91,15 @@
                 <label for="Deskripsi">Deskripsi</label>
                 <textarea name="Deskripsi" id="Deskripsi" cols="60" rows="8" required></textarea>
                 <label for="Shopee">Link Shopee</label>
-                <input type="url" name="Shopee">
+                <input type="url" name="Shopee" id="shopeeEdit">
                 <label for="Tokped">Link Tokopedia</label>
-                <input type="url" name="Tokped">
+                <input type="url" name="Tokped" id="tokpedEdit">
                 <label for="Blibli">Link Blibli</label>
-                <input type="url" name="Blibli">
+                <input type="url" name="Blibli" id="blibliEdit">
                 <label for="Lazada">Link Lazada</label>
-                <input type="url" name="Lazada">
+                <input type="url" name="Lazada" id="lazadaEdit">
                 <label for="Bukalapak">Link Bukalapak</label>
-                <input type="url" name="Bukalapak">
+                <input type="url" name="Bukalapak" id="bukalapakEdit">
                 <div class="button">
                     <button type="button" id="modcancel">Cancel</button>
                     <button type="submit" id="modedit">Edit</button>

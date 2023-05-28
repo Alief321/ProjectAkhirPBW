@@ -7,10 +7,10 @@
       </div>
       <div class="prod-text">
         <p class="prod-judul"><?= $cart['Nama']?></p>
-        <p class="prod-price"><?= $cart['Harga']?></p>
+        <p class="prod-price">Rp<?= number_format($cart['Harga'], 0, ',', '.')?></p>
         <div class="stok">
           <p>Stok Barang</p>
-          <p><?=$cart['Stok']?></p>
+          <p><?= number_format($cart['Stok'], 0, ',', '.')?></p>
         </div>
         <div class="tombol-tombol">
           <a href="Product/detail">

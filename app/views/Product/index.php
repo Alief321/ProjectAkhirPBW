@@ -64,7 +64,7 @@
         </div>
         <div class="prod-text">
           <div class="prod-price">
-            <p><?= $product['Harga']?></p>
+            <p>Rp<?= number_format($product['Harga'], 0, ',', '.')?></p>
             <i data-feather="shopping-cart" id="shoping-cart"></i>
           </div>
           <p class="prod-judul"><?= $product['Nama']?></p>

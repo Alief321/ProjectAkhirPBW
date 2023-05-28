@@ -10,10 +10,10 @@
         </div>
         <div class="prod-text">
           <p class="prod-judul"><?= $data['product']['Nama']?></p>
-          <p class="prod-price"><?= $data['product']['Harga']?></p>
+          <p class="prod-price">Rp<?= number_format($data['product']['Harga'], 0, ',', '.')?></p>
           <div class="stok">
             <p>Stok Barang</p>
-            <p><?= $data['product']['Stok']?></p>
+            <p><?= number_format($data['product']['Stok'], 0, ',', '.')?></p>
           </div>
           <hr>
           <p>Kategori: <a href="Product" style="color: #730000; "><?= $data['product']['Category']?></a></p>
