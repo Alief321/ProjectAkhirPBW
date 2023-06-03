@@ -82,11 +82,11 @@
                 <input type="number" name="Stok" id="StokEdit" required>
                 <label for="Kategori">Kategori</label>
                 <select name="Kategori" id="Kategori">
-                    <option value="Makanan & Camilan"> Makanan & Camilan</option>
-                    <option value="Obat & Vitamin"> Obat & Vitamin</option>
-                    <option value="Alat Kebersihan"> Alat Kebersihan</option>
-                    <option value="Kandang & Toilet"> Kandang & Toilet</option>
-                    <option value="Lainnya"> Lainnya</option>
+                    <option value="1"> Makanan & Camilan</option>
+                    <option value="2"> Obat & Vitamin</option>
+                    <option value="3"> Alat Kebersihan</option>
+                    <option value="4"> Kandang & Toilet</option>
+                    <option value="5"> Lainnya</option>
                 </select>
                 <label for="Deskripsi">Deskripsi</label>
                 <textarea name="Deskripsi" id="Deskripsi" cols="60" rows="8" required></textarea>
@@ -122,11 +122,11 @@
                 <input type="number" name="stok" required>
                 <label for="kategori">Kategori</label>
                 <select name="kategori" id="Kategori">
-                    <option value="Makanan & Camilan"> Makanan & Camilan</option>
-                    <option value="Obat & Vitamin"> Obat & Vitamin</option>
-                    <option value="Alat Kebersihan"> Alat Kebersihan</option>
-                    <option value="Kandang & Toilet"> Kandang & Toilet</option>
-                    <option value="Lainnya"> Lainnya</option>
+                    <option value="1"> Makanan & Camilan</option>
+                    <option value="2"> Obat & Vitamin</option>
+                    <option value="3"> Alat Kebersihan</option>
+                    <option value="4"> Kandang & Toilet</option>
+                    <option value="5"> Lainnya</option>
                 </select>
                 <label for="deskripsi">Deskripsi</label>
                 <textarea name="deskripsi" id="Deskripsi" cols="60" rows="8" required></textarea>

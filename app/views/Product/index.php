@@ -4,12 +4,16 @@
         <option value="Terbaru">Terbaru</option>
         <option value="Terhits">Terhits</option>
       </select>
+      <div class="searcharea">
       <form action="" id="searchform">
-        <input type="search" name="search" id="search" placeholder="Input nama produk..." />
+        <input type="search" name="search" id="search" placeholder="Input nama produk..." onkeyup="showHint(this.value)" />
         <div class="searchbtn">
           <i data-feather="search" id="search-magnify"></i>
         </div>
       </form>
+      <div id="suggest"></div>
+
+      </div>
       <select name="sorting" id="sorting">
         <option value="ascending">Menaik</option>
         <option value="descending">Menurun</option>
@@ -20,12 +24,12 @@
     <!-- group -->
     <section id="group-categories">
       <ul class="group-cat-wrap">
-        <li style="margin-left: -2rem" class="group-active category-group">Semua</li>
-        <li class="category-group">Makanan & Camilan</li>
-        <li class="category-group">Obat & Vitamin</li>
-        <li class="category-group">Alat Kebersihan</li>
-        <li class="category-group">Kandang & Toilet</li>
-        <li class="category-group">Lainnya</li>
+        <a href="Product"><li style="margin-left: -2rem" class="category-group <?php if($data['group'] == 'All') echo 'group-active';?>">Semua</li></a>
+        <a href="Product/category/1"><li class="category-group <?php if($data['group'] == '1') echo 'group-active';?>">Makanan & Camilan</li></a>
+        <a href="Product/category/2"><li class="category-group <?php if($data['group'] == '2') echo 'group-active';?>">Obat & Vitamin</li></a>
+        <a href="Product/category/3"><li class="category-group <?php if($data['group'] == '3') echo 'group-active';?>"">Alat Kebersihan</li></a>
+        <a href="Product/category/4"> <li class="category-group <?php if($data['group'] == '4') echo 'group-active';?>">Kandang & Toilet</li></a>
+        <a href="Product/category/5"><li class="category-group <?php if($data['group'] == '5') echo 'group-active';?>">Lainnya</li></a>
       </ul>
       <hr style="border: 1px solid #cecbcb" />
     </section>
@@ -38,13 +42,13 @@
           <option value="Terhits">Terhits</option>
         </select>
         <!-- groupcat mobile -->
-        <select name="category" id="catGroup">
-            <option class="category-group">Semua</option>
-            <option class="category-group">Makanan & Camilan</option>
-            <option class="category-group">Obat & Vitamin</option>
-            <option class="category-group">Alat Kebersihan</option>
-            <option class="category-group">Kandang & Toilet</option>
-            <option class="category-group">Lainnya</option>
+        <select name="category" id="catGroup" onchange="window.location.href=this.options [this.selectedIndex].value">
+            <option value="Product" class="category-group" <?php if($data['group']=='All'){ echo 'selected';} else{ echo '';} ?>>Semua</option>
+            <option value="Product/category/1" class="category-group" <?php if($data['group']=='1'){ echo 'selected';} else{ echo '';} ?>>Makanan & Camilan</option>
+            <option value="Product/category/2" class="category-group" <?php if($data['group']=='2'){ echo 'selected';} else{ echo '';} ?>>Obat & Vitamin</option>
+            <option value="Product/category/3" class="category-group" <?php if($data['group']=='3'){ echo 'selected';} else{ echo '';} ?>>Alat Kebersihan</option>
+            <option value="Product/category/4" class="category-group" <?php if($data['group']=='4'){ echo 'selected';} else{ echo '';} ?>>Kandang & Toilet</option>
+            <option value="Product/category/5" class="category-group" <?php if($data['group']== '5'){ echo 'selected';} else{ echo '';} ?>>Lainnya</option>
         </select>
         <!-- Akhir groupcat mobile -->
         <select name="sorting" id="sortingmob">
@@ -57,8 +61,9 @@
     
     <!-- isi -->
     <section id="product">
-    <?php foreach ($data['product'] as $product) :?> 
-    <div class="prod-card">
+    <?php if(isset($data['search'])):?>
+      <?php foreach ($data['search'] as $product) :?> 
+      <div class="prod-card">
         <div class="prod-pic">
           <img src="images/Product/<?= $product['Foto']?>" alt="whiskas" width="60%" />
         </div>
@@ -76,11 +81,34 @@
           </a>
         </div>
       </div>
-    <?php endforeach;?>
+      <?php endforeach;?>
+      <?php else:?>
+        <?php foreach ($data['product'] as $product) :?> 
+          <div class="prod-card">
+            <div class="prod-pic">
+              <img src="images/Product/<?= $product['Foto']?>" alt="whiskas" width="60%" />
+            </div>
+            <div class="prod-text">
+          <div class="prod-price">
+            <p>Rp<?= number_format($product['Harga'], 0, ',', '.')?></p>
+            <i data-feather="shopping-cart" id="shoping-cart"></i>
+          </div>
+          <p class="prod-judul"><?= $product['Nama']?></p>
+          <p style="font-size: 0.75rem; margin-top: 0; text-align: justify"><?= $product['Deskripsi']?></p>
+          <a href="Product/detail/<?= $product['idProduct']?>">
+            <div class="product-more">
+              <p>Selengkapnya</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <?php endforeach;?>
+      <?php endif?>
     </section>
     <!-- akhir isi -->
     </section>
 
     <!-- js addition-->
     <script src="js/product.js"></script>
+    <script src="js/suggestion.js"></script>
     <!-- akhir js addition -->

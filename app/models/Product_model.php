@@ -19,6 +19,14 @@ class Product_model{
         return $this->db->single();
     }
 
+    // getproductby category
+    public function getProductByCategory($category)
+    {
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE Category=:category');
+        $this->db->bind('category', $category);
+        return $this->db->resultSet();
+    }
+
     public function tambahDataProduct($data, $file)
     {
         $query = "INSERT INTO product
@@ -67,5 +75,29 @@ class Product_model{
         $this->db->bind('isRekom', 0);
         $this->db->bind('idProduct', $id);
         $this->db->execute();
+    }
+
+    // gethint
+    public function getHint($suggest)
+    {
+        $query = "SELECT * From product WHERE Nama Like '%$suggest%'";
+        $this->db->query($query);
+        $data = $this->db->resultSet();
+        // // lookup all hints if query result is not empty
+        // $hint = "";
+        // if ($data) {
+        //     foreach($data as $row) {
+        //         if ($hint === "") {
+        //         $hint = $row["Nama"];
+        //         } else {
+        //             $hint .= ", " .$row["Nama"];
+        //         }
+        //     }
+        // }
+        // // Output "no suggestion" if no hint was found or output correct values
+        foreach ($data as $value) {
+            echo $value["Nama"], "<br>";
+        }
+        return $data;
     }
 }

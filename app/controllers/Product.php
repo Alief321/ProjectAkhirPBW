@@ -12,6 +12,7 @@ class Product extends Controller{
         if(!isset($_SESSION)){ 
             session_start(); 
         } 
+        $data['group']= "All";
         $data['judul'] = "Product";
         $data['css'] = "product.css";
         $data['product'] = $this->model('Product_model')->getAllProduct();
@@ -93,5 +94,27 @@ class Product extends Controller{
     public function edit($id){
         $data['product'] = $this->model('Product_model')->getProductById($id);
         return $data['product'];
+    }
+
+    public function suggest()
+    {
+        $data['search']= $this->model('Product_model')->getHint($_GET['keyword']);
+        return $data['search'];
+    }
+
+    public function category($category){
+        if(!isset($_SESSION)){ 
+            session_start(); 
+        } 
+        $data['judul'] = "Product";
+        $data['css'] = "product.css";
+        // $data['product'] = $this->model('Product_model')->getAllProduct();
+        $data['group']= $category;
+        $data['product']= $this->model('Product_model')->getProductByCategory($category);
+        $this->view('Templates/header', $data);
+        $this->view('Templates/navbar', $data);
+        $this->view('Product/index' ,$data);
+        $this->view('Templates/footer');
+        // return $data['product'];
     }
 };
