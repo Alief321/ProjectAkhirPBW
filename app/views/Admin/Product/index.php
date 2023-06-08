@@ -29,7 +29,25 @@
                     <td><?= $product['Nama'] ;?></td>
                     <td><?= $product['Harga'] ;?></td>
                     <td><?= $product['Stok'] ;?></td>
-                    <td><?= $product['Category'] ;?></td>
+                    <?php 
+                        switch($product['Category']){
+                            case 1:
+                                echo '<td>Makanan & Camilan</td>';
+                                break;
+                            case 2:
+                                echo '<td>Obat & Vitamin</td>';
+                                break;
+                            case 3:
+                                echo '<td>Alat Kebersihan</td>';
+                                break;
+                            case 4:
+                                echo '<td>Kandang & Toilet</td>';
+                                break;
+                            case 5:
+                                echo '<td>Lainnya</td>';
+                                break;
+                        }
+                    ?>
                     <td><?= $product['Deskripsi'] ;?></td>
                     <td><?= $product['LinkShopee'] ;?></td>
                     <td><?= $product['LinkTokped'] ;?></td>

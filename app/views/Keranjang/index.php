@@ -1,9 +1,15 @@
     <!-- Isi -->
-    <section id="keranjang">    
+    <section id="keranjang">
+      <div style="width: 100%; height: 1.7rem; display: flex; justify-content: center; align-items: center;">
+      <?php Flasher::flash()?>
+      </div>
+    <?php if ($data['keranjang']== null):?>
+      <p style="text-align: center; justify-content: center;">Belum ada daftar keranjang</p>
+    <?php else:?>
     <?php foreach ($data['keranjang'] as $cart) :?> 
     <div class="product">
       <div class="prod-pic">
-        <img src="img/whiskas.png" alt="whiskas" height="95%"  id="whiskas"/>
+        <img src="images/Product/<?=$cart['Foto']?>" alt="whiskas" height="95%"  id="whiskas"/>
       </div>
       <div class="prod-text">
         <p class="prod-judul"><?= $cart['Nama']?></p>
@@ -13,16 +19,18 @@
           <p><?= number_format($cart['Stok'], 0, ',', '.')?></p>
         </div>
         <div class="tombol-tombol">
-          <a href="Product/detail">
+          <a href="Product/detail/<?=$cart['idProduct']?>">
             <p class="tombol" style="background-color: #9f4629">Selengkapnya</p>
           </a>
           <p class="tombol" style="background-color: #e1901d;" id="linkBeli">Link Pembelian</p>
-          <i data-feather="trash-2" class="tombol" style="background-color: #e33434" id="delete"></i>
+          <a href="Keranjang/hapus/<?= $cart['idKeranjang']?>">
+            <i data-feather="trash-2" class="tombol" style="background-color: #e33434" id="delete"></i>
+          </a>
         </div>
         </div>
-      </div>';
+      </div>
     <?php endforeach; ?>
-
+    <?php endif;?>
       <!-- Modal -->
       <div class="modal-link">
         <div class="modal-atas">

@@ -83,21 +83,7 @@ class Product_model{
         $query = "SELECT * From product WHERE Nama Like '%$suggest%'";
         $this->db->query($query);
         $data = $this->db->resultSet();
-        // // lookup all hints if query result is not empty
-        // $hint = "";
-        // if ($data) {
-        //     foreach($data as $row) {
-        //         if ($hint === "") {
-        //         $hint = $row["Nama"];
-        //         } else {
-        //             $hint .= ", " .$row["Nama"];
-        //         }
-        //     }
-        // }
-        // // Output "no suggestion" if no hint was found or output correct values
-        foreach ($data as $value) {
-            echo $value["Nama"], "<br>";
-        }
+            echo json_encode($data);
         return $data;
     }
 }

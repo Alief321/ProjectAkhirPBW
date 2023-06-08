@@ -78,6 +78,7 @@ class Product extends Controller{
         if($Picture['isRekom']==1){
             $this->model('Rekomendasi_model')->hapusDataRekomendasifromProduct($id);
         }
+
         // delete data from database
         if($this->model('Product_model')->hapusDataProduct($id) > 0){
             Flasher::setFlash('Data berhasil', 'dihapus', 'sukses');

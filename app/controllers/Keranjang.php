@@ -8,22 +8,25 @@ class Keranjang extends Controller{
         } 
         $data['judul'] = "Keranjang";
         $data['css'] = "Keranjang.css";
-        $data['keranjang'] = $this->model('Keranjang_model')->getAllKeranjang();
+        $data['keranjang'] = $this->model('Keranjang_model')->getKeranjangUser($_SESSION['idUser']);
         $this->view('Templates/header', $data);
         $this->view('Templates/navbar', $data);
         $this->view('Keranjang/index', $data);
         $this->view('Templates/footer');
     }
 
-    public function tambah()
+    public function tambah($id)
     {
+            // mencari data product
+            $data = $this->model('Product_model')->getProductById($id);
+
             // move data into database
-            if($this->model('Keranjang_model')->tambahDataKeranjang($_POST) > 0) {
-                header('Location: ' . BASEURL . 'Product');
-                Flasher::setFlash('Data berhasil', 'ditambahkan', 'sukses');
+            if($this->model('Keranjang_model')->tambahDataKeranjang($data, $_SESSION['idUser']) > 0) {
+                Flasher::setFlash('Keranjang berhasil', 'ditambahkan', 'sukses');
+                header('Location: ' . BASEURL . 'Keranjang');
                 exit;
             }else {
-                Flasher::setFlash('Data gagal', 'ditambahkan', 'gagal');
+                Flasher::setFlash('Keranjang gagal', 'ditambahkan', 'gagal');
                 header('Location: ' . BASEURL . 'Product');
                 exit;
             }
@@ -31,12 +34,12 @@ class Keranjang extends Controller{
     public function hapus($id)
     {
          // delete data from database
-        if( $this->model('Rekomendasi_model')->hapusDataKeranjang($id) > 0){
-            Flasher::setFlash('Data berhasil', 'dihapus', 'sukses');
+        if( $this->model('Keranjang_model')->hapusDataKeranjang($id) > 0){
+            Flasher::setFlash('Keranjang berhasil', 'dihapus', 'sukses');
             header('Location: ' . BASEURL . 'Keranjang');
             exit;
         } else{
-            Flasher::setFlash('Data gagal', 'dihapus', 'gagal');
+            Flasher::setFlash('Keranjang gagal', 'dihapus', 'gagal');
             header('Location: ' . BASEURL . 'Keranjang');
             exit;
         }

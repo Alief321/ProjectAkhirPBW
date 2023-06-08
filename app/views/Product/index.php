@@ -59,30 +59,9 @@
       <hr style="border: 1px solid #cecbcb" />
     </section>
     
+    <div id="sugesto"></div>
     <!-- isi -->
-    <section id="product">
-    <?php if(isset($data['search'])):?>
-      <?php foreach ($data['search'] as $product) :?> 
-      <div class="prod-card">
-        <div class="prod-pic">
-          <img src="images/Product/<?= $product['Foto']?>" alt="whiskas" width="60%" />
-        </div>
-        <div class="prod-text">
-          <div class="prod-price">
-            <p>Rp<?= number_format($product['Harga'], 0, ',', '.')?></p>
-            <i data-feather="shopping-cart" id="shoping-cart"></i>
-          </div>
-          <p class="prod-judul"><?= $product['Nama']?></p>
-          <p style="font-size: 0.75rem; margin-top: 0; text-align: justify"><?= $product['Deskripsi']?></p>
-          <a href="Product/detail/<?= $product['idProduct']?>">
-            <div class="product-more">
-              <p>Selengkapnya</p>
-            </div>
-          </a>
-        </div>
-      </div>
-      <?php endforeach;?>
-      <?php else:?>
+    <section id="product" >
         <?php foreach ($data['product'] as $product) :?> 
           <div class="prod-card">
             <div class="prod-pic">
@@ -91,7 +70,9 @@
             <div class="prod-text">
           <div class="prod-price">
             <p>Rp<?= number_format($product['Harga'], 0, ',', '.')?></p>
-            <i data-feather="shopping-cart" id="shoping-cart"></i>
+            <a href="Keranjang/tambah/<?=$product['idProduct']?>">
+              <i data-feather="shopping-cart" id="shoping-cart"></i>
+            </a>
           </div>
           <p class="prod-judul"><?= $product['Nama']?></p>
           <p style="font-size: 0.75rem; margin-top: 0; text-align: justify"><?= $product['Deskripsi']?></p>
@@ -103,7 +84,6 @@
         </div>
       </div>
       <?php endforeach;?>
-      <?php endif?>
     </section>
     <!-- akhir isi -->
     </section>
