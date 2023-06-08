@@ -2,7 +2,9 @@
     <section id="product-detail">
         <div class="prod-pic">
           <div style="display: flex; width: 100%; justify-content: right; height: auto;">
+          <a href="Keranjang/tambah/<?=$data['product']['idProduct'] ?>">  
             <i data-feather="shopping-cart" id="shoping-cart"></i>
+          </a>
           </div>
           <div class="img-pic">
             <img src="images/Product/<?= $data['product']['Foto']?>" alt="whiskas" />

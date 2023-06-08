@@ -106,7 +106,9 @@
             </div>
             <div class="recom-price">
               <div class="cart">
+              <a href="Keranjang/tambah/<?=$rekom['idProduct']?>">
                 <i data-feather="shopping-cart" id="shoping-cart"></i>
+              </a>
               </div>
               <p class="recom-price-text">Rp<?=number_format($rekom['Harga'], 0, ',', '.')?></p>
             </div>
