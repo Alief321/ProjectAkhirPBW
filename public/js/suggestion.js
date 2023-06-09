@@ -24,6 +24,7 @@ function formatNumber(number) {
 }
 
 // JSON
+// Get hint All
 function showHint(str) {
   let hint = document.getElementById('product');
   let no = document.getElementById('sugesto');
@@ -69,5 +70,53 @@ function showHint(str) {
     }
   };
   xhttp.open('GET', 'Product/suggest?keyword=' + str, true);
+  xhttp.send();
+}
+
+function showHintCategory(str, ctr) {
+  let hint = document.getElementById('product');
+  let no = document.getElementById('sugesto');
+  let result = '';
+
+  xhttp = new XMLHttpRequest();
+  //Code 4b
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      // db = JSON.stringify(this.responseText);
+      myObj = JSON.parse(this.responseText);
+
+      for (let x in myObj) {
+        result +=
+          `<div class="prod-card">
+        <div class="prod-pic">
+          <img src="images/Product/${myObj[x].Foto}" alt="${myObj[x].Nama}" width="60%" />
+        </div>
+        <div class="prod-text">
+          <div class="prod-price">
+            <p>Rp` +
+          formatNumber(myObj[x].Harga) +
+          `</p>
+            <i data-feather="shopping-cart" id="shoping-cart"></i>
+          </div>
+        <p class="prod-judul">${myObj[x].Nama}</p>
+        <p style="font-size: 0.75rem; margin-top: 0; text-align: justify">${myObj[x].Deskripsi}</p>
+        <a href="Product/detail/${myObj[x].idProduct}">
+      <div class="product-more">
+      <p>Selengkapnya</p>
+    </div>
+  </a>
+</div>
+</div>`;
+      }
+      if (result == '') {
+        no.innerHTML = `<div style=" text-align: center; width: 100%; height: 100%; margin:1rem">Keyword yang anda ketik tidak sesuai dengan produk manapun</div> `;
+        hint.innerHTML = '';
+      } else {
+        hint.innerHTML = result;
+        no.innerHTML = '';
+      }
+    }
+  };
+  xhttp.open('GET', 'Product/suggestCategory/' + ctr + 'r?keyword=' + str, true);
   xhttp.send();
 }

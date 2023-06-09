@@ -16,6 +16,7 @@ class Product extends Controller{
         $data['judul'] = "Product";
         $data['css'] = "product.css";
         $data['product'] = $this->model('Product_model')->getAllProduct();
+        $data['search'] = 'showHint(this.value)';
         $this->view('Templates/header', $data);
         $this->view('Templates/navbar', $data);
         $this->view('Product/index' ,$data);
@@ -103,6 +104,12 @@ class Product extends Controller{
         return $data['search'];
     }
 
+    public function suggestCategory($category)
+    {
+        $data['search']= $this->model('Product_model')->getHintCategory($_GET['keyword'], $category);
+        return $data['search'];
+    }
+
     public function category($category){
         if(!isset($_SESSION)){ 
             session_start(); 
@@ -111,6 +118,7 @@ class Product extends Controller{
         $data['css'] = "product.css";
         // $data['product'] = $this->model('Product_model')->getAllProduct();
         $data['group']= $category;
+        $data['search'] = 'showHintCategory(this.value, '. $category . ')';
         $data['product']= $this->model('Product_model')->getProductByCategory($category);
         $this->view('Templates/header', $data);
         $this->view('Templates/navbar', $data);

@@ -28,7 +28,7 @@ class Keranjang_model
     }
     public function getKeranjangUser($id)
     {
-        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE idUser=:id');
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE idUser=:id ORDER BY idKeranjang DESC');
         $this->db->bind('id', $id);
         return $this->db->resultSet();
     }

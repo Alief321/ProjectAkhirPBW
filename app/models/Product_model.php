@@ -12,6 +12,11 @@ class Product_model{
         $this->db->query('SELECT * FROM ' . $this->table);
         return $this->db->resultSet();
     }
+    public function getAllProductSortedByOlder()
+    {
+        $this->db->query('SELECT * FROM ' . $this->table . 'ORDER BY idProduct DESC');
+        return $this->db->resultSet();
+    }
     public function getProductById($id)
     {
         $this->db->query('SELECT * FROM ' . $this->table . ' WHERE idProduct=:id');
@@ -82,6 +87,15 @@ class Product_model{
     {
         $query = "SELECT * From product WHERE Nama Like '%$suggest%'";
         $this->db->query($query);
+        $data = $this->db->resultSet();
+            echo json_encode($data);
+        return $data;
+    }
+    public function getHintCategory($suggest, $category)
+    {
+        $query = "SELECT * From product WHERE Nama Like '%$suggest%' AND Category=:category";
+        $this->db->query($query);
+        $this->db->bind('category', $category);
         $data = $this->db->resultSet();
             echo json_encode($data);
         return $data;

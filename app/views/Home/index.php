@@ -29,7 +29,7 @@
     <section id="categories">
       <p class="button-carou" id="prev-carou"><</p>
       <div class="categories_content carousel1">
-        <a href="Product">
+        <a href="Product/category/1">
           <div class="cat-pic">
             <div class="cat-picture">
               <img src="img/pur kucing.png" alt="categories" />
@@ -41,7 +41,7 @@
         </a>
       </div>
       <div class="categories_content carousel1">
-        <a href="Product">
+        <a href="Product/category/2">
           <div class="cat-pic">
             <div class="cat-picture">
               <img src="img/vitamin 1.png" alt="categories" />
@@ -53,7 +53,7 @@
         </a>
       </div>
       <div class="categories_content carousel1">
-        <a href="Product">
+        <a href="Product/category/3">
           <div class="cat-pic">
             <div class="cat-picture">
               <img src="img/clean.png" alt="categories" />
@@ -65,7 +65,7 @@
         </a>
       </div>
       <div class="categories_content carousel2">
-        <a href="Product">
+        <a href="Product/category/4">
           <div class="cat-pic">
             <div class="cat-picture">
               <img src="img/hamster.png" alt="categories" />
@@ -77,7 +77,7 @@
         </a>
       </div>
       <div class="categories_content carousel2">
-        <a href="Product">
+        <a href="Product/category/5">
           <div class="cat-pic">
             <div class="cat-picture">
               <img src="img/kitty.png" alt="categories" />

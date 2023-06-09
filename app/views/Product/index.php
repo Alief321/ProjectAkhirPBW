@@ -6,7 +6,7 @@
       </select>
       <div class="searcharea">
       <form action="" id="searchform">
-        <input type="search" name="search" id="search" placeholder="Input nama produk..." onkeyup="showHint(this.value)" />
+        <input type="search" name="search" id="search" placeholder="Input nama produk..." onkeyup="<?=$data['search']?>" />
         <div class="searchbtn">
           <i data-feather="search" id="search-magnify"></i>
         </div>
