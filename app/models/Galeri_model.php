@@ -47,4 +47,23 @@ class Galeri_model{
         
         return $this->db->rowCount();
     }
+
+    public function showFotobyId($id){
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE idFoto=:id');
+        $this->db->bind('id', $id);
+        $data = $this->db->single();
+            echo json_encode($data);
+        return $data;
+    }
+
+    public function updateGaleri($id, $data, $file){
+        $query = "UPDATE galery SET Nama=:nama, Path=:pathGalery WHERE idFoto=:id";
+        $this->db->query($query);
+        $this->db->bind('pathGalery', $file);
+        $this->db->bind('nama', $data);
+        $this->db->bind('id', $id);
+
+        $this->db->execute();
+        return $this->db->rowCount();
+    }
 }
