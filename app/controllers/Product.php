@@ -166,7 +166,7 @@ class Product extends Controller{
             }
         }
         // move file and data into database
-        if($this->model('Product_model')->updateProduct($id, $_POST, $filename) > 0) {
+        if($this->model('Product_model')->updateProduct($_POST, $filename, $id) > 0) {
             Flasher::setFlash('Data berhasil', 'diedit', 'sukses');
             header('Location: ' . BASEURL . 'Admin/Product');
             exit;

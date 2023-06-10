@@ -126,9 +126,9 @@ class Product_model{
             echo json_encode($data);
         return $data;
     }
-    public function updateProduct($id, $data, $file){
+    public function updateProduct($data, $file, $id){
             $query = "UPDATE product 
-                        SET Nama=:nama, Deskripsi=:deskripsi, Harga=:harga, Stok=:stok, Category=:kategori, LinkShopee=:shopee, LinkTokped=:tokped, LinkBiliBli=:blibli, LinkLazada=:lazada, LinkBukalapak=:bkplk, Foto=:foto
+                        SET Nama=:nama, Deskripsi=:deskripsi, Harga=:harga, Stok=:stok, Category=:kategori, LinkShopee=:shopee, LinkTokped=:tokped, LinkBiliBli=:blibli, LinkLazada=:lazada, LinkBukalapak=:bklpk, Foto=:foto
                         WHERE idProduct=:id";
             $this->db->query($query);
             $this->db->bind('nama', $data['nama']);
