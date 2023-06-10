@@ -100,4 +100,21 @@ class Product_model{
             echo json_encode($data);
         return $data;
     }
+
+    public function filter($filter, $sort){
+        $query = "SELECT * From product ORDER BY $filter $sort";
+        $this->db->query($query);
+        $data = $this->db->resultSet();
+            echo json_encode($data);
+        return $data;
+    }
+
+    public function filterGroup($filter, $sort, $group){
+        $query = "SELECT * From product WHERE Category=:category ORDER BY $filter $sort";
+        $this->db->query($query);
+        $this->db->bind('category', $group);
+        $data = $this->db->resultSet();
+            echo json_encode($data);
+        return $data;
+    }
 }

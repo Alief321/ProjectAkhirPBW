@@ -17,6 +17,7 @@ class Product extends Controller{
         $data['css'] = "product.css";
         $data['product'] = $this->model('Product_model')->getAllProduct();
         $data['search'] = 'showHint(this.value)';
+        $data['sort'] = 'filter()';
         $this->view('Templates/header', $data);
         $this->view('Templates/navbar', $data);
         $this->view('Product/index' ,$data);
@@ -103,6 +104,15 @@ class Product extends Controller{
         $data['search']= $this->model('Product_model')->getHint($_GET['keyword']);
         return $data['search'];
     }
+    public function filter()
+    {
+        if (isset($_GET['category'])) {
+            $data['search']= $this->model('Product_model')->filterGroup($_GET['filter'], $_GET['sort'], $_GET['category']);
+        }else{
+            $data['search']= $this->model('Product_model')->filter($_GET['filter'], $_GET['sort']);
+        }
+        return $data['search'];
+    }
 
     public function suggestCategory($category)
     {
@@ -118,6 +128,7 @@ class Product extends Controller{
         $data['css'] = "product.css";
         // $data['product'] = $this->model('Product_model')->getAllProduct();
         $data['group']= $category;
+        $data['sort'] = 'filter('. $category.')';
         $data['search'] = 'showHintCategory(this.value, '. $category . ')';
         $data['product']= $this->model('Product_model')->getProductByCategory($category);
         $this->view('Templates/header', $data);
