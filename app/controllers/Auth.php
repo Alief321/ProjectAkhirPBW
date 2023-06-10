@@ -10,6 +10,10 @@ class Auth extends Controller
         $_SESSION['password'] = $_POST['password'];
         $_SESSION["role"] = $this->model("User_model")->getUserByEmail($_SESSION["email"])["Role"];
         $_SESSION["idUser"] = $this->model("User_model")->getUserByEmail($_SESSION["email"])["idUser"];
-        header("Location:". BASEURL . "Home");
+        if ($_SESSION['role'] == 'admin') {
+            header("Location:". BASEURL . "Admin");
+        }else{
+            header("Location:". BASEURL . "Home");
+        }
     }
 }

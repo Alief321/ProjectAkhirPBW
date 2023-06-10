@@ -101,7 +101,7 @@ class Product extends Controller{
 
     public function suggest()
     {
-        $data['search']= $this->model('Product_model')->getHint($_GET['keyword']);
+        $data['search']= $this->model('Product_model')->getHint($_GET['keyword'], $_GET['filter'], $_GET['sort']);
         return $data['search'];
     }
     public function filter()
@@ -116,7 +116,7 @@ class Product extends Controller{
 
     public function suggestCategory($category)
     {
-        $data['search']= $this->model('Product_model')->getHintCategory($_GET['keyword'], $category);
+        $data['search']= $this->model('Product_model')->getHintCategory($_GET['keyword'], $category,  $_GET['filter'], $_GET['sort']);
         return $data['search'];
     }
 

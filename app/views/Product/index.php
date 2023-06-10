@@ -5,12 +5,12 @@
         <option value="Nama">Abjad</option>
       </select>
       <div class="searcharea">
-      <form action="" id="searchform">
+      <div id="searchform">
         <input type="text" name="search" id="search" placeholder="Input nama produk..." onkeyup="<?=$data['search']?>" />
         <div class="searchbtn">
           <i data-feather="search" id="search-magnify"></i>
         </div>
-      </form>
+      </div>
       <div id="suggest"></div>
       </div>
 

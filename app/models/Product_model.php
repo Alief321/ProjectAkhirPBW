@@ -83,17 +83,17 @@ class Product_model{
     }
 
     // gethint
-    public function getHint($suggest)
+    public function getHint($suggest, $filter, $sort)
     {
-        $query = "SELECT * From product WHERE Nama Like '%$suggest%'";
+        $query = "SELECT * From product WHERE Nama Like '%$suggest%' ORDER BY $filter $sort";
         $this->db->query($query);
         $data = $this->db->resultSet();
             echo json_encode($data);
         return $data;
     }
-    public function getHintCategory($suggest, $category)
+    public function getHintCategory($suggest, $category,  $filter, $sort)
     {
-        $query = "SELECT * From product WHERE Nama Like '%$suggest%' AND Category=:category";
+        $query = "SELECT * From product WHERE Nama Like '%$suggest%' AND Category=:category ORDER BY $filter $sort";
         $this->db->query($query);
         $this->db->bind('category', $category);
         $data = $this->db->resultSet();

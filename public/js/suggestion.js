@@ -28,6 +28,8 @@ function formatNumber(number) {
 function showHint(str) {
   let hint = document.getElementById('product');
   let no = document.getElementById('sugesto');
+  let filter = document.getElementById('filtering');
+  let sort = document.getElementById('sorting');
   let result = '';
 
   xhttp = new XMLHttpRequest();
@@ -71,13 +73,15 @@ function showHint(str) {
       }
     }
   };
-  xhttp.open('GET', 'Product/suggest?keyword=' + str, true);
+  xhttp.open('GET', 'Product/suggest?keyword=' + str + '&filter=' + filter.value + '&sort=' + sort.value, true);
   xhttp.send();
 }
 
 function showHintCategory(str, ctr) {
   let hint = document.getElementById('product');
   let no = document.getElementById('sugesto');
+  let filter = document.getElementById('filtering');
+  let sort = document.getElementById('sorting');
   let result = '';
 
   xhttp = new XMLHttpRequest();
@@ -121,7 +125,7 @@ function showHintCategory(str, ctr) {
       }
     }
   };
-  xhttp.open('GET', 'Product/suggestCategory/' + ctr + '?keyword=' + str, true);
+  xhttp.open('GET', 'Product/suggestCategory/' + ctr + '?keyword=' + str + '&filter=' + filter.value + '&sort=' + sort.value, true);
   xhttp.send();
 }
 
