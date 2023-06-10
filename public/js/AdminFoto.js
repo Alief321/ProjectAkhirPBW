@@ -35,11 +35,10 @@ function showFoto($id) {
 function edit($id) {
   const modalAdmin = document.querySelector('.modalAdmin');
   const modcancel = document.querySelector('#modcancel');
-  let form = document.getElementById('formEdit').formAction;
 
   showEdit($id);
   modalAdmin.style.display = 'block';
-  form = 'Galeri/update/' + $id;
+  document.getElementById('formEdit').action = 'Galeri/update/' + $id;
 
   modcancel.addEventListener('click', function () {
     modalAdmin.style.display = 'none';

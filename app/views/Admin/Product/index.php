@@ -88,7 +88,7 @@
         </table>
         <!-- modal edit -->
         <div class="modalAdmin">
-            <form action="" id="formEdit" method="post" enctype="multipart/form-data">
+            <form id="formEditProd" method="post" enctype="multipart/form-data">
                 <div class="isi_edit"></div>
                 <div class="button">
                     <button type="button" id="modcancel">Cancel</button>

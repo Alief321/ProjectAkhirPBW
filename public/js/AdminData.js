@@ -14,11 +14,10 @@ createCancel.addEventListener('click', function () {
 function editModal($id) {
   const modalAdmin = document.querySelector('.modalAdmin');
   const modcancel = document.querySelector('#modcancel');
-  let form = document.getElementById('formEdit').formAction;
 
   showModalEdit($id);
   modalAdmin.style.display = 'block';
-  form = 'Product/update/' + $id;
+  document.getElementById('formEditProd').action = 'Product/update/' + $id;
 
   modcancel.addEventListener('click', function () {
     modalAdmin.style.display = 'none';
@@ -84,6 +83,7 @@ function showModalEdit($id) {
   xhttp.open('GET', 'Product/edit?id=' + $id, true);
   xhttp.send();
 }
+
 // showmodalEdit
 
 // function SetChecked() {

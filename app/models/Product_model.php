@@ -126,7 +126,26 @@ class Product_model{
             echo json_encode($data);
         return $data;
     }
-    public function update(){
-
+    public function updateProduct($id, $data, $file){
+            $query = "UPDATE product 
+                        SET Nama=:nama, Deskripsi=:deskripsi, Harga=:harga, Stok=:stok, Category=:kategori, LinkShopee=:shopee, LinkTokped=:tokped, LinkBiliBli=:blibli, LinkLazada=:lazada, LinkBukalapak=:bkplk, Foto=:foto
+                        WHERE idProduct=:id";
+            $this->db->query($query);
+            $this->db->bind('nama', $data['nama']);
+            $this->db->bind('deskripsi', $data['deskripsi']);
+            $this->db->bind('harga', $data['harga']);
+            $this->db->bind('stok', $data['stok']);
+            $this->db->bind('kategori', $data['kategori']);
+            $this->db->bind('shopee', $data['shopee']);
+            $this->db->bind('tokped', $data['tokped']);
+            $this->db->bind('blibli', $data['blibli']);
+            $this->db->bind('lazada', $data['lazada']);
+            $this->db->bind('bklpk', $data['bukalapak']);
+            $this->db->bind('foto', $file);
+            $this->db->bind('id', $id);
+    
+            $this->db->execute();
+            
+            return $this->db->rowCount();
+        }
     }
-}
