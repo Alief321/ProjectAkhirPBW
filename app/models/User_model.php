@@ -50,4 +50,16 @@ class User_model{
         $this->db->execute();
         return $this->db->rowCount();
     }
+
+    public function updateUser($data, $idUser)
+    {
+        $query = "UPDATE " . $this->table . " SET Password =:Pass, ConPassword =:Pass2 WHERE idUser=:iduser";
+        $this->db->query($query);
+        $this->db->bind('iduser', $idUser);
+        $this->db->bind('Pass',hash('sha1',$data['Password']));
+        $this->db->bind('Pass2',hash('sha1',$data['PasswordBaru']));
+        
+        $this->db->execute();
+        return $this->db->rowCount();
+    }
 }

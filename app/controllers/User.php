@@ -23,4 +23,18 @@ class User extends Controller{
             exit;
         }
     }
+
+    public function update()
+    {
+        if ($this->model('User_model')->updateUser($_POST, $_SESSION['idUser']) > 0) {
+            Flasher::setFlash('Data User berhasil', 'diedit', 'sukses');
+            header('Location: ' . BASEURL . 'User');
+            exit;
+        }
+        else {
+            Flasher::setFlash('Data User gagal', 'diedit', 'gagal');
+            header('Location: ' . BASEURL . 'User');
+            exit;
+        }
+    }
 }
