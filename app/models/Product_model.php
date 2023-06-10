@@ -117,4 +117,16 @@ class Product_model{
             echo json_encode($data);
         return $data;
     }
+
+    public function showProductById($id)
+    {
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE idProduct=:id');
+        $this->db->bind('id', $id);
+        $data = $this->db->single();
+            echo json_encode($data);
+        return $data;
+    }
+    public function update(){
+
+    }
 }

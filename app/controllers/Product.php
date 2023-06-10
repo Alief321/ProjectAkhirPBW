@@ -94,9 +94,9 @@ class Product extends Controller{
         }
     }
 
-    public function edit($id){
-        $data['product'] = $this->model('Product_model')->getProductById($id);
-        return $data['product'];
+    public function edit(){
+        $data['edit'] = $this->model('Product_model')->showProductById($_GET['id']);
+        return $data['edit'];
     }
 
     public function suggest()
