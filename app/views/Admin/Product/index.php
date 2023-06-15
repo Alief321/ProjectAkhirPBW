@@ -12,11 +12,6 @@
                     <th>Stok</th>
                     <th>Kategori</th>
                     <th>Deskripsi</th>
-                    <th>Link Shopee</th>
-                    <th>Link Tokped</th>
-                    <th>Link Bilibili</th>
-                    <th>Link Lazada</th>
-                    <th>Link Bukalapak</th>
                     <th>Rekomendasi</th>
                     <th>Update</th>
                     <th>Delete</th>
@@ -49,11 +44,6 @@
                         }
                     ?>
                     <td><?= $product['Deskripsi'] ;?></td>
-                    <td><?= $product['LinkShopee'] ;?></td>
-                    <td><?= $product['LinkTokped'] ;?></td>
-                    <td><?= $product['LinkBiliBli'] ;?></td>
-                    <td><?= $product['LinkLazada'] ;?></td>
-                    <td><?= $product['LinkBukalapak'] ;?></td>
                     <td>
                         <?php $id = $product['idProduct']?>
                         <form action="<?php if($product['isRekom']==1){echo 'Rekomendasi/hapusFromProduct/'.$id;}else{ echo 'Rekomendasi/tambah';}?>" method="post" id="checkForm" enctype="multipart/form-data">
@@ -120,16 +110,6 @@
                 </select>
                 <label for="deskripsi">Deskripsi</label>
                 <textarea name="deskripsi" id="Deskripsi" cols="60" rows="8" required></textarea>
-                <label for="shopee">Link Shopee</label>
-                <input type="url" name="shopee">
-                <label for="tokped">Link Tokopedia</label>
-                <input type="url" name="tokped">
-                <label for="blibli">Link Blibli</label>
-                <input type="url" name="blibli">
-                <label for="lazada">Link Lazada</label>
-                <input type="url" name="lazada">
-                <label for="bukalapak">Link Bukalapak</label>
-                <input type="url" name="bukalapak">
                 <div class="button">
                     <button type="button" id="createCancel">Cancel</button>
                     <button type="submit" id="modCreate">Create</button>

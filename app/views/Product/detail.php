@@ -1,11 +1,6 @@
     <!-- Isi -->
     <section id="product-detail">
         <div class="prod-pic">
-          <div style="display: flex; width: 100%; justify-content: right; height: auto;">
-          <a href="Keranjang/tambah/<?=$data['product']['idProduct'] ?>">  
-            <i data-feather="shopping-cart" id="shoping-cart"></i>
-          </a>
-          </div>
           <div class="img-pic">
             <img src="images/Product/<?= $data['product']['Foto']?>" alt="whiskas" />
           </div>
@@ -57,49 +52,9 @@
                     ?></a></p>
           <p>Deskripsi Product</p>
           <p class="desk-detail"><?= $data['product']['Deskripsi']?></p>
-          <p>Link pembelian</p>
-          <div class="link-olshop">
-            <?php if ($data['product']['LinkShopee'] != null) :?>
-            <a href="<?= $data['product']['LinkShopee']?>" class="link">
-              <div class="isi-content" style="background: #ff8678">
-                <img src="img/shopee.png" alt="shopee" width="25%" height="90%" />
-                <p>Shopee</p>
-              </div>
-            </a>
-            <?php endif?>
-            <?php if ($data['product']['LinkTokped'] != null) :?>
-            <a href="<?= $data['product']['LinkTokped']?>" class="link">
-              <div class="isi-content" style="background: #74c26f">
-                <img src="img/tokped.png" alt="shopee" width="25%" height="90%" />
-                <p>Tokopedia</p>
-              </div>
-            </a>
-            <?php endif?>
-            <?php if ($data['product']['LinkBiliBli'] != null) :?>
-            <a href="<?= $data['product']['LinkBiliBli']?>" class="link">
-              <div class="isi-content" style="background: #83c5e3">
-                <img src="img/blibli.png" alt="shopee" width="25%" height="90%" />
-                <p>Blibli</p>
-              </div>
-            </a>
-            <?php endif?>
-            <?php if ($data['product']['LinkLazada'] != null) :?>
-            <a href="<?= $data['product']['LinkLazada']?>" class="link">
-              <div class="isi-content laz">
-                <img src="img/lazada.png" alt="lazada" width="25%" height="90%" />
-                <p>Lazada</p>
-              </div>
-            </a>
-            <?php endif?>
-            <?php if ($data['product']['LinkBukalapak'] != null) :?>
-            <a href="<?= $data['product']['LinkBukalapak']?>" class="link">
-              <div class="isi-content" style="background: #f377ad">
-                <img src="img/bukalapak.png" alt="bukalapak" width="25%" height="90%" />
-                <p>Bukalapak</p>
-              </div>
-            </a>
-            <?php endif?>
-          </div>
-       
+          <br>
+          <a href="Keranjang/tambah/<?=$data['product']['idProduct'] ?>">  
+            <i data-feather="shopping-cart" id="shoping-cart"></i>
+          </a>
     </section>
     <!-- Akhir Isi -->

@@ -9,7 +9,6 @@
                     <th>Nama Produk</th>
                     <th>Harga</th>
                     <th>Deskripsi</th>
-                    <th>Update</th>
                     <th>Delete</th>
                 </tr>
             </thead>
@@ -20,13 +19,6 @@
                     <td><?=$rekomendasi['Nama'] ;?></td>
                     <td><?=$rekomendasi['Harga'] ;?></td>
                     <td><?=$rekomendasi['Deskripsi'] ;?></td>
-                    <td>
-                        <a href="<?= BASEURL;?>Rekomendasi/edit/<?= $rekomendasi['idrekomendasi'];?>">
-                            <div class="edit">
-                                <i data-feather="edit" id="edit"> </i>
-                            </div>
-                        </a>
-                    </td>
                     <td>
                         <a href="<?= BASEURL;?>Rekomendasi/hapus/<?= $rekomendasi['idrekomendasi'];?>/<?= $rekomendasi['idProduct']?>" onclick="return confirm('apakah anda yakin ingin menghapus data')">
                             <div class="trash">
@@ -52,7 +44,6 @@
                 <label for="Deskripsi">Deskripsi</label>
                 <textarea name="Deskripsi" id="Deskripsi" cols="60" rows="8"></textarea>
                 <div class="button">
-                    <button type="button" id="modcancel">Cancel</button>
                     <button type="submit" id="modedit">Edit</button>
                 </div>
             </form>

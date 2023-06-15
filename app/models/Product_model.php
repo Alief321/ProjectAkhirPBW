@@ -36,18 +36,13 @@ class Product_model{
     {
         $query = "INSERT INTO product
                     VALUES 
-                    ('', :Nama, :Deskripsi, :Harga, :Stok, :Category, :LinkShopee, :LinkTokped, :LinkBiliBli, :LinkLazada, :LinkBukalapak, default, :Foto, 0)";
+                    ('', :Nama, :Deskripsi, :Harga, :Stok, :Category, default, :Foto, 0)";
         $this->db->query($query);
         $this->db->bind('Nama', $data['nama']);
         $this->db->bind('Deskripsi', $data['deskripsi']);
         $this->db->bind('Harga', $data['harga']);
         $this->db->bind('Stok', $data['stok']);
         $this->db->bind('Category', $data['kategori']);
-        $this->db->bind('LinkShopee', $data['shopee']);
-        $this->db->bind('LinkTokped', $data['tokped']);
-        $this->db->bind('LinkBiliBli', $data['blibli']);
-        $this->db->bind('LinkLazada', $data['lazada']);
-        $this->db->bind('LinkBukalapak', $data['bukalapak']);
         $this->db->bind('Foto', $file);
 
         $this->db->execute();
@@ -128,7 +123,7 @@ class Product_model{
     }
     public function updateProduct($data, $file, $id){
             $query = "UPDATE product 
-                        SET Nama=:nama, Deskripsi=:deskripsi, Harga=:harga, Stok=:stok, Category=:kategori, LinkShopee=:shopee, LinkTokped=:tokped, LinkBiliBli=:blibli, LinkLazada=:lazada, LinkBukalapak=:bklpk, Foto=:foto
+                        SET Nama=:nama, Deskripsi=:deskripsi, Harga=:harga, Stok=:stok, Category=:kategori, Foto=:foto
                         WHERE idProduct=:id";
             $this->db->query($query);
             $this->db->bind('nama', $data['nama']);
@@ -136,11 +131,6 @@ class Product_model{
             $this->db->bind('harga', $data['harga']);
             $this->db->bind('stok', $data['stok']);
             $this->db->bind('kategori', $data['kategori']);
-            $this->db->bind('shopee', $data['shopee']);
-            $this->db->bind('tokped', $data['tokped']);
-            $this->db->bind('blibli', $data['blibli']);
-            $this->db->bind('lazada', $data['lazada']);
-            $this->db->bind('bklpk', $data['bukalapak']);
             $this->db->bind('foto', $file);
             $this->db->bind('id', $id);
     

@@ -53,4 +53,17 @@ class Admin extends Controller{
         $data['content'] = '../app/views/Admin/Galeri/index.php';
         $this->view('Templates/Admin', $data);
     }
+    public function Pesanan()
+    {
+        if(!isset($_SESSION)){ 
+            session_start(); 
+        }
+        if ($_SESSION["role"]!= "admin") {
+            header("Location: ". BASEURL . "Home");
+        }  
+        $data['judul'] = "Pesanan";
+        $data['pesanan'] = $this->model('Pesanan_model')->getAllPesanan();
+        $data['content'] = '../app/views/Admin/Pesanan/index.php';
+        $this->view('Templates/Admin', $data);
+    }
 };

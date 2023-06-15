@@ -20,7 +20,7 @@ class Rekomendasi_model{
     }
     public function getLastRekomendasi()
     {
-        $this->db->query('SELECT * FROM ' . $this->table . ' LIMIT 3');
+        $this->db->query('SELECT * FROM ' . $this->table . ' ORDER BY idRekomendasi DESC LIMIT 3');
         return $this->db->resultSet();
     }
 

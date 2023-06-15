@@ -26,6 +26,7 @@
                 <a href="Admin/Rekomendasi"><li class="nav_item <?php if($data['judul'] == 'Rekomendasi') echo 'activeAdmin';?>"> <i data-feather="star"></i> &nbsp; <span>Rekomendasi</span></li></a>
                 <a href="Admin/Product"><li class="nav_item <?php if($data['judul'] == 'ProductAdmin') echo 'activeAdmin';?>"> <i data-feather="box"></i> &nbsp; <span>Product</span></li></a>
                 <a href="Admin/Galeri"><li class="nav_item <?php if($data['judul'] == 'Galeri') echo 'activeAdmin';?>"> <i data-feather="camera"></i> &nbsp; <span>Galeri</span></li></a>
+                <a href="Admin/Pesanan"><li class="nav_item <?php if($data['judul'] == 'Pesanan') echo 'activeAdmin';?>"> <i data-feather="mail"></i> &nbsp; <span>Pesanan</span></li></a>
                 <a href="Home" target="_blank"><li class="nav_item"><i data-feather="globe"></i> &nbsp; <span>Main Page</span></li></a>
             </ul>
         </aside>

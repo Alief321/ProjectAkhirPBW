@@ -75,7 +75,8 @@
             </a>
           </div>
           <p class="prod-judul"><?= $product['Nama']?></p>
-          <p style="font-size: 0.75rem; margin-top: 0; text-align: justify"><?= $product['Deskripsi']?></p>
+          <br>
+          <p style="font-size: 0.85rem; margin-top: 0; text-align: justify"><?= mb_strimwidth($product['Deskripsi'], 0, 30, "..");?></p>
           <a href="Product/detail/<?= $product['idProduct']?>">
             <div class="product-more">
               <p>Selengkapnya</p>
