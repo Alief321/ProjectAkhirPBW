@@ -43,7 +43,7 @@ class Pesanan_model{
     }
 
     public function hapusDataPesanan($id){
-        $query = "DELETE FROM product WHERE idPesanan=:id";
+        $query = "DELETE FROM pesanan WHERE idPesanan=:id";
         $this->db->query($query);
         $this->db->bind('id', $id);
 

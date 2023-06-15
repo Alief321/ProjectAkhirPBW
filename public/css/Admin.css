@@ -229,6 +229,11 @@ input:focus {
 .wesprove:hover {
   filter: brightness(80%);
 }
+
+.butdec {
+  text-decoration: underline;
+  text-underline-offset: 0.35em;
+}
 .durprove {
   background-color: #c23a3a;
 }

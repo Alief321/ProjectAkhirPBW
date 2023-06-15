@@ -69,4 +69,19 @@ class Pesanan extends Controller{
         $data['foto'] =  $this->model('Pesanan_Model')->showFotoById($_GET['id']);
         return $data['foto'];
     }
+
+    public function hapus($id){
+        $Picture = $this->model('Pesanan_model')->getPesananById($id);
+        unlink(getcwd().DIRECTORY_SEPARATOR.'images'.DIRECTORY_SEPARATOR. 'Bukti' . DIRECTORY_SEPARATOR. $Picture['Bukti_invoice']);
+          // delete data from database
+          if( $this->model('Pesanan_model')-> hapusDataPesanan($id) > 0){
+            Flasher::setFlash('Data berhasil', 'dihapus', 'sukses');
+            header('Location: ' . BASEURL . 'Admin/Pesanan');
+            exit;
+        } else{
+            Flasher::setFlash('Data gagal', 'dihapus', 'gagal');
+            header('Location: ' . BASEURL . 'Admin/Pesanan');
+            exit;
+        }
+    }
 }

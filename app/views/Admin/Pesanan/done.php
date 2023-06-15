@@ -3,7 +3,7 @@
         <div style="width:100%; display: flex; height: auto; justify-content: start; column-gap: 1rem;">
             <?php Flasher::flash()?>
             <a href="Admin/Pesanan" class="durprove">Belum Approve</a>
-            <a href="Admin/Pesanan_done" class="wesprove">Sudah Approve</a>
+            <a href="Admin/Pesanan_done" class="wesprove butdec">Sudah Approve</a>
         </div>
             <thead>
                 <tr>

@@ -2,7 +2,7 @@
     <table>   
         <div style="width:100%; display: flex; height: auto; justify-content: start; column-gap: 1rem;">
             <?php Flasher::flash()?>
-            <a href="Admin/Pesanan" class="durprove">Belum Approve</a>
+            <a href="Admin/Pesanan" class="durprove butdec">Belum Approve</a>
             <a href="Admin/Pesanan_done" class="wesprove">Sudah Approve</a>
         </div>
             <thead>
@@ -13,6 +13,7 @@
                     <th>Bukti Invoice</th>
                     <th>id User</th>
                     <th>Approve</th>
+                    <th>Tolak</th>
                 </tr>
             </thead>
             <tbody>
@@ -29,6 +30,13 @@
                         <form action="Pesanan/approve/<?=$pesan['idPesanan']?>" method="post">
                             <input type="checkbox" name="higlight" id="higlight" onChange="this.form.submit()">
                         </form>
+                    </td>
+                    <td>
+                        <a href="<?= BASEURL;?>Pesanan/hapus/<?= $pesan['idPesanan'];?>" onclick="return confirm('apakah anda yakin ingin menghapus data')">
+                            <div class="trash">
+                                <i data-feather="trash-2" id="trash"> </i>
+                            </div>
+                        </a>
                     </td>
                     </tr>
 
