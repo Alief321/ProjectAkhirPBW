@@ -19,7 +19,7 @@
           <p><?= number_format($cart['Stok'], 0, ',', '.')?></p>
         </div>
         <div class="tombol-tombol">
-          <a href="Pesanan/index/<?= $cart['idProduct']?>">
+          <a href="Pesanan/index/<?= $cart['idProduct']?>/<?= $cart['idKeranjang']?>">
             <p class="tombol" style="background-color: #4DB730;">Beli Produk</p>
           </a>
           <a href="Keranjang/hapus/<?= $cart['idKeranjang']?>">

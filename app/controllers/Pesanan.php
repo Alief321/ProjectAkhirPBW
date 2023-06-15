@@ -1,12 +1,13 @@
 <?php 
 class Pesanan extends Controller{
-    public function index($id){
+    public function index($id, $idk){
         if(!isset($_SESSION)){ 
             session_start(); 
         } 
         $data['judul'] = "Pesanan";
         $data['css'] = "Pesanan.css";
         $data['pesanan'] = $this->model('Product_model')->getProductById($id);
+        $data['keranjang'] = $this->model('Keranjang_model')->getKeranjangbyId($idk);
         $this->view('Templates/header', $data);
         $this->view('Templates/navbar', $data);
         $this->view('Pesanan/index', $data);
@@ -39,6 +40,8 @@ class Pesanan extends Controller{
 
         // move file and data into database
         if($this->model('Pesanan_model')->tambahDataPesanan($_POST, $filename) > 0) {
+            $this->model('Keranjang_model')-> hapusDataKeranjang($_POST['idKer']);
+            $this->model('Product_model')->minstok($_POST['idProd']);
             Flasher::setFlash('Item berhasil', 'dibeli', 'sukses');
             header('Location: ' . BASEURL . 'Keranjang');
             exit;

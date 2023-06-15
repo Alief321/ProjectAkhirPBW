@@ -225,12 +225,16 @@ input:focus {
   color: white;
 }
 
+.durprove:hover,
+.wesprove:hover {
+  filter: brightness(80%);
+}
 .durprove {
   background-color: #c23a3a;
 }
 
 .wesprove {
-  background-color: #3daf3d;
+  background-color: #46c546;
 }
 
 #modedit {

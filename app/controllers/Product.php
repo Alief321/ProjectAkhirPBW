@@ -120,6 +120,10 @@ class Product extends Controller{
         return $data['search'];
     }
 
+    public function count(){
+        $data['count']= $this->model('Product_model')->countByCategory();
+        return $data['count'];
+    }
     public function category($category){
         if(!isset($_SESSION)){ 
             session_start(); 

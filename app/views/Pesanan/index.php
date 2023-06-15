@@ -13,9 +13,11 @@
     <br>
     <label for="bukti">Upload Bukti Pembayaran</label>
     <br>
-    <input type="file" name="foto">
+    <input type="file" name="foto" required>
     <br>
     <input type="hidden" name="id" value="<?=$_SESSION['idUser']?>">
+    <input type="hidden" name="idKer" value="<?=$data['keranjang']['idKeranjang']?>">
+    <input type="hidden" name="idProd" value="<?=$data['pesanan']['idProduct']?>">
     <button type="submit">Kirim</button>
 </form>
 </div>

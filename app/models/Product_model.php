@@ -138,4 +138,30 @@ class Product_model{
             
             return $this->db->rowCount();
         }
+
+    public function countByCategory(){
+        $query = "SELECT Category, COUNT(*) as count FROM product GROUP BY Category";
+        $this->db->query($query);
+        $data = $this->db->resultSet();
+            echo json_encode($data);
+        return $data;
+    }
+
+    public function minstok($id){
+
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE idProduct=:id');
+        $this->db->bind('id', $id);
+        $data = $this->db->single();
+
+        $count = $data['Stok'];
+        $query = "UPDATE product 
+                SET Stok=:stok WHERE idProduct=:id";
+         $this->db->query($query);
+         $this->db->bind('stok', $count-1);
+         $this->db->bind('id', $id);
+
+         $this->db->execute();
+            
+         return $this->db->rowCount();
+    }
     }
