@@ -62,8 +62,21 @@ class Admin extends Controller{
             header("Location: ". BASEURL . "Home");
         }  
         $data['judul'] = "Pesanan";
-        $data['pesanan'] = $this->model('Pesanan_model')->getAllPesanan();
+        $data['pesanan'] = $this->model('Pesanan_model')->getPesananByApprove(0);
         $data['content'] = '../app/views/Admin/Pesanan/index.php';
+        $this->view('Templates/Admin', $data);
+    }
+    public function Pesanan_done()
+    {
+        if(!isset($_SESSION)){ 
+            session_start(); 
+        }
+        if ($_SESSION["role"]!= "admin") {
+            header("Location: ". BASEURL . "Home");
+        }  
+        $data['judul'] = "Pesanan";
+        $data['pesanan'] = $this->model('Pesanan_model')->getPesananByApprove(1);
+        $data['content'] = '../app/views/Admin/Pesanan/done.php';
         $this->view('Templates/Admin', $data);
     }
 };

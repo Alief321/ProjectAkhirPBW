@@ -217,6 +217,22 @@ input:focus {
   overflow: hidden;
 }
 
+.durprove,
+.wesprove {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: auto;
+  color: white;
+}
+
+.durprove {
+  background-color: #c23a3a;
+}
+
+.wesprove {
+  background-color: #3daf3d;
+}
+
 #modedit {
   background-color: orange;
   color: white;

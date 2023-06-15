@@ -12,7 +12,6 @@
                     <th>Harga</th>
                     <th>Bukti Invoice</th>
                     <th>id User</th>
-                    <th>Approve</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,18 +24,12 @@
                         <button id="<?=$pesan['idPesanan']?>" class="prevFoto" onclick="show(this.id)">Lihat Foto</button>
                     </td>
                     <td><?= $pesan['idUser']?></td>
-                    <td>
-                        <form action="Pesanan/approve/<?=$pesan['idPesanan']?>" method="post">
-                            <input type="checkbox" name="higlight" id="higlight" onChange="this.form.submit()">
-                        </form>
-                    </td>
                     </tr>
 
                 <?php $i++; ?>
                 <?php endforeach; ?>
             </tbody>
         </table>
-
 
         <!-- modal foto -->
         <div class="modalFoto">
@@ -45,4 +38,6 @@
         </div>
         <!-- Akhhir modal foto -->
         
+        <script src="js/Bukti.js"></script>
+
         <script src="js/Bukti.js"></script>
