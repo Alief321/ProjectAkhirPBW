@@ -18,6 +18,13 @@ class Rekomendasi_model{
         $this->db->bind('id', $id);
         return $this->db->single();
     }
+    public function getRekomendasiByIdProductrow($id)
+    {
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE idProduct=:id');
+        $this->db->bind('id', $id);
+        $this->db->execute();
+        return $this->db->rowCount();
+    }
     public function getLastRekomendasi()
     {
         $this->db->query('SELECT * FROM ' . $this->table . ' ORDER BY idRekomendasi DESC LIMIT 3');
@@ -53,6 +60,20 @@ class Rekomendasi_model{
     public function hapusDataRekomendasifromProduct($id){
         $query = "DELETE FROM rekomendasi WHERE idProduct=:id";
         $this->db->query($query);
+        $this->db->bind('id', $id);
+
+        $this->db->execute();
+        
+        return $this->db->rowCount();
+    }
+
+    public function update($data, $id)
+    {
+        $query = "UPDATE rekomendasi SET Nama=:nama,  Deskripsi=:desk,  Harga=:harga WHERE idProduct=:id";
+        $this->db->query($query);
+        $this->db->bind('nama', $data['nama']);
+        $this->db->bind('desk', $data['deskripsi']);
+        $this->db->bind('harga', $data['harga']);
         $this->db->bind('id', $id);
 
         $this->db->execute();

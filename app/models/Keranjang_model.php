@@ -26,6 +26,14 @@ class Keranjang_model
         $this->db->bind('id', $id);
         return $this->db->resultSet();
     }
+
+    public function getKeranjangByIdProductrow($id)
+    {
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE idProduct=:id');
+        $this->db->bind('id', $id);
+        $this->db->execute();
+        return $this->db->rowCount();
+    }
     public function getKeranjangUser($id)
     {
         $this->db->query('SELECT * FROM ' . $this->table . ' WHERE idUser=:id ORDER BY idKeranjang DESC');
@@ -61,5 +69,50 @@ class Keranjang_model
         $this->db->execute();
         
         return $this->db->rowCount();
+    }
+
+    public function hapusDataKeranjangFromProd($id){
+        $query = "DELETE FROM keranjang WHERE idProduct=:id";
+        $this->db->query($query);
+        $this->db->bind('id', $id);
+
+        $this->db->execute();
+        
+        return $this->db->rowCount();
+    }
+
+    public function update($data, $Foto, $id)
+    {
+        $query = "UPDATE keranjang SET Nama=:nama,  Deskripsi=:desk,  Harga=:harga, Stok=:stok, Foto=:foto WHERE idProduct=:id";
+        $this->db->query($query);
+        $this->db->bind('nama', $data['nama']);
+        $this->db->bind('desk', $data['deskripsi']);
+        $this->db->bind('harga', $data['harga']);
+        $this->db->bind('stok', $data['stok']);
+        $this->db->bind('id', $id);
+        $this->db->bind('foto', $Foto);
+
+
+        $this->db->execute();
+        
+        return $this->db->rowCount();
+    }
+
+    public function minstokKeranjang($id){
+
+        $this->db->query('SELECT * FROM product WHERE idProduct=:id');
+        $this->db->bind('id', $id);
+        $data = $this->db->single();
+
+        $count = $data['Stok'];
+        $query = "UPDATE keranjang 
+                SET Stok=:stok WHERE idProduct=:id";
+         $this->db->query($query);
+         $this->db->bind('stok', $count);
+         $this->db->bind('id', $id);
+
+         $this->db->execute();
+            
+         return $this->db->rowCount();
     }
 };

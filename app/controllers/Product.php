@@ -83,6 +83,12 @@ class Product extends Controller{
 
         // delete data from database
         if($this->model('Product_model')->hapusDataProduct($id) > 0){
+            if ($this->model('Keranjang_model')->getKeranjangByIdProductrow($id)>0) {
+                $this->model('Keranjang_model')->hapusDataKeranjangFromProd($id);
+            }
+            if($this->model('Rekomendasi_model')->getRekomendasiByIdProductrow($id)>0){
+                $this->model('Rekomendasi_model')->hapusDataRekomendasifromProduct($id);
+            }
             Flasher::setFlash('Data berhasil', 'dihapus', 'sukses');
             header('Location: ' . BASEURL . 'Admin/Product');
             exit;
@@ -171,6 +177,12 @@ class Product extends Controller{
         }
         // move file and data into database
         if($this->model('Product_model')->updateProduct($_POST, $filename, $id) > 0) {
+            if ($this->model('Keranjang_model')->getKeranjangByIdProductrow($id)>0) {
+                $this->model('Keranjang_model')->update($_POST, $filename, $id);
+            }
+            if($this->model('Rekomendasi_model')->getRekomendasiByIdProductrow($id)>0){
+                $this->model('Rekomendasi_model')->update($_POST, $id);
+            }
             Flasher::setFlash('Data berhasil', 'diedit', 'sukses');
             header('Location: ' . BASEURL . 'Admin/Product');
             exit;

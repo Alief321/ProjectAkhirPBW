@@ -1,17 +1,23 @@
 <div class="main">
 <form action="Pesanan/tambah" method="post" enctype="multipart/form-data">
-    <h1>Upload Bukti Pembayaran</h1>
-    <img src="images/Product/<?=$data['pesanan']['Foto']?>" alt="<?=$data['pesanan']['Nama']?>"  height="200px" width="200px">
-    <br>
+    <h1 style="text-align: center;">Upload Bukti Pembayaran</h1>
+    <div style="width: 100%; display: flex; justify-content: center;">
+        <img src="images/Product/<?=$data['pesanan']['Foto']?>" alt="<?=$data['pesanan']['Nama']?>" id="img">
+    </div>
+    </br>
+    </br>
     <label for="nama">Nama Produk</label>
+    <br>
     <br>
     <input type="text" name="nama" value="<?= $data['pesanan']['Nama']?>" readonly >
     <br>
     <label for="harga">Harga</label>
     <br>
+    <br>
     <input type="number" name="harga" value="<?= $data['pesanan']['Harga']?>" readonly>
     <br>
     <label for="bukti">Upload Bukti Pembayaran</label>
+    <br>
     <br>
     <input type="file" name="foto" required>
     <br>

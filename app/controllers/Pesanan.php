@@ -42,6 +42,7 @@ class Pesanan extends Controller{
         if($this->model('Pesanan_model')->tambahDataPesanan($_POST, $filename) > 0) {
             $this->model('Keranjang_model')-> hapusDataKeranjang($_POST['idKer']);
             $this->model('Product_model')->minstok($_POST['idProd']);
+            $this->model('Keranjang_model')->minstokKeranjang($_POST['idProd']);
             Flasher::setFlash('Item berhasil', 'dibeli', 'sukses');
             header('Location: ' . BASEURL . 'Keranjang');
             exit;
