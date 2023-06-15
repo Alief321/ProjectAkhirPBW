@@ -67,6 +67,9 @@
             <a href="https://mail.google.com/mail/u/0/#inbox/FMfcgzGsmDsbFtZLXMmhpkDtsHjFhgCV?compose=CllgCJvqKMLTGgWzZCmFZGvNDrzwqjbFHqBVnBRPQbZTbtNMlhPWgnFvlhGCZdwlRZQNkFpRRCL" target="_blank">
               <i data-feather="mail" class="socmed_item"> </i>
             </a>
+            <a href="https://github.com/Alief321" target="_blank">
+              <i data-feather="github" class="socmed_item"> </i>
+            </a>
           </div>
         </div>
       </div>

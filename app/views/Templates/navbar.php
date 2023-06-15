@@ -114,7 +114,7 @@
     <!-- float item -->
     <div class="float_item">
       <img src="img/up-arrow.png" width="60px" height="60px" id="up_arrow" alt="upArrow" />
-      <a href="">
+      <a href="https://wa.me/6281575382808">
         <img src="img/whatsapp.png" width="60px" height="60px" id="wa" alt="wa" />
       </a>
     </div>

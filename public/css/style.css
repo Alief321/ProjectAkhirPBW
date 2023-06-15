@@ -554,4 +554,11 @@ animate-top {
       font-size: 1.2rem;
     }
   }
+
+  @media screen and (max-width: 384px) {
+    .socmed_item {
+      height: 30px;
+      width: 30px;
+    }
+  }
 }
