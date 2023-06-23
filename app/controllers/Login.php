@@ -13,6 +13,8 @@ class Login extends Controller{
         session_destroy();
 
         setcookie('email', '', time()-3600);
+        setcookie('emailKey', '', time()-3600);
+        setcookie('pass', '', time()-3600) ;
         setcookie('key', '', time()-3600) ;
         setcookie('role', '', time()-3600) ;
         setcookie('id', '', time()-3600);

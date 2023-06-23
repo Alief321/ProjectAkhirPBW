@@ -13,8 +13,12 @@
         echo $quoteList[mt_rand(0, count($quoteList)-1)];
         echo '</i>';
         ?>
+
+        <!-- di server fitur ini dihilangkan -->
         <h2>Grafik Product berdasarkan kategori</h2>
         <div id="piechart" style="width: 80%; height: 50%;"></div>
+        <!---->
+
         <h2>Gambar Kucing lucu</h2>
         <div style="width: 90%; display: flex; justify-content: center; align-items: center; background-color: white; border-radius: 0.5rem;">  
         <img src="<?php 
