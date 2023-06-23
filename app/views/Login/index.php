@@ -28,6 +28,12 @@
             </div>
           </div>
           <br />
+          <div class="remme">
+            <div class="remember">
+              <input type="checkbox" name="remember" id="remember"/>
+              <label for="remember">Remember me</label>
+            </div>
+          </div>
           <button type="submit" class="login-text">Login</button>
         </form>
 

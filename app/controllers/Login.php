@@ -11,5 +11,10 @@ class Login extends Controller{
         $this->view('Login/index');
         session_unset();
         session_destroy();
+
+        setcookie('email', '', time()-3600);
+        setcookie('key', '', time()-3600) ;
+        setcookie('role', '', time()-3600) ;
+        setcookie('id', '', time()-3600);
     }
 }

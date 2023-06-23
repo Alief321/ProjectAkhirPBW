@@ -5,7 +5,22 @@ class Keranjang extends Controller{
     {
         if(!isset($_SESSION)){ 
             session_start(); 
-        } 
+        }
+        // cek cookie
+        if(isset($_COOKIE['key']) && isset($_COOKIE['email'])){
+            $email = $_COOKIE['email'];
+            $key = $_COOKIE['key'];
+
+            $row = $this->model('User_model')->getUserByEmail($email);
+
+            if($key == $row['Password']){
+                $_SESSION['login'] == true;
+            }
+        }
+        if ($_SESSION['login']== false) {
+            header('Location:'. BASEURL .'Login');
+        }
+        
         $data['judul'] = "Keranjang";
         $data['css'] = "Keranjang.css";
         $data['keranjang'] = $this->model('Keranjang_model')->getKeranjangUser($_SESSION['idUser']);

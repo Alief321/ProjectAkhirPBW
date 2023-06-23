@@ -3,6 +3,11 @@ class Pesanan extends Controller{
     public function index($id, $idk){
         if(!isset($_SESSION)){ 
             session_start(); 
+        }
+        // cek cookie
+        include('../app/lib/cookieCheck.php');
+        if ($_SESSION['login']== false) {
+            header('Location:'. BASEURL .'Login');
         } 
         $data['judul'] = "Pesanan";
         $data['css'] = "Pesanan.css";

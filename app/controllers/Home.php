@@ -3,8 +3,10 @@ class Home extends Controller{
     public function index(){
         if(!isset($_SESSION)){ 
             session_start(); 
-        } 
-        if (!isset($_SESSION['email'])) {
+        }
+        // cookie check
+        include('../app/lib/cookieCheck.php');
+        if ($_SESSION['login']== false) {
             header('Location:'. BASEURL .'Login');
         }else{
             if ( $this->model('User_model')->validateUser($_SESSION['email'], $_SESSION['password']) <= 0) {

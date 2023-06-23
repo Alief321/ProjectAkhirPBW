@@ -2,16 +2,16 @@
 
 class Product extends Controller{
 
-    // private $uploader;
-    // public function __construct() {
-    //     $this->uploader = new Uploader();
-    // }
-
     public function index()
     {
         if(!isset($_SESSION)){ 
             session_start(); 
-        } 
+        }
+        // cek cookie
+        include('../app/lib/cookieCheck.php');
+        if ($_SESSION['login']== false) {
+            header('Location:'. BASEURL .'Login');
+        }
         $data['group']= "All";
         $data['judul'] = "Product";
         $data['css'] = "product.css";

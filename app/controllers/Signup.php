@@ -18,7 +18,8 @@ class Signup extends Controller{
                 exit;
             }
         }
-        catch (\PDOException $e) {
+        // if contains integrity contraint in unique field email
+        catch (PDOException $e) {
             if ($e->errorInfo[1] == 1062) {
                 Flasher::setFlash('Email tersebut sudah', 'terdaftar', 'gagal');
                 header('Location: ' . BASEURL . 'Signup');

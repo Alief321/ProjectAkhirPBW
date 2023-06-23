@@ -6,7 +6,11 @@ class User extends Controller{
         if(!isset($_SESSION)){ 
             session_start(); 
         } 
-
+        // cek cookie
+        include('../app/lib/cookieCheck.php');
+        if ($_SESSION['login']== false) {
+            header('Location:'. BASEURL .'Login');
+        }
         $data['judul'] = "User";
         $data['User']= $this->model('User_model')->getUserByEmail($_SESSION['email']);
         $data['css'] = "user.css";
