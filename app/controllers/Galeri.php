@@ -42,7 +42,7 @@ class Galeri extends Controller
     public function hapus($id)
     {
          // delete foto from local directori
-         $Picture = $this->model('Galeri_Model')->getFotoById($id);
+         $Picture = $this->model('Galeri_model')->getFotoById($id);
          unlink(getcwd().DIRECTORY_SEPARATOR.'images'.DIRECTORY_SEPARATOR. 'Galeri' . DIRECTORY_SEPARATOR.$Picture['Path']);
          
          // delete data from database
@@ -58,14 +58,14 @@ class Galeri extends Controller
     }
     
     public function showFoto(){
-        $data['foto'] =  $this->model('Galeri_Model')->showFotoById($_GET['id']);
+        $data['foto'] =  $this->model('Galeri_model')->showFotoById($_GET['id']);
         return $data['foto'];
     }
 
     public function update($id){
 
         // delete foto from local directori
-        $Picture = $this->model('Galeri_Model')->getFotoById($id);
+        $Picture = $this->model('Galeri_model')->getFotoById($id);
         unlink(getcwd().DIRECTORY_SEPARATOR.'images'.DIRECTORY_SEPARATOR. 'Galeri' . DIRECTORY_SEPARATOR.$Picture['Path']);
 
         // move file into directory

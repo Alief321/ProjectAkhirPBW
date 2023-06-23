@@ -71,7 +71,7 @@ class Pesanan extends Controller{
     }
 
     public function showFoto(){
-        $data['foto'] =  $this->model('Pesanan_Model')->showFotoById($_GET['id']);
+        $data['foto'] =  $this->model('Pesanan_model')->showFotoById($_GET['id']);
         return $data['foto'];
     }
 
