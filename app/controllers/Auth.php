@@ -15,7 +15,9 @@ class Auth extends Controller
         // setcookie satu minggu
         if (isset($_POST['remember'])){
             setcookie('email', $_SESSION['email'], time()+(3600*24*7));
-            setcookie('key', $_SESSION['password'], time()+(3600*24*7)) ;
+            setcookie('emailKey', hash('sha1', $_SESSION['email']), time()+(3600*24*7));
+            setcookie('key', hash('sha1', $_SESSION['password']), time()+(3600*24*7)) ;
+            setcookie('pass', $_SESSION['password'], time()+(3600*24*7)) ;
             setcookie('role', $_SESSION['role'], time()+(3600*24*7)) ;
             setcookie('id', $_SESSION['idUser'], time()+(3600*24*7));
         }

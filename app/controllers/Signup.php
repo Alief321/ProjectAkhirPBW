@@ -10,7 +10,8 @@ class Signup extends Controller{
     public function tambah(){
         try {
             if($this->model('User_model')->tambahDataUser($_POST) > 0) {
-                header('Location: ' . BASEURL . 'Auth');
+                Flasher::setFlash('Data User berhasil', 'ditambahkan', 'sukses');
+                header('Location: ' . BASEURL . 'Login');
                 exit;
             } else{
                 Flasher::setFlash('Data User gagal', 'ditambahkan', 'gagal');
